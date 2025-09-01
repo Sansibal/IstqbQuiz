@@ -1,0 +1,64 @@
+@page "/details"
+@inject NavigationManager Nav
+@inject QuizState State
+
+<h3>Detailauswertung</h3>
+
+@if (State?.Questions == null || State.Questions.Count == 0)
+{
+    <p>Keine Daten gefunden. Bitte zuerst das Quiz absolvieren.</p>
+    <button class="btn btn-primary" @onclick='() => Nav.NavigateTo("/quiz")'>Zum Quiz</button>
+}
+else
+{
+    <p>
+        Punkte: @State.Score / @State.Questions.Count
+        (@(State.Questions.Count > 0 ? Math.Round((double)State.Score / State.Questions.Count * 100, 1) : 0)%)
+    </p>
+
+    <div class="mb-3">
+        <button class="btn btn-primary" @onclick="GoBack">Zurück zur Startseite</button>
+    </div>
+
+    @foreach (var q in State.Questions)
+    {
+        // safe: userIdx vorinitialisieren, TryGetValue nur aufrufen wenn Dictionary nicht null
+        int userIdx = -1;
+        bool has = State.UserAnswers != null && State.UserAnswers.TryGetValue(q.Id, out userIdx);
+        bool isCorrect = has && userIdx == q.CorrectIndex;
+
+        // sichere Texte (Indexgrenzen prüfen)
+        string? userAnswerText = (has && userIdx >= 0 && userIdx < q.Options.Count) ? q.Options[userIdx] : null;
+        string correctAnswerText = (q.CorrectIndex >= 0 && q.CorrectIndex < q.Options.Count) ? q.Options[q.CorrectIndex] : "(fehlende korrekte Antwort)";
+
+        <div class="card mb-3">
+            <div class="card-header">
+                <strong>@q.Text</strong>
+            </div>
+            <div class="card-body">
+                <p>
+                    Deine Antwort:
+                    @if (userAnswerText != null)
+                    {
+                        <span class="@(isCorrect ? "text-success fw-bold" : "text-danger fw-bold")">
+                            @userAnswerText
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Keine Antwort</span>
+                    }
+                </p>
+
+                <p>
+                    Richtige Antwort:
+                    <span class="text-success">@correctAnswerText</span>
+                </p>
+            </div>
+        </div>
+    }
+}
+
+@code {
+    void GoBack() => Nav.NavigateTo("/");
+}

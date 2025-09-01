@@ -1,0 +1,64 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IstqbQuiz.Server", "Server\IstqbQuiz.Server.csproj", "{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IstqbQuiz.Client", "Client\IstqbQuiz.Client.csproj", "{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IstqbQuiz.Shared", "Shared\IstqbQuiz.Shared.csproj", "{F8D2CBC4-D447-431A-8038-3EA1A607F776}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Debug|x64.Build.0 = Debug|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Debug|x86.Build.0 = Debug|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Release|x64.ActiveCfg = Release|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Release|x64.Build.0 = Release|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Release|x86.ActiveCfg = Release|Any CPU
+		{26EC1EE5-88F7-483B-821A-FBF7EE0EC0C9}.Release|x86.Build.0 = Release|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Debug|x64.Build.0 = Debug|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Debug|x86.Build.0 = Debug|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Release|x64.ActiveCfg = Release|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Release|x64.Build.0 = Release|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C6FD887-67D4-4A86-8A9D-3F5AC6536C51}.Release|x86.Build.0 = Release|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Debug|x64.Build.0 = Debug|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Debug|x86.Build.0 = Debug|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Release|x64.ActiveCfg = Release|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Release|x64.Build.0 = Release|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Release|x86.ActiveCfg = Release|Any CPU
+		{F8D2CBC4-D447-431A-8038-3EA1A607F776}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CD07205-0A08-495A-8B61-A5B1FE4DD4FE}
+	EndGlobalSection
+EndGlobal

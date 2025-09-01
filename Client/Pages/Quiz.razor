@@ -1,0 +1,132 @@
+@page "/quiz"
+@inject QuestionService QService
+@inject NavigationManager Nav
+@inject QuizState State
+@using IstqbQuiz.Shared.Models
+@using System.Net
+
+<h3>ISTQB Quiz</h3>
+
+@if (!quizStarted)
+{
+    <button class="btn btn-primary" @onclick="StartQuiz">Start (40 Fragen)</button>
+}
+else if (currentIndex < questions.Count)
+{
+    <p><b>Frage @(@currentIndex + 1) / @questions.Count</b></p>
+
+    <div class="question-text">@ToMarkup(questions[currentIndex].Text)</div>
+
+    @* Bild anzeigen, falls vorhanden *@
+    @if (!string.IsNullOrEmpty(questions[currentIndex].Diagram))
+    {
+        <div style="text-align:center;">
+            <img src="@questions[currentIndex].Diagram" 
+                 alt="Diagramm zur Frage" 
+                 style="width:700px;height:auto;display:inline-block;margin-bottom:1em;" />
+        </div>
+    }
+
+    @* Tabelle anzeigen, falls vorhanden *@
+    @if (questions[currentIndex].Table != null && questions[currentIndex].Table.Count > 0 && questions[currentIndex].Table[0] != null)
+    {
+        <table class="table table-bordered table-sm mb-2">
+            <thead>
+                <tr>
+                    @foreach (var col in questions[currentIndex].Table[0].Keys)
+                    {
+                        <th>@col</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in questions[currentIndex].Table)
+                {
+                    <tr>
+                        @foreach (var val in row.Values)
+                        {
+                            <td>@val</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    @if (!string.IsNullOrEmpty(questions[currentIndex].PostText))
+    {
+        <div class="question-text">@ToMarkup(questions[currentIndex].PostText)</div>
+    }
+
+    <ul class="list-unstyled">
+        @for (int i = 0; i < questions[currentIndex].Options.Count; i++)
+        {
+            var localIndex = i;
+            <li class="mb-2">
+                <button class="btn @(answers[currentIndex] == localIndex ? "btn-primary" : "btn-outline-secondary") w-100 text-start"
+                        @onclick="() => Select(localIndex)">
+                    @questions[currentIndex].Options[i]
+                </button>
+            </li>
+        }
+    </ul>
+
+
+    <div class="mt-2">
+        <button class="btn btn-link" @onclick="Prev" disabled="@(currentIndex==0)">Zurück</button>
+        <button class="btn btn-link" @onclick="Next" disabled="@(answers[currentIndex]==null)">Weiter</button>
+    </div>
+}
+else
+{
+    <p>Berechne Ergebnis...</p>
+}
+
+@code {
+    bool quizStarted = false;
+    List<Question> questions = new();
+    List<int?> answers = new();
+    int currentIndex = 0;
+
+    async Task StartQuiz()
+    {
+        quizStarted = true;
+        questions = await QService.GetRandomAsync(40);
+        answers = Enumerable.Repeat<int?>(null, questions.Count).ToList();
+        currentIndex = 0;
+        State.UserAnswers.Clear();
+    }
+
+    void Select(int choice)
+    {
+        answers[currentIndex] = choice;
+        var questionId = questions[currentIndex].Id;
+        State.UserAnswers[questionId] = choice;
+    }
+
+    void Next()
+    {
+        if (currentIndex < questions.Count - 1) currentIndex++;
+        else Finish();
+    }
+
+    void Prev() => currentIndex = Math.Max(0, currentIndex - 1);
+
+    void Finish()
+    {
+        int score = questions.Zip(answers, (q, a) => (q, a))
+            .Count(t => t.a.HasValue && t.a.Value == t.q.CorrectIndex);
+        State.Questions = questions;
+        State.Answers = answers;
+        State.Score = score;
+        Nav.NavigateTo("/result");
+    }
+
+    MarkupString ToMarkup(string? s)
+    {
+        var text = s ?? string.Empty;
+        text = WebUtility.HtmlDecode(text); // HTML Entities decodieren (&lt; etc.)
+        text = text.Replace("\r\n", "<br>").Replace("\n", "<br>");
+        return (MarkupString)text;
+    }
+}
