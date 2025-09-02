@@ -1,25 +1,27 @@
-# Basis-Image für die Laufzeit
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 80
-
-# Build-Image
+# ==========================
+# 1. Build Stage
+# ==========================
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Alles kopieren
+# Copy sln and csproj files first for better layer caching
+COPY ["IstqbQuiz.sln", "."]
+COPY ["Server/IstqbQuiz.Server.csproj", "Server/"]
+COPY ["Client/IstqbQuiz.Client.csproj", "Client/"]
+COPY ["Shared/IstqbQuiz.Shared.csproj", "Shared/"]
+
+RUN dotnet restore "IstqbQuiz.sln"
+
+# Copy everything else and build
 COPY . .
+RUN dotnet publish "Server/IstqbQuiz.Server.csproj" -c Release -o /app/publish
 
-# Projekt wiederherstellen
-RUN dotnet restore "./IstqbQuiz.Server/IstqbQuiz.Server.csproj"
-
-# Projekt bauen und veröffentlichen
-RUN dotnet publish "./IstqbQuiz.Server/IstqbQuiz.Server.csproj" -c Release -o /app/publish
-
-# Finales Image
-FROM base AS final
+# ==========================
+# 2. Runtime Stage
+# ==========================
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Startpunkt
+EXPOSE 80
 ENTRYPOINT ["dotnet", "IstqbQuiz.Server.dll"]
