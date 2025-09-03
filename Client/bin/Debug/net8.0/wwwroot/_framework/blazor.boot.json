@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "IstqbQuiz.Client",
   "resources": {
-    "hash": "sha256-fT6otT2Ix0Cd43Ln6VPJT69wDe3Y7NpkTpLZls4HR6Y=",
+    "hash": "sha256-ArU3QdHOME+KHLDL9B+czqEqqfdZrHU0O/kcd3k+m2A=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-O/NCYcAN9uPocD7ns7AzF/cqx7f5vL1PTJCQs0vEXyk="
     },
@@ -209,12 +209,12 @@
       "mscorlib.wasm": "sha256-RLW/7NVuhoPfq151II3kX2kWHgBwQgpCw9aemQNg3to=",
       "netstandard.wasm": "sha256-lAg5WvTiA8wbsIwlr51xh0YWpXT9F5EX3Cnv+11O/mU=",
       "System.Private.CoreLib.wasm": "sha256-3O3muuRQwoLRecYRjfIFWUURvTjP4EmD2O8wYg2UDNY=",
-      "IstqbQuiz.Shared.wasm": "sha256-sroRbmFAJtWORerQf57BwIiuXRWikYte5lLfc3UhqxY=",
-      "IstqbQuiz.Client.wasm": "sha256-vjuASQO9F0TYX3UJ7B64Zx14c4PrgUeDj/9IZMJGLoo="
+      "IstqbQuiz.Shared.wasm": "sha256-CzCBIA6YuICMlLhDcvTA3tkHznIFCUdp9JAcFflf7dE=",
+      "IstqbQuiz.Client.wasm": "sha256-q49oXO/Zg6mRHYBuyXuFBND7gVBucc3paOV+XjcJpls="
     },
     "pdb": {
-      "IstqbQuiz.Shared.pdb": "sha256-/F+IMcxahEleRTD8ohMRrnsyywLEVRvuJACI0r4D/Rw=",
-      "IstqbQuiz.Client.pdb": "sha256-k8zHKbDblvbhaJda/OER614PhRFIaEL4KXCe5+h15oA="
+      "IstqbQuiz.Shared.pdb": "sha256-ijlvMeKmLmCHVDiZhj0Xx5ZA03pcf9BZHxhf/qpMRu0=",
+      "IstqbQuiz.Client.pdb": "sha256-bopW/o8ItDLPapZha9XvYOS9TvDMykKhal7X8q7p+s0="
     }
   },
   "cacheBootResources": true,
