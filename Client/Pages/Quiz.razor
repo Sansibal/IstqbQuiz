@@ -1,7 +1,7 @@
 @page "/quiz"
-@inject QuestionService QService
-@inject NavigationManager Nav
-@inject QuizState State
+@using Microsoft.AspNetCore.Components.Web
+@rendermode InteractiveAuto
+
 @using IstqbQuiz.Shared.Models
 @using System.Net
 
@@ -11,11 +11,26 @@
 {
     <button class="btn btn-primary" @onclick="StartQuiz">Start (40 Fragen)</button>
 }
+else if (loading)
+{
+    <p>Fragen werden geladen...</p>
+}
+else if (questions.Count == 0 && !string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        Ein Fehler ist aufgetreten: @errorMessage
+    </div>
+}
+else if (questions.Count == 0 && string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-warning" role="alert">
+        Keine Fragen gefunden. Bitte überprüfen Sie, ob die Datei 'questions.json' Fragen enthält.
+    </div>
+    <button class="btn btn-primary" @onclick="GoToQuiz">Zurück zum Quiz</button>
+}
 else if (currentIndex < questions.Count)
 {
     <p><b>Frage @(@currentIndex + 1) / @questions.Count</b></p>
-
-    <div class="question-text">@ToMarkup(questions[currentIndex].Text)</div>
 
     @* Bild anzeigen, falls vorhanden *@
     @if (!string.IsNullOrEmpty(questions[currentIndex].Diagram))
@@ -83,7 +98,18 @@ else
 }
 
 @code {
+    [Inject]
+    private QuestionService QService { get; set; } = default!;
+    
+    [Inject]
+    private NavigationManager Nav { get; set; } = default!;
+
+    [Inject]
+    private QuizState State { get; set; } = default!;
+
     bool quizStarted = false;
+    bool loading = false;
+    string errorMessage = string.Empty;
     List<Question> questions = new();
     List<int?> answers = new();
     int currentIndex = 0;
@@ -91,7 +117,30 @@ else
     async Task StartQuiz()
     {
         quizStarted = true;
-        questions = await QService.GetRandomAsync(40);
+        loading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+            questions = await QService.GetRandomAsync(40);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+            return;
+        }
+        finally
+        {
+            loading = false;
+        }
+
+        if (questions.Count == 0)
+        {
+            // Do not proceed with the quiz if no questions are found
+            quizStarted = false;
+            return;
+        }
+
         answers = Enumerable.Repeat<int?>(null, questions.Count).ToList();
         currentIndex = 0;
         State.UserAnswers.Clear();
@@ -128,5 +177,10 @@ else
         text = WebUtility.HtmlDecode(text); // HTML Entities decodieren (&lt; etc.)
         text = text.Replace("\r\n", "<br>").Replace("\n", "<br>");
         return (MarkupString)text;
+    }
+
+    void GoToQuiz()
+    {
+        quizStarted = false;
     }
 }

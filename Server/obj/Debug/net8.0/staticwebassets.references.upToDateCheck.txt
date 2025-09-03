@@ -1,0 +1,3 @@
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\staticwebassets.build.json

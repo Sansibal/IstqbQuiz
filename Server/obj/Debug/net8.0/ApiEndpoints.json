@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "IstqbQuiz.Server.Controllers.QuestionsController",
+    "Method": "GetQuestions",
+    "RelativePath": "api/Questions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

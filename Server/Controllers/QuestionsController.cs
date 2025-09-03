@@ -8,23 +8,26 @@ namespace IstqbQuiz.Server.Controllers
     [Route("api/[controller]")]
     public class QuestionsController : ControllerBase
     {
-        private readonly IWebHostEnvironment _env;
-
-        public QuestionsController(IWebHostEnvironment env)
-        {
-            _env = env;
-        }
-
         [HttpGet]
         public IActionResult GetQuestions()
         {
-            var filePath = Path.Combine(_env.ContentRootPath, "Data", "questions.json");
+            // Use AppContext.BaseDirectory to get the correct path to the output folder.
+            var filePath = Path.Combine(AppContext.BaseDirectory, "Data", "questions.json");
+            
             if (!System.IO.File.Exists(filePath))
-                return NotFound("questions.json not found!");
+                return NotFound("questions.json not found! Path: " + filePath);
 
-            var json = System.IO.File.ReadAllText(filePath);
-            var questions = JsonSerializer.Deserialize<List<Question>>(json);
-            return Ok(questions);
+            try
+            {
+                var json = System.IO.File.ReadAllText(filePath);
+                var questions = JsonSerializer.Deserialize<List<Question>>(json);
+                return Ok(questions);
+            }
+            catch (Exception ex)
+            {
+                // Return an error with details to help debug the JSON deserialization.
+                return StatusCode(500, $"An error occurred while deserializing the questions.json file: {ex.Message}");
+            }
         }
     }
 }

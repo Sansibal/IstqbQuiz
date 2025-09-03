@@ -1,14 +1,15 @@
-using Microsoft.AspNetCore.ResponseCompression;
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
-builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseWebAssemblyDebugging();
@@ -19,19 +20,15 @@ else
     app.UseHsts();
 }
 
-// KEIN HTTPS Redirect, da Render HTTP nutzt
-// app.UseHttpsRedirection();
-
-app.UseBlazorFrameworkFiles();
+app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseAntiforgery();
 
-app.UseRouting();
+app.MapRazorComponents<IstqbQuiz.Client.App>()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(IstqbQuiz.Client._Imports).Assembly);
 
-app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
-
-// Render braucht explizit den Port 8080
-app.Urls.Add("http://0.0.0.0:8080");
 
 app.Run();
