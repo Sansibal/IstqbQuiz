@@ -1,0 +1,2 @@
+C:\Users\VhmSephiroth\IstqbQuiz\out\emcc-props.json
+C:\Users\VhmSephiroth\IstqbQuiz\out\web.config

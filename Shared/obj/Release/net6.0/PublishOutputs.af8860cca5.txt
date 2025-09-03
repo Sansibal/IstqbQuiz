@@ -1,0 +1,3 @@
+C:\Users\VhmSephiroth\IstqbQuiz\out\IstqbQuiz.Shared.dll
+C:\Users\VhmSephiroth\IstqbQuiz\out\IstqbQuiz.Shared.deps.json
+C:\Users\VhmSephiroth\IstqbQuiz\out\IstqbQuiz.Shared.pdb

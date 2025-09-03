@@ -1,8 +1,7 @@
-bin/
-obj/
-*.md
-.git
-.gitignore
-.vscode
+**/bin/
+**/obj/
+**/.vs/
+**/.git/
+**/.gitignore
 Dockerfile
-.dockerignore
+docker-compose.yml

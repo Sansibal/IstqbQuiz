@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8h31CLGFPvs=",
+  "dgSpecHash": "1dfx8cu/ogk=",
   "success": true,
-  "projectFilePath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
+  "projectFilePath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.36\\microsoft.aspnetcore.authorization.6.0.36.nupkg.sha512",
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.36\\microsoft.aspnetcore.components.6.0.36.nupkg.sha512",
@@ -28,13 +28,12 @@
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.1\\microsoft.extensions.primitives.6.0.1.nupkg.sha512",
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.jsinterop\\6.0.36\\microsoft.jsinterop.6.0.36.nupkg.sha512",
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.36\\microsoft.jsinterop.webassembly.6.0.36.nupkg.sha512",
-    "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
-    "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.19\\microsoft.net.illink.tasks.8.0.19.nupkg.sha512",
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.8\\microsoft.net.sdk.webassembly.pack.9.0.8.nupkg.sha512",
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.2\\system.diagnostics.diagnosticsource.6.0.2.nupkg.sha512",
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\VhmSephiroth\\.nuget\\packages\\system.text.json\\6.0.11\\system.text.json.6.0.11.nupkg.sha512",
-    "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.36\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.36.nupkg.sha512"
+    "C:\\Users\\VhmSephiroth\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.19\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.19.nupkg.sha512"
   ],
   "logs": []
 }

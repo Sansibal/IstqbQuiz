@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {}
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {}
   },
   "projects": {
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
+        "projectUniqueName": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
         "projectName": "IstqbQuiz.Client",
-        "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
+        "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
         "packagesPath": "C:\\Users\\VhmSephiroth\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\obj\\",
+        "outputPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,11 +30,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
-                "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
+              "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
+                "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
               }
             }
           }
@@ -52,8 +52,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
@@ -64,16 +64,10 @@
               "target": "Package",
               "version": "[6.0.36, )"
             },
-            "Microsoft.NET.ILLink.Analyzers": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.100-1.23211.1, )",
-              "autoReferenced": true
-            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.100-1.23211.1, )",
+              "version": "[8.0.19, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
@@ -97,7 +91,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.36, 6.0.36]"
+              "version": "[8.0.19, 8.0.19]"
             }
           ],
           "frameworkReferences": {
@@ -105,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -114,14 +108,14 @@
         }
       }
     },
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
+        "projectUniqueName": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
         "projectName": "IstqbQuiz.Server",
-        "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
+        "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
         "packagesPath": "C:\\Users\\VhmSephiroth\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\obj\\",
+        "outputPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -132,7 +126,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -140,14 +134,14 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
-                "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj"
+              "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
+                "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj"
               },
-              "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
-                "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
+              "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
+                "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
               }
             }
           }
@@ -165,8 +159,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebAssembly.Server": {
               "target": "Package",
@@ -192,18 +186,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
         "projectName": "IstqbQuiz.Shared",
-        "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
+        "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
         "packagesPath": "C:\\Users\\VhmSephiroth\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -214,7 +208,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -222,8 +216,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -240,8 +234,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -258,7 +252,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
