@@ -1,64 +1,49 @@
 @page "/details"
-@inject NavigationManager Nav
-@inject QuizState State
 
-<h3>Detailauswertung</h3>
+<h3>Auswertung im Detail</h3>
 
-@if (State?.Questions == null || State.Questions.Count == 0)
+@if (State.Questions.Count > 0)
 {
-    <p>Keine Daten gefunden. Bitte zuerst das Quiz absolvieren.</p>
-    <button class="btn btn-primary" @onclick='() => Nav.NavigateTo("/quiz")'>Zum Quiz</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Frage</th>
+                <th>Deine Antwort</th>
+                <th>Korrekte Antwort</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < State.Questions.Count; i++)
+            {
+                var q = State.Questions[i];
+                var userAnswer = State.Answers[i];
+                var correctIndex = q.CorrectIndex;
+                bool correct = userAnswer.HasValue && userAnswer.Value == correctIndex;
+
+                <tr class="@(correct ? "table-success" : "table-danger")">
+                    <td>@(i + 1)</td>
+                    <td>@q.Text</td>
+                    <td>@(userAnswer.HasValue ? q.Options[userAnswer.Value] : "Keine Antwort")</td>
+                    <td>@q.Options[correctIndex]</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" @onclick="GoBack">Zurück zum Ergebnis</button>
 }
 else
 {
-    <p>
-        Punkte: @State.Score / @State.Questions.Count
-        (@(State.Questions.Count > 0 ? Math.Round((double)State.Score / State.Questions.Count * 100, 1) : 0)%)
-    </p>
-
-    <div class="mb-3">
-        <button class="btn btn-primary" @onclick="GoBack">Zurück zur Startseite</button>
-    </div>
-
-    @foreach (var q in State.Questions)
-    {
-        // safe: userIdx vorinitialisieren, TryGetValue nur aufrufen wenn Dictionary nicht null
-        int userIdx = -1;
-        bool has = State.UserAnswers != null && State.UserAnswers.TryGetValue(q.Id, out userIdx);
-        bool isCorrect = has && userIdx == q.CorrectIndex;
-
-        // sichere Texte (Indexgrenzen prüfen)
-        string? userAnswerText = (has && userIdx >= 0 && userIdx < q.Options.Count) ? q.Options[userIdx] : null;
-        string correctAnswerText = (q.CorrectIndex >= 0 && q.CorrectIndex < q.Options.Count) ? q.Options[q.CorrectIndex] : "(fehlende korrekte Antwort)";
-
-        <div class="card mb-3">
-            <div class="card-header">
-                <strong>@q.Text</strong>
-            </div>
-            <div class="card-body">
-                <p>
-                    Deine Antwort:
-                    @if (userAnswerText != null)
-                    {
-                        <span class="@(isCorrect ? "text-success fw-bold" : "text-danger fw-bold")">
-                            @userAnswerText
-                        </span>
-                    }
-                    else
-                    {
-                        <span class="text-muted">Keine Antwort</span>
-                    }
-                </p>
-
-                <p>
-                    Richtige Antwort:
-                    <span class="text-success">@correctAnswerText</span>
-                </p>
-            </div>
-        </div>
-    }
+    <p>Keine Daten vorhanden. Bitte starte ein neues Quiz.</p>
 }
 
 @code {
-    void GoBack() => Nav.NavigateTo("/");
+    [Inject]
+    private QuizState State { get; set; } = default!;
+
+    [Inject]
+    private NavigationManager Nav { get; set; } = default!;
+
+    void GoBack() => Nav.NavigateTo("/result");
 }

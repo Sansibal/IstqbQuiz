@@ -1,18 +1,14 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using Microsoft.AspNetCore.Components.Routing
+@using IstqbQuiz.Client.Shared
+
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
-        <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <p>Sorry, die Seite wurde nicht gefunden.</p>
         </LayoutView>
     </NotFound>
 </Router>
-
-<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-<link href="css/app.css" rel="stylesheet" />
-<link href="IstqbQuiz.Client.styles.css" rel="stylesheet" />
-
-<script src="_framework/blazor.webassembly.js"></script>

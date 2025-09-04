@@ -1,32 +1,25 @@
 @page "/result"
 
-@inject QuizState State
+<h3>Dein Ergebnis</h3>
 
-@inject NavigationManager Nav
-
-@if (!State.Questions.Any())
+@if (State.Questions.Count > 0)
 {
-    <p>Kein Ergebnis gefunden. Starte ein Quiz.</p>
-
-    <button class="btn btn-primary" @onclick="GoToQuiz">Zum Quiz</button>
-    <button class="btn btn-secondary" @onclick="NavigateTo">Details anzeigen</button>
+    <p><b>Punkte:</b> @State.Score / @State.Questions.Count</p>
+    <button class="btn btn-primary" @onclick="GoHome">Neues Quiz starten</button>
+    <button class="btn btn-secondary" @onclick="ShowDetails">Details anzeigen</button>
 }
 else
 {
-    <p>Punkte: @State.Score / @State.Questions.Count</p>
-    @if (State.Score >= 26)
-    {
-        <p class="text-success">Bestanden ✅</p>
-    }
-    else
-    {
-        <p class="text-danger">Nicht bestanden ❌</p>
-    }
-    <button @onclick="ShowDetails">Details anzeigen</button>
+    <p>Keine Daten. Bitte starte ein neues Quiz.</p>
 }
 
 @code {
+    [Inject]
+    private QuizState State { get; set; } = default!;
+
+    [Inject]
+    private NavigationManager Nav { get; set; } = default!;
+
+    void GoHome() => Nav.NavigateTo("/");
     void ShowDetails() => Nav.NavigateTo("/details");
-    void GoToQuiz() => Nav.NavigateTo("/quiz");
-    void NavigateTo() => Nav.NavigateTo("/details");
 }

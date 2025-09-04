@@ -1,7 +1,4 @@
 @page "/quiz"
-@using Microsoft.AspNetCore.Components.Web
-@rendermode InteractiveAuto
-
 @using IstqbQuiz.Shared.Models
 @using System.Net
 
@@ -32,17 +29,15 @@ else if (currentIndex < questions.Count)
 {
     <p><b>Frage @(@currentIndex + 1) / @questions.Count</b></p>
 
-    @* Bild anzeigen, falls vorhanden *@
     @if (!string.IsNullOrEmpty(questions[currentIndex].Diagram))
     {
         <div style="text-align:center;">
-            <img src="@questions[currentIndex].Diagram" 
-                 alt="Diagramm zur Frage" 
+            <img src="@questions[currentIndex].Diagram"
+                 alt="Diagramm zur Frage"
                  style="width:700px;height:auto;display:inline-block;margin-bottom:1em;" />
         </div>
     }
 
-    @* Tabelle anzeigen, falls vorhanden *@
     @if (questions[currentIndex].Table != null && questions[currentIndex].Table.Count > 0 && questions[currentIndex].Table[0] != null)
     {
         <table class="table table-bordered table-sm mb-2">
@@ -86,7 +81,6 @@ else if (currentIndex < questions.Count)
         }
     </ul>
 
-
     <div class="mt-2">
         <button class="btn btn-link" @onclick="Prev" disabled="@(currentIndex==0)">Zurück</button>
         <button class="btn btn-link" @onclick="Next" disabled="@(answers[currentIndex]==null)">Weiter</button>
@@ -100,7 +94,7 @@ else
 @code {
     [Inject]
     private QuestionService QService { get; set; } = default!;
-    
+
     [Inject]
     private NavigationManager Nav { get; set; } = default!;
 
@@ -136,7 +130,6 @@ else
 
         if (questions.Count == 0)
         {
-            // Do not proceed with the quiz if no questions are found
             quizStarted = false;
             return;
         }
@@ -174,7 +167,7 @@ else
     MarkupString ToMarkup(string? s)
     {
         var text = s ?? string.Empty;
-        text = WebUtility.HtmlDecode(text); // HTML Entities decodieren (&lt; etc.)
+        text = WebUtility.HtmlDecode(text);
         text = text.Replace("\r\n", "<br>").Replace("\n", "<br>");
         return (MarkupString)text;
     }
