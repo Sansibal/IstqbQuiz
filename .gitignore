@@ -1,28 +1,40 @@
-# Build-Ordner
+# Build Ergebnisse
 bin/
 obj/
 
-# Visual Studio
+# Visual Studio Dateien
 .vs/
-.vscode/
-
-# User-spezifische Dateien
 *.user
 *.suo
 
-# Blazor Publish Output
-wwwroot/_framework/
-wwwroot/css/
-wwwroot/js/
-wwwroot/*.gz
-wwwroot/*.br
+# Visual Studio Code
+.vscode/
 
-# Sonstige temporäre Dateien
-*.dll
-*.pdb
+# Backup- und Cache-Dateien
+*.db
+*.db-shm
+*.db-wal
+*.v2
+*.bin
 *.cache
 *.log
-*.tmp
-*.db
-*.gz
-*.zip
+
+# Paketverwaltung
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build Output von Blazor WebAssembly
+wwwroot/_framework/
+wwwroot/_content/
+
+# Rider/JetBrains
+.idea/
+
+# OS Dateien
+Thumbs.db
+.DS_Store
