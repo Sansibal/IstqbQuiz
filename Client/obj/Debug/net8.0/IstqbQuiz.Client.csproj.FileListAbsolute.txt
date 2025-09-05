@@ -1040,8 +1040,8 @@ C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\IstqbQuiz.Client.dll
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\refint\IstqbQuiz.Client.dll
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\IstqbQuiz.Client.pdb
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\ref\IstqbQuiz.Client.dll
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\pkxdflmcrv-z9iw08u9g6.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\zd60a8x0qm-1e3vkcgkeo.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jc5flozsjm-yvyqdbw6tw.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jpr3vcdsxp-nwvxsbyd5t.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\m5v25xp1i7-zivh1ezw93.gz
+c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\pkxdflmcrv-exd97azs7i.gz
+c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\zd60a8x0qm-v7vjgix01n.gz
+c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jc5flozsjm-7wdj8eocty.gz
+c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jpr3vcdsxp-dr96a4ebox.gz
+c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\m5v25xp1i7-cv9j9yhx29.gz

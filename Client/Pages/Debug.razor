@@ -1,0 +1,101 @@
+@page "/debug"
+@inject QuestionService QService
+@using IstqbQuiz.Shared.Models
+@using System.Net
+
+<h3>Debug-Fragenübersicht</h3>
+
+@if (questions.Count == 0)
+{
+    <button class="btn btn-primary" @onclick="LoadQuestions">Alle Fragen laden</button>
+}
+else
+{
+    <div class="mb-3 d-flex align-items-center">
+        <label class="me-2">Frage-Nr:</label>
+        <input type="number" min="1" max="@questions.Count" @bind="debugIndex" style="width:80px" class="form-control d-inline-block" />
+        <button class="btn btn-warning btn-sm ms-2" @onclick="ShowQuestion">Anzeigen</button>
+        <span class="ms-3 text-muted">(Gesamt: @questions.Count)</span>
+    </div>
+
+    @if (currentQuestion != null)
+    {
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Frage @debugIndex</h5>
+                <div class="question-text">@ToMarkup(currentQuestion.Text)</div>
+
+                @if (!string.IsNullOrEmpty(currentQuestion.Diagram))
+                {
+                    <div class="text-center my-3">
+                        <img src="@currentQuestion.Diagram" class="img-fluid rounded" style="max-width:700px;" />
+                    </div>
+                }
+
+                @if (currentQuestion.Table != null && currentQuestion.Table.Count > 0)
+                {
+                    <table class="table table-bordered table-sm mt-3">
+                        <thead class="table-light">
+                            <tr>
+                                @foreach (var col in currentQuestion.Table[0].Keys)
+                                {
+                                    <th>@col</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var row in currentQuestion.Table)
+                            {
+                                <tr>
+                                    @foreach (var val in row.Values)
+                                    {
+                                        <td>@val</td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+
+                @if (!string.IsNullOrEmpty(currentQuestion.PostText))
+                {
+                    <div class="question-text mt-3">@ToMarkup(currentQuestion.PostText)</div>
+                }
+
+                <ul class="list-group mt-3">
+                    @for (int i = 0; i < currentQuestion.Options.Count; i++)
+                    {
+                        <li class="list-group-item">@currentQuestion.Options[i]</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+}
+
+@code {
+    List<Question> questions = new();
+    int debugIndex = 1;
+    Question? currentQuestion;
+
+    async Task LoadQuestions()
+    {
+        questions = await QService.GetAllAsync();
+        debugIndex = 1;
+        currentQuestion = questions.FirstOrDefault();
+    }
+
+    void ShowQuestion()
+    {
+        if (questions.Count > 0 && debugIndex >= 1 && debugIndex <= questions.Count)
+            currentQuestion = questions[debugIndex - 1];
+    }
+
+    MarkupString ToMarkup(string? s)
+    {
+        var text = s ?? string.Empty;
+        text = WebUtility.HtmlDecode(text);
+        text = text.Replace("\r\n", "<br>").Replace("\n", "<br>");
+        return (MarkupString)text;
+    }
+}

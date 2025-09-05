@@ -29,16 +29,28 @@ else if (currentIndex < questions.Count)
 {
     <p><b>Frage @(@currentIndex + 1) / @questions.Count</b></p>
 
-    @if (!string.IsNullOrEmpty(questions[currentIndex].Diagram))
+    <!-- ✅ Hier die Hauptfrage anzeigen -->
+    <div class="question-text fs-5 mb-3">@ToMarkup(questions[currentIndex].Text)</div>
+
+    @if (!string.IsNullOrEmpty(questions[currentIndex]!.Diagram))
     {
         <div style="text-align:center;">
-            <img src="@questions[currentIndex].Diagram"
-                 alt="Diagramm zur Frage"
-                 style="width:700px;height:auto;display:inline-block;margin-bottom:1em;" />
+            <img src="@questions[currentIndex]!.Diagram"
+                alt="Diagramm zur Frage"
+                style="max-width:700px;height:auto;display:inline-block;margin-bottom:1em;" />
         </div>
     }
 
-    @if (questions[currentIndex].Table != null && questions[currentIndex].Table.Count > 0 && questions[currentIndex].Table[0] != null)
+    @if (!string.IsNullOrEmpty(questions[currentIndex]!.Diagram))
+    {
+        <div style="text-align:center;">
+            <img src="@questions[currentIndex]!.Diagram"
+                alt="Diagramm zur Frage"
+                style="max-width:700px;height:auto;display:inline-block;margin-bottom:1em;" />
+        </div>
+    }
+
+    @if (questions[currentIndex]!.Table != null && questions[currentIndex]?.Table?.Count > 0 && questions[currentIndex]?.Table?[0] != null)
     {
         <table class="table table-bordered table-sm mb-2">
             <thead>
@@ -63,27 +75,30 @@ else if (currentIndex < questions.Count)
         </table>
     }
 
-    @if (!string.IsNullOrEmpty(questions[currentIndex].PostText))
+    @if (!string.IsNullOrEmpty(questions[currentIndex]!.PostText))
     {
-        <div class="question-text">@ToMarkup(questions[currentIndex].PostText)</div>
+        <div class="question-posttext">@ToMarkup(questions[currentIndex]!.PostText)</div>
     }
 
-    <ul class="list-unstyled">
-        @for (int i = 0; i < questions[currentIndex].Options.Count; i++)
+    <ul class="list-unstyled mt-3">
+        @for (int i = 0; i < questions[currentIndex]!.Options.Count; i++)
         {
             var localIndex = i;
             <li class="mb-2">
                 <button class="btn @(answers[currentIndex] == localIndex ? "btn-primary" : "btn-outline-secondary") w-100 text-start"
                         @onclick="() => Select(localIndex)">
-                    @questions[currentIndex].Options[i]
+                    @questions[currentIndex]!.Options[i]
                 </button>
             </li>
         }
-    </ul>
+</ul>
 
-    <div class="mt-2">
-        <button class="btn btn-link" @onclick="Prev" disabled="@(currentIndex==0)">Zurück</button>
-        <button class="btn btn-link" @onclick="Next" disabled="@(answers[currentIndex]==null)">Weiter</button>
+
+    <div class="mt-3 d-flex justify-content-between">
+        <button class="btn btn-secondary" @onclick="Prev" disabled="@(currentIndex==0)">Zurück</button>
+        <button class="btn btn-primary" @onclick="Next" disabled="@(answers[currentIndex]==null)">
+            @(currentIndex == questions.Count - 1 ? "Fertig" : "Weiter")
+        </button>
     </div>
 }
 else
