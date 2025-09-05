@@ -1,3 +1,28 @@
-# Visual Studio temporary files and build folders
-[Bb]in/
-[Oo]bj/
+# Build-Ordner
+bin/
+obj/
+
+# Visual Studio
+.vs/
+.vscode/
+
+# User-spezifische Dateien
+*.user
+*.suo
+
+# Blazor Publish Output
+wwwroot/_framework/
+wwwroot/css/
+wwwroot/js/
+wwwroot/*.gz
+wwwroot/*.br
+
+# Sonstige temporäre Dateien
+*.dll
+*.pdb
+*.cache
+*.log
+*.tmp
+*.db
+*.gz
+*.zip

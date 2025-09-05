@@ -1,0 +1,10 @@
+services:
+  - type: static
+    name: istqbquiz
+    env: static
+    buildCommand: ./build.sh
+    publishDir: Client/bin/Release/net8.0/publish/wwwroot
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
