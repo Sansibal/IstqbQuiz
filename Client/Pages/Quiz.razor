@@ -41,15 +41,6 @@ else if (currentIndex < questions.Count)
         </div>
     }
 
-    @if (!string.IsNullOrEmpty(questions[currentIndex]!.Diagram))
-    {
-        <div style="text-align:center;">
-            <img src="@questions[currentIndex]!.Diagram"
-                alt="Diagramm zur Frage"
-                style="max-width:700px;height:auto;display:inline-block;margin-bottom:1em;" />
-        </div>
-    }
-
     @if (questions[currentIndex]!.Table != null && questions[currentIndex]?.Table?.Count > 0 && questions[currentIndex]?.Table?[0] != null)
     {
         <table class="table table-bordered table-sm mb-2">
