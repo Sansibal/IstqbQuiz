@@ -1031,6 +1031,11 @@ C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\41oegt3i7i-tj
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\gx0copuso7-tptq2av103.gz
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\8kxrrwu1hl-lfu7j35m59.gz
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\ouulqf2md9-oyz0vx2fzb.gz
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\pkxdflmcrv-56h40ztbbx.gz
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\zd60a8x0qm-xg9qojrl4y.gz
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jc5flozsjm-ddjntmo14i.gz
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jpr3vcdsxp-1goa9njs6k.gz
+C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\m5v25xp1i7-9m14tkaod2.gz
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\staticwebassets.development.json
@@ -1040,8 +1045,3 @@ C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\IstqbQuiz.Client.dll
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\refint\IstqbQuiz.Client.dll
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\IstqbQuiz.Client.pdb
 C:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\ref\IstqbQuiz.Client.dll
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\pkxdflmcrv-exd97azs7i.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\zd60a8x0qm-v7vjgix01n.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jc5flozsjm-7wdj8eocty.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\jpr3vcdsxp-dr96a4ebox.gz
-c:\Users\VhmSephiroth\IstqbQuiz\Client\obj\Debug\net8.0\compressed\m5v25xp1i7-cv9j9yhx29.gz

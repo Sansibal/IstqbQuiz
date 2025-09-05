@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IstqbQuiz.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec6ca43e2fa189cdd5bdde65a852b5256f6f770e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc303cb6d6e5d259e24c02fc3dedd33de991e6d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("IstqbQuiz.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IstqbQuiz.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

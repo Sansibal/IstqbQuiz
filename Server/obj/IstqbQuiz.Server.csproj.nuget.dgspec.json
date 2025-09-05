@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {}
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {}
   },
   "projects": {
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
+        "projectUniqueName": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
         "projectName": "IstqbQuiz.Client",
-        "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
+        "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj",
         "packagesPath": "C:\\Users\\VhmSephiroth\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\obj\\",
+        "outputPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
-                "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
+              "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
+                "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
               }
             }
           }
@@ -103,14 +103,14 @@
         }
       }
     },
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
+        "projectUniqueName": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
         "projectName": "IstqbQuiz.Server",
-        "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
+        "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\IstqbQuiz.Server.csproj",
         "packagesPath": "C:\\Users\\VhmSephiroth\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\obj\\",
+        "outputPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -132,11 +132,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
-                "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj"
+              "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj": {
+                "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Client\\IstqbQuiz.Client.csproj"
               },
-              "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
-                "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
+              "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
+                "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj"
               }
             }
           }
@@ -185,14 +185,14 @@
         }
       }
     },
-    "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
+    "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
         "projectName": "IstqbQuiz.Shared",
-        "projectPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
+        "projectPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\IstqbQuiz.Shared.csproj",
         "packagesPath": "C:\\Users\\VhmSephiroth\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\VhmSephiroth\\IstqbQuiz\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
