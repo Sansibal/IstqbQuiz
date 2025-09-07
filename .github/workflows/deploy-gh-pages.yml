@@ -1,0 +1,36 @@
+name: Deploy Blazor WebAssembly to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Nur ausführen, wenn Änderungen auf main gepusht werden
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Publish Blazor WASM
+        run: dotnet publish Client/IstqbQuiz.Client.csproj -c Release -o build --nologo
+
+      - name: Change Base Tag for GitHub Pages
+        run: |
+          sed -i 's/<base href="\/" \/>/<base href="\/IstqbQuiz\/" \/>/' build/wwwroot/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/wwwroot
+          force_orphan: true
