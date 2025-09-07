@@ -3,26 +3,14 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-
-    <!-- PWA und Service Worker Konfiguration -->
-    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
-    <BlazorEnableCompression>true</BlazorEnableCompression>
-    <PublishTrimmed>false</PublishTrimmed> <!-- Verhindert Probleme mit PWA -->
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
     <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
-
-    <!-- Optional: Versionierung für PWA -->
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Core Blazor WebAssembly -->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
-    
-    <!-- PWA Support -->
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
-
-    <!-- Projekt-Referenzen -->
     <ProjectReference Include="..\Shared\IstqbQuiz.Shared.csproj" />
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.js" />
   </ItemGroup>
 </Project>
