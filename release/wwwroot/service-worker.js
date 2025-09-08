@@ -1,4 +1,4 @@
-/* Manifest version: n/s4kJlA */
+/* Manifest version: Mo8Nt8n4 */
 // Service Worker für PWA
 const cacheName = 'istqbquiz-cache-v1';
 const basePath = '/IstqbQuiz/'; // GitHub Pages Repo-Name

@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "n/s4kJlA",
+  "version": "Mo8Nt8n4",
   "assets": [
     {
       "hash": "sha256-/0gVTk7PVqZm5f4IC3xLiWJNIEkdYfsn3FbJ55mVxyo=",
@@ -10,11 +10,11 @@ self.assetsManifest = {
       "url": "IstqbQuiz.Client.styles.css"
     },
     {
-      "hash": "sha256-O/RB6gp/YOc490xY3B+OK1Ew7zk3fBxUxuVkRpEWBqo=",
+      "hash": "sha256-Q6OKuayChgoO4H16xWRkdBQyKs0TtZRtXUaXaEi0f3g=",
       "url": "_framework/IstqbQuiz.Client.wasm"
     },
     {
-      "hash": "sha256-aNTc1VFwzXAZnWvQZi6aFWOdYKErCDS0C4IZbDjKZmY=",
+      "hash": "sha256-P+Ea/r+CyX4N0I04dnceq6ChWnc8inUOjGP1gulX8kg=",
       "url": "_framework/IstqbQuiz.Shared.wasm"
     },
     {
@@ -142,7 +142,7 @@ self.assetsManifest = {
       "url": "_framework/System.Text.RegularExpressions.wasm"
     },
     {
-      "hash": "sha256-wpmsPxTdezRyThkbhD6eyL8W93qajvx/MIDvHP9biNY=",
+      "hash": "sha256-qOwqNesgyll1jfxV9Dg9dGsz87sbFG8VymkCysM0ZTI=",
       "url": "_framework/blazor.boot.json"
     },
     {
