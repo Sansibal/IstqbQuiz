@@ -1,35 +1,30 @@
+using IstqbQuiz.Shared.Models;
+using IstqbQuiz.Client.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.JSInterop;
-using Microsoft.Extensions.DependencyInjection;
-using IstqbQuiz.Client;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
+// HTTP Client für API oder statische Daten
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+// Services registrieren
+builder.Services.AddScoped<QuestionService>();
+builder.Services.AddSingleton<QuizState>();
 
 var host = builder.Build();
 
-// Service Worker (PWA) nur in Production registrieren
-if (builder.HostEnvironment.IsProduction())
+// Environment prüfen
+var env = host.Services.GetRequiredService<IWebAssemblyHostEnvironment>();
+
+if (env.IsProduction())
 {
-    try
-    {
-        var js = host.Services.GetRequiredService<IJSRuntime>();
-        // Pfad mit führendem Slash, damit es auch auf unterschiedlichen Basispfaden funktioniert
-        await js.InvokeVoidAsync("navigator.serviceWorker.register", "/service-worker.js");
-        Console.WriteLine("✅ Service Worker erfolgreich registriert.");
-    }
-    catch (JSException jsex)
-    {
-        Console.WriteLine($"⚠ Fehler bei Service Worker-Registrierung (JS): {jsex.Message}");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"⚠ Unbekannter Fehler bei Service Worker-Registrierung: {ex.Message}");
-    }
+    var jsRuntime = host.Services.GetRequiredService<IJSRuntime>();
+    await jsRuntime.InvokeVoidAsync("navigator.serviceWorker.register", "service-worker.js");
 }
 
 await host.RunAsync();
+

@@ -1,36 +1,34 @@
-name: Deploy Blazor WebAssembly to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Nur ausführen, wenn Änderungen auf main gepusht werden
+      - main  # oder dein Hauptbranch
+
+permissions:
+  contents: write  # ✅ gibt der Action Schreibrechte
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: '8.0.x'
 
-      - name: Restore Dependencies
-        run: dotnet restore
+      - name: Restore dependencies
+        run: dotnet restore ./Server/IstqbQuiz.Server.csproj
 
-      - name: Publish Blazor WASM
-        run: dotnet publish Client/IstqbQuiz.Client.csproj -c Release -o build --nologo
-
-      - name: Change Base Tag for GitHub Pages
-        run: |
-          sed -i 's/<base href="\/" \/>/<base href="\/IstqbQuiz\/" \/>/' build/wwwroot/index.html
+      - name: Publish Blazor
+        run: dotnet publish ./Server/IstqbQuiz.Server.csproj -c Release -o release --nologo
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/wwwroot
-          force_orphan: true
+          publish_dir: ./release/wwwroot

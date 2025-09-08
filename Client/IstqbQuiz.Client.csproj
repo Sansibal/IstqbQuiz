@@ -6,6 +6,7 @@
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
     <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+    <RootNamespace>IstqbQuiz.Client</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
