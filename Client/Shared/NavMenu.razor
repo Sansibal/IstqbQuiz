@@ -1,19 +1,19 @@
 ﻿@using Microsoft.AspNetCore.Components.Routing
 
 <nav class="nav flex-column nav-pills sidebar-nav">
-    <NavLink class="nav-link" href="">
+    <NavLink href="/" Match="NavLinkMatch.All" class="nav-link">
         <i class="bi bi-house-door"></i> Startseite
     </NavLink>
-    <NavLink class="nav-link" href="quiz">
+    <NavLink href="quiz" class="nav-link">
         <i class="bi bi-question-circle"></i> Quiz starten
     </NavLink>
-    <NavLink class="nav-link" href="result">
+    <NavLink href="result" class="nav-link">
         <i class="bi bi-check2-circle"></i> Ergebnis
     </NavLink>
-    <NavLink class="nav-link" href="details">
+    <NavLink href="details" class="nav-link">
         <i class="bi bi-list-ul"></i> Details
     </NavLink>
-    <NavLink class="nav-link" href="debug">
+    <NavLink href="debug" class="nav-link">
         <i class="bi bi-bug"></i> Debug
     </NavLink>
 </nav>

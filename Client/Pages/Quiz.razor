@@ -1,178 +1,52 @@
 @page "/quiz"
-@using IstqbQuiz.Shared.Models
-@using System.Net
-@using System.Net.Http.Json
-@inject HttpClient Http
-@inject NavigationManager Nav
-@inject QuizState State
+@using Microsoft.AspNetCore.Components.Forms
 
-<h3>ISTQB Quiz</h3>
+<h3>Quiz starten</h3>
 
-@if (!quizStarted)
+@if (currentQuestionIndex < questions.Count)
 {
-    <button class="btn btn-primary" @onclick="StartQuiz">Start (40 Fragen)</button>
-}
-else if (loading)
-{
-    <p>Fragen werden geladen...</p>
-}
-else if (!string.IsNullOrEmpty(errorMessage))
-{
-    <div class="alert alert-danger">Ein Fehler ist aufgetreten: @errorMessage</div>
-}
-else if (questions.Count == 0)
-{
-    <div class="alert alert-warning">Keine Fragen gefunden. Bitte prüfe die questions.json.</div>
-}
-else if (currentIndex < questions.Count)
-{
-    <p><b>Frage @(@currentIndex + 1) / @questions.Count</b></p>
+    <EditForm Model="this" OnValidSubmit="SubmitAnswer">
+        <div>
+            <p>@questions[currentQuestionIndex].QuestionText</p>
 
-    <div class="question-text">@((MarkupString)ToMarkup(questions[currentIndex].Text ?? ""))</div>
-
-    @* optionales Diagramm *@
-    @if (!string.IsNullOrEmpty(questions[currentIndex].Diagram))
-    {
-        <div style="text-align:center;">
-            <img src="@questions[currentIndex].Diagram" alt="Diagramm" style="max-width:700px;height:auto;margin-bottom:1rem;" />
-        </div>
-    }
-
-    @* optionale Tabelle *@
-    @if (questions[currentIndex].Table != null && questions[currentIndex].Table.Count > 0 && questions[currentIndex].Table[0] != null)
-    {
-        <table class="table table-bordered table-sm mb-2">
-            <thead>
-                <tr>
-                    @foreach (var col in questions[currentIndex].Table[0].Keys)
-                    {
-                        <th>@col</th>
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var row in questions[currentIndex].Table)
+            <InputRadioGroup @bind-Value="selectedAnswer">
+                @foreach (var answer in questions[currentQuestionIndex].Answers)
                 {
-                    <tr>
-                        @foreach (var val in row.Values)
-                        {
-                            <td>@val</td>
-                        }
-                    </tr>
+                    <div>
+                        <InputRadio Value="@answer" /> @answer
+                    </div>
                 }
-            </tbody>
-        </table>
-    }
-
-    @if (!string.IsNullOrEmpty(questions[currentIndex].PostText))
-    {
-        <div class="question-text">@((MarkupString)ToMarkup(questions[currentIndex].PostText))</div>
-    }
-
-    <div class="mt-2">
-        @for (int i = 0; i < questions[currentIndex].Options.Count; i++)
-        {
-            var localIndex = i;
-            <div class="mb-2">
-                <button class="btn @(answers[currentIndex] == localIndex ? "btn-primary" : "btn-outline-secondary") w-100 text-start"
-                        @onclick="() => Select(localIndex)">
-                    @questions[currentIndex].Options[i]
-                </button>
-            </div>
-        }
-    </div>
-
-    <div class="mt-3">
-        <button class="btn btn-link" @onclick="Prev" disabled="@(currentIndex == 0)">Zurück</button>
-        <button class="btn btn-link" @onclick="Next" disabled="@(answers[currentIndex] == null)">Weiter</button>
-    </div>
+            </InputRadioGroup>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Weiter</button>
+    </EditForm>
 }
 else
 {
-    <p>Berechne Ergebnis...</p>
+    <p>Quiz abgeschlossen!</p>
+    <a href="/result" class="btn btn-success">Ergebnis anzeigen</a>
 }
 
 @code {
-    bool quizStarted = false;
-    bool loading = false;
-    string errorMessage = string.Empty;
-
-    List<Question> questions = new();
-    List<int?> answers = new();
-    int currentIndex = 0;
-
-    async Task StartQuiz()
+    private List<Question> questions = new()
     {
-        quizStarted = true;
-        loading = true;
-        errorMessage = string.Empty;
+        new Question { QuestionText = "Was ist Blazor?", Answers = new List<string>{ "Framework", "Programmiersprache", "Editor" } },
+        new Question { QuestionText = "Welche Sprache nutzt Blazor?", Answers = new List<string>{ "C#", "Java", "Python" } }
+    };
 
-        try
-        {
-#if DEBUG
-            var all = await Http.GetFromJsonAsync<List<Question>>("api/questions");
-#else
-            var all = await Http.GetFromJsonAsync<List<Question>>("questions.json");
-#endif
-            if (all == null || all.Count == 0)
-            {
-                questions = new List<Question>();
-            }
-            else
-            {
-                // mischen und 40 nehmen (wenn vorhanden)
-                var rnd = new Random();
-                questions = all.OrderBy(x => rnd.Next()).Take(Math.Min(40, all.Count)).ToList();
-            }
+    private int currentQuestionIndex = 0;
+    private string selectedAnswer = string.Empty;
 
-            answers = Enumerable.Repeat<int?>(null, questions.Count).ToList();
-            currentIndex = 0;
-            State.UserAnswers.Clear();
-        }
-        catch (Exception ex)
-        {
-            errorMessage = ex.Message;
-        }
-        finally
-        {
-            loading = false;
-        }
+    private void SubmitAnswer()
+    {
+        Console.WriteLine($"Antwort: {selectedAnswer}");
+        currentQuestionIndex++;
+        selectedAnswer = string.Empty;
     }
 
-    void Select(int choice)
+    public class Question
     {
-        if (currentIndex < 0 || currentIndex >= questions.Count) return;
-
-        answers[currentIndex] = choice;
-        var qid = questions[currentIndex].Id;
-        State.UserAnswers[qid] = choice;
-    }
-
-    void Next()
-    {
-        if (currentIndex < questions.Count - 1) currentIndex++;
-        else Finish();
-    }
-
-    void Prev() => currentIndex = Math.Max(0, currentIndex - 1);
-
-    void Finish()
-    {
-        int score = questions.Zip(answers, (q, a) => (q, a))
-                             .Count(t => t.a.HasValue && t.a.Value == t.q.CorrectIndex);
-
-        State.Questions = questions;
-        State.Answers = answers;
-        State.Score = score;
-
-        Nav.NavigateTo("result");
-    }
-
-    string ToMarkup(string? s)
-    {
-        var text = s ?? string.Empty;
-        text = WebUtility.HtmlDecode(text);
-        text = text.Replace("\r\n", "<br>").Replace("\n", "<br>");
-        return text;
+        public string QuestionText { get; set; }
+        public List<string> Answers { get; set; }
     }
 }
