@@ -1,52 +1,155 @@
 @page "/quiz"
-@using Microsoft.AspNetCore.Components.Forms
+@using System.Net.Http.Json
+@using IstqbQuiz.Client.Services
+@inject HttpClient Http
+@inject QuizState State
+@inject NavigationManager Nav
 
-<h3>Quiz starten</h3>
+<h3>ISTQB Quiz</h3>
 
-@if (currentQuestionIndex < questions.Count)
+@if (!quizStarted)
 {
-    <EditForm Model="this" OnValidSubmit="SubmitAnswer">
-        <div>
-            <p>@questions[currentQuestionIndex].QuestionText</p>
+    <button class="btn btn-primary" @onclick="StartQuiz">Start (40 Fragen)</button>
+}
+else if (loading)
+{
+    <p>Fragen werden geladen...</p>
+}
+else if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">Ein Fehler ist aufgetreten: @errorMessage</div>
+}
+else if (State.Questions.Count == 0)
+{
+    <div class="alert alert-warning">Keine Fragen gefunden (prüfe data/questions.json).</div>
+}
+else if (currentIndex < State.Questions.Count)
+{
+    <p><strong>Frage @(@currentIndex + 1) / @State.Questions.Count</strong></p>
 
-            <InputRadioGroup @bind-Value="selectedAnswer">
-                @foreach (var answer in questions[currentQuestionIndex].Answers)
-                {
-                    <div>
-                        <InputRadio Value="@answer" /> @answer
-                    </div>
-                }
-            </InputRadioGroup>
+    <div class="question-text">@((MarkupString)ToMarkup(State.Questions[currentIndex].Text))</div>
+
+    @if (!string.IsNullOrEmpty(State.Questions[currentIndex].Diagram))
+    {
+        <div style="text-align:center;">
+            <img src="@State.Questions[currentIndex].Diagram" alt="Diagramm" style="max-width:700px;height:auto;margin-bottom:1rem;" />
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Weiter</button>
-    </EditForm>
+    }
+
+    @if (State.Questions[currentIndex].Table != null && State.Questions[currentIndex].Table.Count > 0)
+    {
+        <table class="table table-bordered table-sm mb-2">
+            <thead>
+                <tr>
+                    @foreach (var col in State.Questions[currentIndex].Table[0].Keys)
+                    {
+                        <th>@col</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in State.Questions[currentIndex].Table)
+                {
+                    <tr>
+                        @foreach (var val in row.Values)
+                        {
+                            <td>@val</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <div class="mt-2">
+        @for (int i = 0; i < State.Questions[currentIndex].Options.Count; i++)
+        {
+            var localIdx = i;
+            <div class="mb-2">
+                <button class="btn @(State.Answers.Count > currentIndex && State.Answers[currentIndex] == localIdx ? "btn-primary" : "btn-outline-secondary") w-100 text-start"
+                        @onclick="() => Select(localIdx)">
+                    @State.Questions[currentIndex].Options[i]
+                </button>
+            </div>
+        }
+    </div>
+
+    <div class="mt-3">
+        <button class="btn btn-link" @onclick="Prev" disabled="@(currentIndex==0)">Zurück</button>
+        <button class="btn btn-link" @onclick="Next" disabled="@(State.Answers.Count <= currentIndex || State.Answers[currentIndex] == null)">Weiter</button>
+    </div>
 }
 else
 {
-    <p>Quiz abgeschlossen!</p>
-    <a href="/result" class="btn btn-success">Ergebnis anzeigen</a>
+    <p>Berechne Ergebnis...</p>
 }
 
 @code {
-    private List<Question> questions = new()
-    {
-        new Question { QuestionText = "Was ist Blazor?", Answers = new List<string>{ "Framework", "Programmiersprache", "Editor" } },
-        new Question { QuestionText = "Welche Sprache nutzt Blazor?", Answers = new List<string>{ "C#", "Java", "Python" } }
-    };
+    bool quizStarted = false;
+    bool loading = false;
+    string errorMessage = string.Empty;
+    int currentIndex = 0;
 
-    private int currentQuestionIndex = 0;
-    private string selectedAnswer = string.Empty;
-
-    private void SubmitAnswer()
+    async Task StartQuiz()
     {
-        Console.WriteLine($"Antwort: {selectedAnswer}");
-        currentQuestionIndex++;
-        selectedAnswer = string.Empty;
+        quizStarted = true;
+        loading = true;
+        errorMessage = string.Empty;
+        State.Clear();
+
+        try
+        {
+            // RELATIVER Pfad: data/questions.json im wwwroot
+            var list = await Http.GetFromJsonAsync<List<QuestionDto>>("data/questions.json");
+            if (list == null || list.Count == 0)
+            {
+                errorMessage = "Keine Fragen gefunden.";
+                State.Questions = new List<QuestionDto>();
+            }
+            else
+            {
+                // random Reihenfolge, nehme bis zu 40
+                var rnd = new Random();
+                State.Questions = list.OrderBy(x => rnd.Next()).Take(Math.Min(40, list.Count)).ToList();
+                State.Answers = Enumerable.Repeat<int?>(null, State.Questions.Count).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+        finally
+        {
+            loading = false;
+            currentIndex = 0;
+        }
     }
 
-    public class Question
+    void Select(int idx)
     {
-        public string QuestionText { get; set; }
-        public List<string> Answers { get; set; }
+        if (currentIndex < 0 || currentIndex >= State.Questions.Count) return;
+        State.Answers[currentIndex] = idx;
+    }
+
+    void Next()
+    {
+        if (currentIndex < State.Questions.Count - 1) currentIndex++;
+        else Finish();
+    }
+
+    void Prev() => currentIndex = Math.Max(0, currentIndex - 1);
+
+    void Finish()
+    {
+        State.Score = State.Questions.Zip(State.Answers, (q, a) => (q, a)).Count(t => t.a.HasValue && t.a.Value == t.q.CorrectIndex);
+        Nav.NavigateTo("result");
+    }
+
+    string ToMarkup(string? s)
+    {
+        var text = s ?? string.Empty;
+        text = System.Net.WebUtility.HtmlDecode(text);
+        text = text.Replace("\r\n", "<br>").Replace("\n", "<br>");
+        return text;
     }
 }

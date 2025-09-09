@@ -2,33 +2,28 @@ name: Deploy Blazor PWA to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # Aktion wird nur bei Push auf main ausgeführt
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup .NET SDK
+      - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore Dependencies
-        run: dotnet restore
-
-      - name: Publish Blazor WebAssembly
+      - name: Publish Blazor WebAssembly (Client)
         run: dotnet publish ./Client/IstqbQuiz.Client.csproj -c Release -o release --nologo
 
-      - name: Prepare for GitHub Pages
+      - name: Create .nojekyll
         run: |
           cd release/wwwroot
-          touch .nojekyll  # wichtig für GitHub Pages
-          echo "✅ Build erfolgreich vorbereitet!"
+          touch .nojekyll
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
