@@ -1,44 +1,178 @@
-@page "/result"
+@page "/quiz"
+@using IstqbQuiz.Shared.Models
+@using System.Net
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager Nav
+@inject QuizState State
 
-<h3>Dein Ergebnis</h3>
+<h3>ISTQB Quiz</h3>
 
-@if (State.Questions.Count > 0)
+@if (!quizStarted)
 {
-    var total = State.Questions.Count;
-    var score = State.Score;
-    var prozent = (score * 100) / total;
-    bool bestanden = score >= 26; // 65 % von 40 Fragen
+    <button class="btn btn-primary" @onclick="StartQuiz">Start (40 Fragen)</button>
+}
+else if (loading)
+{
+    <p>Fragen werden geladen...</p>
+}
+else if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">Ein Fehler ist aufgetreten: @errorMessage</div>
+}
+else if (questions.Count == 0)
+{
+    <div class="alert alert-warning">Keine Fragen gefunden. Bitte prüfe die questions.json.</div>
+}
+else if (currentIndex < questions.Count)
+{
+    <p><b>Frage @(@currentIndex + 1) / @questions.Count</b></p>
 
-    <div class="alert @(bestanden ? "alert-success" : "alert-danger")" role="alert">
-        @if (bestanden)
+    <div class="question-text">@((MarkupString)ToMarkup(questions[currentIndex].Text ?? ""))</div>
+
+    @* optionales Diagramm *@
+    @if (!string.IsNullOrEmpty(questions[currentIndex].Diagram))
+    {
+        <div style="text-align:center;">
+            <img src="@questions[currentIndex].Diagram" alt="Diagramm" style="max-width:700px;height:auto;margin-bottom:1rem;" />
+        </div>
+    }
+
+    @* optionale Tabelle *@
+    @if (questions[currentIndex].Table != null && questions[currentIndex].Table.Count > 0 && questions[currentIndex].Table[0] != null)
+    {
+        <table class="table table-bordered table-sm mb-2">
+            <thead>
+                <tr>
+                    @foreach (var col in questions[currentIndex].Table[0].Keys)
+                    {
+                        <th>@col</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in questions[currentIndex].Table)
+                {
+                    <tr>
+                        @foreach (var val in row.Values)
+                        {
+                            <td>@val</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    @if (!string.IsNullOrEmpty(questions[currentIndex].PostText))
+    {
+        <div class="question-text">@((MarkupString)ToMarkup(questions[currentIndex].PostText))</div>
+    }
+
+    <div class="mt-2">
+        @for (int i = 0; i < questions[currentIndex].Options.Count; i++)
         {
-            <p><strong>Bestanden ✅</strong> – Glückwunsch! Du hast die erforderlichen 65 % erreicht.</p>
-        }
-        else
-        {
-            <p><strong>Nicht bestanden ❌</strong> – Du brauchst mindestens 26 Punkte.</p>
+            var localIndex = i;
+            <div class="mb-2">
+                <button class="btn @(answers[currentIndex] == localIndex ? "btn-primary" : "btn-outline-secondary") w-100 text-start"
+                        @onclick="() => Select(localIndex)">
+                    @questions[currentIndex].Options[i]
+                </button>
+            </div>
         }
     </div>
 
-    <p><b>Punkte:</b> @score / @total (@prozent %)</p>
-
     <div class="mt-3">
-        <button class="btn btn-primary me-2" @onclick="GoHome">Neues Quiz starten</button>
-        <button class="btn btn-secondary" @onclick="ShowDetails">Details anzeigen</button>
+        <button class="btn btn-link" @onclick="Prev" disabled="@(currentIndex == 0)">Zurück</button>
+        <button class="btn btn-link" @onclick="Next" disabled="@(answers[currentIndex] == null)">Weiter</button>
     </div>
 }
 else
 {
-    <p>Keine Daten. Bitte starte ein neues Quiz.</p>
+    <p>Berechne Ergebnis...</p>
 }
 
 @code {
-    [Inject]
-    private QuizState State { get; set; } = default!;
+    bool quizStarted = false;
+    bool loading = false;
+    string errorMessage = string.Empty;
 
-    [Inject]
-    private NavigationManager Nav { get; set; } = default!;
+    List<Question> questions = new();
+    List<int?> answers = new();
+    int currentIndex = 0;
 
-    void GoHome() => Nav.NavigateTo("/");
-    void ShowDetails() => Nav.NavigateTo("/details");
+    async Task StartQuiz()
+    {
+        quizStarted = true;
+        loading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+#if DEBUG
+            var all = await Http.GetFromJsonAsync<List<Question>>("api/questions");
+#else
+            var all = await Http.GetFromJsonAsync<List<Question>>("questions.json");
+#endif
+            if (all == null || all.Count == 0)
+            {
+                questions = new List<Question>();
+            }
+            else
+            {
+                // mischen und 40 nehmen (wenn vorhanden)
+                var rnd = new Random();
+                questions = all.OrderBy(x => rnd.Next()).Take(Math.Min(40, all.Count)).ToList();
+            }
+
+            answers = Enumerable.Repeat<int?>(null, questions.Count).ToList();
+            currentIndex = 0;
+            State.UserAnswers.Clear();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    void Select(int choice)
+    {
+        if (currentIndex < 0 || currentIndex >= questions.Count) return;
+
+        answers[currentIndex] = choice;
+        var qid = questions[currentIndex].Id;
+        State.UserAnswers[qid] = choice;
+    }
+
+    void Next()
+    {
+        if (currentIndex < questions.Count - 1) currentIndex++;
+        else Finish();
+    }
+
+    void Prev() => currentIndex = Math.Max(0, currentIndex - 1);
+
+    void Finish()
+    {
+        int score = questions.Zip(answers, (q, a) => (q, a))
+                             .Count(t => t.a.HasValue && t.a.Value == t.q.CorrectIndex);
+
+        State.Questions = questions;
+        State.Answers = answers;
+        State.Score = score;
+
+        Nav.NavigateTo("result");
+    }
+
+    string ToMarkup(string? s)
+    {
+        var text = s ?? string.Empty;
+        text = WebUtility.HtmlDecode(text);
+        text = text.Replace("\r\n", "<br>").Replace("\n", "<br>");
+        return text;
+    }
 }

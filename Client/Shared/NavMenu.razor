@@ -1,17 +1,19 @@
-﻿<nav class="nav flex-column nav-pills sidebar-nav">
-    <a class="nav-link" href="/">
+﻿@using Microsoft.AspNetCore.Components.Routing
+
+<nav class="nav flex-column nav-pills sidebar-nav">
+    <NavLink class="nav-link" href="">
         <i class="bi bi-house-door"></i> Startseite
-    </a>
-    <a class="nav-link" href="/quiz">
+    </NavLink>
+    <NavLink class="nav-link" href="quiz">
         <i class="bi bi-question-circle"></i> Quiz starten
-    </a>
-    <a class="nav-link" href="/result">
+    </NavLink>
+    <NavLink class="nav-link" href="result">
         <i class="bi bi-check2-circle"></i> Ergebnis
-    </a>
-    <a class="nav-link" href="/details">
+    </NavLink>
+    <NavLink class="nav-link" href="details">
         <i class="bi bi-list-ul"></i> Details
-    </a>
-    <a class="nav-link" href="/debug">
+    </NavLink>
+    <NavLink class="nav-link" href="debug">
         <i class="bi bi-bug"></i> Debug
-    </a>
+    </NavLink>
 </nav>
