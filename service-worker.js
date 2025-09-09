@@ -4,6 +4,7 @@ const FALLBACK_PAGE = BASE_PATH + 'index.html';
 
 let ASSETS = [
     FALLBACK_PAGE,
+    BASE_PATH + 'index.html',
     BASE_PATH + 'css/app.css',
     BASE_PATH + '_framework/blazor.webassembly.js'
 ];
@@ -15,7 +16,7 @@ try {
         ASSETS = Array.from(new Set(ASSETS.concat(urls)));
     }
 } catch (e) {
-    console.warn('service-worker-assets.js nicht gefunden, Fallback genutzt.');
+    console.warn('service-worker-assets.js not found, using fallback asset list.');
 }
 
 self.addEventListener('install', event => {
@@ -54,4 +55,8 @@ self.addEventListener('fetch', event => {
         })
     );
 });
-/* Manifest version: I4Jw9oon */
+
+self.addEventListener('message', event => {
+    if (event.data === 'skipWaiting') self.skipWaiting();
+});
+/* Manifest version: liXnB362 */
