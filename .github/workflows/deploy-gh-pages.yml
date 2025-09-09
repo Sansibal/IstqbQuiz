@@ -1,34 +1,35 @@
-name: Deploy to GitHub Pages
+name: Deploy Blazor WebAssembly to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # oder dein Hauptbranch
-
-permissions:
-  contents: write  # ✅ gibt der Action Schreibrechte
+      - main  # nur auf main deployen
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore ./Server/IstqbQuiz.Server.csproj
+      - name: Publish Blazor WebAssembly
+        run: |
+          cd Client
+          dotnet publish -c Release -o build_output --nologo
 
-      - name: Publish Blazor
-        run: dotnet publish ./Server/IstqbQuiz.Server.csproj -c Release -o release --nologo
+      - name: Add .nojekyll file
+        run: echo "" > Client/build_output/wwwroot/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./release/wwwroot
+          publish_branch: gh-pages
+          publish_dir: Client/build_output/wwwroot
+          force_orphan: true
