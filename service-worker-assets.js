@@ -33,27 +33,27 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-dKcclJIqco7\/I\/aUaXW5bQKDrpkHPxmfNktQjoGq+MY=",
+      "hash": "sha256-eYuE7GHB\/oTYbAifAH41sy\/LyNVs8PYpIHpqQFl3b5Y=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-BtZ4dGGD1SziOD9ZT6uskilfNHivtyd0sRyyZpjFwaM=",
+      "hash": "sha256-SGQ5lntS5N7qSlMQlamMdUqYefEkwairP38QgXr4z8A=",
       "url": "_framework\/IstqbQuiz.Client.wasm"
     },
     {
-      "hash": "sha256-fBP8a3FtnoKkKTdAAMEqpuhi5jcx1QG8+BEzqaEbeDk=",
+      "hash": "sha256-0WD+w64dM\/7mZ849GR1ryjRXBZDOzwQjYIJwegMKmO8=",
       "url": "_framework\/IstqbQuiz.Shared.wasm"
     },
     {
-      "hash": "sha256-a3e6GVdVh02ir0It1UlWcYRtoVr7u25sInG0RbUUGX4=",
+      "hash": "sha256-sqgFeMGOA4aVlR5RUD0q5rRcHXN3wjryXZGiks2jysU=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
-      "hash": "sha256-GTojlbmh\/9nO\/nUDL\/4nKP48O7MqJhngaudoREaHrIc=",
+      "hash": "sha256-UdabQmEdSLOGD4+cj+Mt9wno+yHjl\/3npq94tk7jDx0=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.wasm"
     },
     {
-      "hash": "sha256-0Za6xSc4m\/AZZ0cHcT2sbleznrkmEE2Mkyo1CL\/J\/tM=",
+      "hash": "sha256-Ws5szf6fWPAXna+XyWsAhavx+WDFcA\/91DQ7iPRPCMs=",
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.wasm"
     },
     {
@@ -73,11 +73,11 @@
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.Abstractions.wasm"
     },
     {
-      "hash": "sha256-gg8xZqJsBBrrNEyUGzYqhL3sqkuZ4AHAvdTdL9nZ0S0=",
+      "hash": "sha256-6To551rnUmd7Ym2LH+UC3rOcrKnoHTqW\/DMpkwtub9U=",
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.wasm"
     },
     {
-      "hash": "sha256-SMUYSQNUjH4BugwJs5ET8\/eJ5fPXCFXYNMZk87PAzQo=",
+      "hash": "sha256-+Fgk2a7GOZ76M3YfJ+0IDUowOMx8\/LBnDwuIKQr+\/IA=",
       "url": "_framework\/Microsoft.Extensions.Logging.Abstractions.wasm"
     },
     {
@@ -153,7 +153,7 @@
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-T4BueCfZxX0QR1K1\/E60wGVMIG53iIk7GhX7Tu+Fo\/w=",
+      "hash": "sha256-GWicwJ0bEYrJnXprrYEVsqd4f6gzTAlfXFyX+J0W58U=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -257,13 +257,17 @@
       "url": "images\/frage33_diagramm.png"
     },
     {
-      "hash": "sha256-UD4TqztXNEagFUHReA3uAraBolXHEfw5H3Am87MB0Io=",
+      "hash": "sha256-2go8DPRxFQFYC0q5MoxU7eGiv\/VrkiCy6BsPIuLtd54=",
       "url": "index.html"
     },
     {
       "hash": "sha256-VH3lICNAUSMNynjtE0oKXNA\/H1O76XeaqfrB7zCZ2b0=",
       "url": "manifest.json"
+    },
+    {
+      "hash": "sha256-3YHO5FcR4t931VlNCJGPjmCfmC5jinyZhy7Th5RepuM=",
+      "url": "sw-update.js"
     }
   ],
-  "version": "+em+YpFV"
+  "version": "dwCiFVoN"
 };
