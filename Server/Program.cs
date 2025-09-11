@@ -1,6 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// API Controller aktivieren
+// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
@@ -17,13 +17,15 @@ else
 }
 
 app.UseHttpsRedirection();
+
+// Liefere Client/wwwroot (Blazor WASM hosted)
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.MapRazorPages();
-app.MapControllers();
-app.MapFallbackToFile("index.html");
+app.MapControllers();               // <- Controllers müssen hier gemappt sein
+app.MapFallbackToFile("index.html"); // dann SPA-Fallback
 
 app.Run();

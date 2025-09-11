@@ -1,8 +1,8 @@
 @page "/quiz"
-@using System.Net.Http.Json
 @using IstqbQuiz.Client.Services
-@inject HttpClient Http
+@using IstqbQuiz.Shared.Models
 @inject QuizState State
+@inject QuestionService QuestionService
 @inject NavigationManager Nav
 
 <h3>ISTQB Quiz</h3>
@@ -21,7 +21,7 @@ else if (!string.IsNullOrEmpty(errorMessage))
 }
 else if (State.Questions.Count == 0)
 {
-    <div class="alert alert-warning">Keine Fragen gefunden (prüfe data/questions.json).</div>
+    <div class="alert alert-warning">Keine Fragen gefunden (prüfe Server/Data/questions.json).</div>
 }
 else if (currentIndex < State.Questions.Count)
 {
@@ -99,8 +99,7 @@ else
 
         try
         {
-            // RELATIVER Pfad: data/questions.json im wwwroot
-            var list = await Http.GetFromJsonAsync<List<QuestionDto>>("data/questions.json");
+            var list = await QuestionService.GetRandomAsync(40);
             if (list == null || list.Count == 0)
             {
                 errorMessage = "Keine Fragen gefunden.";
@@ -108,9 +107,18 @@ else
             }
             else
             {
-                // random Reihenfolge, nehme bis zu 40
-                var rnd = new Random();
-                State.Questions = list.OrderBy(x => rnd.Next()).Take(Math.Min(40, list.Count)).ToList();
+                State.Questions = list.Select(q => new QuestionDto
+                {
+                    Id = q.Id,
+                    Text = q.Text,
+                    Options = q.Options,
+                    CorrectIndex = q.CorrectIndex,
+                    Explanation = q.Explanation,
+                    Diagram = q.Diagram,
+                    Table = q.Table,
+                    PostText = q.PostText
+                }).ToList();
+
                 State.Answers = Enumerable.Repeat<int?>(null, State.Questions.Count).ToList();
             }
         }
@@ -141,7 +149,8 @@ else
 
     void Finish()
     {
-        State.Score = State.Questions.Zip(State.Answers, (q, a) => (q, a)).Count(t => t.a.HasValue && t.a.Value == t.q.CorrectIndex);
+        State.Score = State.Questions.Zip(State.Answers, (q, a) => (q, a))
+                                     .Count(t => t.a.HasValue && t.a.Value == t.q.CorrectIndex);
         Nav.NavigateTo("result");
     }
 

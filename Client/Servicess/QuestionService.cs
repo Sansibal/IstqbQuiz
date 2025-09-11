@@ -15,8 +15,7 @@ namespace IstqbQuiz.Client.Services
 
         public async Task<List<Question>> GetRandomAsync(int count)
         {
-            var all = await GetAllAsync();
-            return all.OrderBy(_ => Guid.NewGuid()).Take(count).ToList();
+            return await _http.GetFromJsonAsync<List<Question>>($"api/questions/random/{count}") ?? new();
         }
     }
 }

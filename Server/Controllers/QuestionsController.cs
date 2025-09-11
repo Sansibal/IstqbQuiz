@@ -8,14 +8,20 @@ namespace IstqbQuiz.Server.Controllers
     [Route("api/[controller]")]
     public class QuestionsController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetQuestions()
+        private readonly IWebHostEnvironment _env;
+
+        public QuestionsController(IWebHostEnvironment env)
         {
-            // Use AppContext.BaseDirectory to get the correct path to the output folder.
-            var filePath = Path.Combine(AppContext.BaseDirectory, "Data", "questions.json");
-            
+            _env = env;
+        }
+
+        [HttpGet]
+        public IActionResult GetAllQuestions()
+        {
+            var filePath = Path.Combine(_env.ContentRootPath, "Data", "questions.json");
+
             if (!System.IO.File.Exists(filePath))
-                return NotFound("questions.json not found! Path: " + filePath);
+                return NotFound($"questions.json not found! Path: {filePath}");
 
             try
             {
@@ -25,8 +31,31 @@ namespace IstqbQuiz.Server.Controllers
             }
             catch (Exception ex)
             {
-                // Return an error with details to help debug the JSON deserialization.
-                return StatusCode(500, $"An error occurred while deserializing the questions.json file: {ex.Message}");
+                return StatusCode(500, $"Error deserializing questions.json: {ex.Message}");
+            }
+        }
+
+        [HttpGet("random/{count}")]
+        public IActionResult GetRandomQuestions(int count = 40)
+        {
+            var filePath = Path.Combine(_env.ContentRootPath, "Data", "questions.json");
+
+            if (!System.IO.File.Exists(filePath))
+                return NotFound($"questions.json not found! Path: {filePath}");
+
+            try
+            {
+                var json = System.IO.File.ReadAllText(filePath);
+                var questions = JsonSerializer.Deserialize<List<Question>>(json) ?? new();
+
+                var rnd = new Random();
+                var randomSet = questions.OrderBy(_ => rnd.Next()).Take(Math.Min(count, questions.Count)).ToList();
+
+                return Ok(randomSet);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error reading questions.json: {ex.Message}");
             }
         }
     }
