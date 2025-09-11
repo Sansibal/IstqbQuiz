@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using IstqbQuiz.Client;
 using IstqbQuiz.Client.Services;
+using Microsoft.JSInterop;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -14,4 +15,11 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddSingleton<QuizState>();
 builder.Services.AddScoped<QuestionService>();
 
-await builder.Build().RunAsync();
+var host = builder.Build();
+
+// Am Ende von Program.cs nach dem Build:
+var jsRuntime = builder.Services.BuildServiceProvider().GetRequiredService<IJSRuntime>();
+await jsRuntime.InvokeVoidAsync("registerForSWUpdate");
+
+await host.RunAsync();
+
