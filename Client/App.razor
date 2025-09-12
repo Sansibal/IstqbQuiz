@@ -24,20 +24,31 @@
 }
 
 @code {
-    private static bool newVersionAvailable;
+    private bool newVersionAvailable = false;
 
-    [Microsoft.JSInterop.JSInvokable]
-    public static void OnNewVersionAvailable()
+    [Inject] private IJSRuntime JS { get; set; } = default!;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Übergibt .NET-Referenz an JS
+            var objRef = DotNetObjectReference.Create(this);
+            await JS.InvokeVoidAsync("registerForSWUpdate", objRef);
+        }
+    }
+
+    [JSInvokable]
+    public void OnNewVersionAvailable()
     {
         newVersionAvailable = true;
+        StateHasChanged();
     }
 
     private async Task ReloadApp()
     {
         newVersionAvailable = false;
-        await JS.InvokeVoidAsync("location.reload");
+        // Seite neu laden, um neue Version zu holen
+        await JS.InvokeVoidAsync("eval", "location.reload()");
     }
-
-    [Inject] private IJSRuntime JS { get; set; } = default!;
 }
-

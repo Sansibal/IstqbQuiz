@@ -1,3 +1,4 @@
+#if DEBUG
 @page "/debug"
 @inject QuestionService QService
 @using IstqbQuiz.Shared.Models
@@ -99,3 +100,4 @@ else
         return (MarkupString)text;
     }
 }
+#endif

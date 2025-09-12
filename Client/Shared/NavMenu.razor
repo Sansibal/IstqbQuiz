@@ -13,7 +13,9 @@
     <NavLink href="details" class="nav-link">
         <i class="bi bi-list-ul"></i> Details
     </NavLink>
-    <NavLink href="debug" class="nav-link">
-        <i class="bi bi-bug"></i> Debug
+    #if DEBUG
+    <NavLink class="nav-link" href="debug">
+        <span class="oi oi-bug" aria-hidden="true"></span> Debug
     </NavLink>
+    #endif
 </nav>
