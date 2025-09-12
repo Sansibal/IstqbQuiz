@@ -13,9 +13,19 @@
     <NavLink href="details" class="nav-link">
         <i class="bi bi-list-ul"></i> Details
     </NavLink>
-    #if DEBUG
-    <NavLink class="nav-link" href="debug">
-        <span class="oi oi-bug" aria-hidden="true"></span> Debug
-    </NavLink>
-    #endif
+
+    @if (ShowDebug)
+    {
+        <NavLink class="nav-link" href="debug">
+            <span class="oi oi-bug" aria-hidden="true"></span> Debug
+        </NavLink>
+    }
 </nav>
+
+@code {
+#if DEBUG
+    private bool ShowDebug = true;
+#else
+    private bool ShowDebug = false;
+#endif
+}
