@@ -457,10 +457,10 @@
     "Id": 38,
     "Text": "Sie haben in Ihrer Rolle als Projektleiter den folgenden Fehlerbericht von den Entwicklern weitergeleitet bekommen, weil sie die beschriebene Anomalie nicht reproduzieren können.\n\nAnwendung hängt sich auf\n\nID 713-20230401 2022-Mai-03 – John Doe – Abgelehnt\n\nDie Anwendung hängt sich nach der Eingabe von \"Testeingabe: $ä\" im Feld Name auf dem Bildschirm zur Erstellung eines neuen Benutzers auf. Ich habe versucht, mich abzumelden und mit dem Konto test_admin01 anzumelden, das gleiche Problem. Mit anderen Testadministratorkonten versucht, dasselbe Problem. Keine Fehlermeldung erhalten; das Protokoll (siehe Anhang) enthält eine fatale Fehlermeldung. Basierend auf dem Testfall TC-1305 sollte die Anwendung die bereitgestellten Eingaben akzeptieren und den Benutzer erstellen. Bitte beheben Sie dieses Problem mit hoher Priorität, da diese Funktion mit REQ-0012 zusammenhängt, die eine wichtige neue fachliche Anforderung ist.\n\nWelche wichtigen Informationen, die für die Entwickler nützlich gewesen wären, fehlen in diesem Fehlerbericht?",
     "Options": [
-      "Testabschlussberichte werden in regelmäßigen Abständen erstellt und verteilt, um die Stakeholder hinsichtlich des Fortschrittes zu informieren.",
-      "Ein Testfortschrittsbericht beinhaltet u. a. die Bewertung der Qualität des Produkts sowie etwaige Abweichungen vom Zeitplan.",
-      "Ein Testabschlussbericht wird erstellt, wenn eine Teststufe abgeschlossen wurde, und baut auf Testfortschrittsberichten und zusätzlichen Daten auf.",
-      "Testfortschrittsberichte werden während des Testabschlusses erstellt, um die Erfüllung der Endekriterien belegen zu können."
+      "Erwartetes Ergebnis und tatsächliches Ergebnis",
+      "Referenzen und Fehlerstatus",
+      "Testumgebung und Testobjekt (inkl. Version)",
+      "Priorität und Schweregrad"
     ],
     "CorrectIndex": 2,
     "Explanation": "Wir wissen nicht, in welcher Testumgebung die Anomalie entdeckt wurde, und wir wissen auch nicht, welches Testobjekt bzw. welche Anwendung (und welche Version) davon betroffen ist (vgl. CTFL-Lehrplan V4.0, Abschnitt 5.5, 3. Absatz, 4. Aufzählungspunkt)."
