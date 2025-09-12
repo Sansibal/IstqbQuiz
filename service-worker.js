@@ -63,4 +63,4 @@ self.addEventListener("fetch", event => {
         caches.match(event.request).then(cached => cached || fetch(event.request))
     );
 });
-/* Manifest version: eaAuKBgD */
+/* Manifest version: NhFq0o8l */
