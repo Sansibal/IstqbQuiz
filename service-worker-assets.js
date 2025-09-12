@@ -33,15 +33,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-DtcTBVjjM1vSTPNFYaYXKByZMWz1c9Zu23uxQ8XiyYg=",
+      "hash": "sha256-9KZ9FaDl5DuylcavLn+RSqAJ4ZwIX6Bjvi7bWTzM+98=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-WprXciid\/wO0l4L1HpPc65d\/eXr5HL5arlg2KpONb8s=",
+      "hash": "sha256-E3JiM7NaJ\/7spt1vl2YbVKEW5Ey5rfKebIDWf0GZ6D8=",
       "url": "_framework\/IstqbQuiz.Client.wasm"
     },
     {
-      "hash": "sha256-OK0Ceu6Eis6MrCPguDR13QEFI6W7l6YOcnyljKXBG7w=",
+      "hash": "sha256-NbfZCpbVnpO5HPDGlHHaPojjKPr0qbl1ioyceExIVoM=",
       "url": "_framework\/IstqbQuiz.Shared.wasm"
     },
     {
@@ -269,5 +269,5 @@
       "url": "sw-update.js"
     }
   ],
-  "version": "+VGGnFzl"
+  "version": "J6AomEC9"
 };
