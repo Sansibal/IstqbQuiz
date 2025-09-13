@@ -5,15 +5,15 @@
 @inject QuestionService QuestionService
 @inject NavigationManager Nav
 
-<h3>ISTQB Quiz</h3>
+<h3 class="mb-4">ISTQB Quiz</h3>
 
 @if (!quizStarted)
 {
-    <button class="btn btn-primary" @onclick="StartQuiz">Start (40 Fragen)</button>
+    <button class="btn btn-primary btn-lg" @onclick="StartQuiz">Start (40 Fragen)</button>
 }
 else if (loading)
 {
-    <p>Fragen werden geladen...</p>
+    <div class="alert alert-info">Fragen werden geladen...</div>
 }
 else if (!string.IsNullOrEmpty(errorMessage))
 {
@@ -25,63 +25,88 @@ else if (State.Questions.Count == 0)
 }
 else if (currentIndex < State.Questions.Count)
 {
-    <p><strong>Frage @(@currentIndex + 1) / @State.Questions.Count</strong></p>
+    <p class="fw-bold mb-3">
+        Frage @(@currentIndex + 1) / @State.Questions.Count
+    </p>
 
-    <div class="question-text">@((MarkupString)ToMarkup(State.Questions[currentIndex].Text))</div>
+    <!-- Frage -->
+    <div class="question-text mb-3">
+        @((MarkupString)ToMarkup(State.Questions[currentIndex].Text))
+    </div>
 
+    <!-- Diagramm -->
     @if (!string.IsNullOrEmpty(State.Questions[currentIndex].Diagram))
     {
-        <div style="text-align:center;">
-            <img src="@State.Questions[currentIndex].Diagram" alt="Diagramm" style="max-width:700px;height:auto;margin-bottom:1rem;" />
+        <div class="text-center mb-3">
+            <img src="@State.Questions[currentIndex].Diagram"
+                 alt="Diagramm"
+                 class="img-fluid rounded shadow-sm" />
         </div>
     }
 
-    @if (State.Questions[currentIndex]!.Table != null && State.Questions[currentIndex]?.Table?.Count > 0 && State.Questions[currentIndex]?.Table?[0] != null)
+    <!-- Tabelle -->
+    @if (State.Questions[currentIndex]?.Table?.Count > 0)
     {
-        <table class="table table-bordered table-sm mb-2">
-            <thead>
-                <tr>
-                    @foreach (var col in State.Questions[currentIndex].Table[0].Keys)
-                    {
-                        <th>@col</th>
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var row in State.Questions[currentIndex].Table)
-                {
+        <div class="table-responsive mb-3">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
                     <tr>
-                        @foreach (var val in row.Values)
+                        @foreach (var col in State.Questions[currentIndex].Table[0].Keys)
                         {
-                            <td>@val</td>
+                            <th>@col</th>
                         }
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var row in State.Questions[currentIndex].Table)
+                    {
+                        <tr>
+                            @foreach (var val in row.Values)
+                            {
+                                <td>@val</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     }
 
-    @if (!string.IsNullOrEmpty(State.Questions[currentIndex]!.PostText))
+    <!-- PostText -->
+    @if (!string.IsNullOrEmpty(State.Questions[currentIndex].PostText))
     {
-        <div class="question-posttext">@ToMarkup(State.Questions[currentIndex]!.PostText)</div>
+        <div class="alert alert-secondary">
+            @ToMarkup(State.Questions[currentIndex].PostText)
+        </div>
     }
 
-    <div class="mt-2">
+    <!-- Antwort-Buttons -->
+    <div class="d-grid gap-2 mt-3">
         @for (int i = 0; i < State.Questions[currentIndex].Options.Count; i++)
         {
             var localIdx = i;
-            <div class="mb-2">
-                <button class="btn @(State.Answers.Count > currentIndex && State.Answers[currentIndex] == localIdx ? "btn-primary" : "btn-outline-secondary") w-100 text-start"
-                        @onclick="() => Select(localIdx)">
-                    @State.Questions[currentIndex].Options[i]
-                </button>
-            </div>
+            <button class="btn @(State.Answers.Count > currentIndex && State.Answers[currentIndex] == localIdx
+                                                     ? "btn-primary"
+                                                     : "btn-outline-secondary") text-start"
+            @onclick="() => Select(localIdx)">
+        @State.Questions[currentIndex].Options[i]
+    </button>
         }
     </div>
 
-    <div class="mt-3">
-        <button class="btn btn-link" @onclick="Prev" disabled="@(currentIndex==0)">Zurück</button>
-        <button class="btn btn-link" @onclick="Next" disabled="@(State.Answers.Count <= currentIndex || State.Answers[currentIndex] == null)">Weiter</button>
+    <!-- Navigation -->
+    <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-outline-primary"
+                @onclick="Prev"
+                disabled="@(currentIndex == 0)">
+            Zurück
+        </button>
+
+        <button class="btn btn-primary"
+                @onclick="Next"
+                disabled="@(State.Answers.Count <= currentIndex || State.Answers[currentIndex] == null)">
+            Weiter
+        </button>
     </div>
 }
 else

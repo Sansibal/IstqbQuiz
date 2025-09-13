@@ -8,25 +8,38 @@
 
     <script src="sw-update.js"></script>
 
+
+
     <!-- Styles -->
+    <!-- Lokales Bootstrap (Fallback, falls CDN nicht lädt) -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- App spezifisches CSS -->
     <link href="css/app.css" rel="stylesheet" />
     <link href="IstqbQuiz.Client.styles.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (aktuelle Version von CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#007bff">
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180.png">
-
 </head>
 
 <body>
     <div id="app">Loading...</div>
+
+    <!-- Custom JS -->
+    <script src="js/site.js"></script>
+
     <!-- Blazor Script -->
     <script src="_framework/blazor.webassembly.js"></script>
 
+    <!-- Bootstrap JS Bundle (enthält Popper, notwendig für Offcanvas/Burger) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Service Worker Registrierung -->
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js')
@@ -34,7 +47,6 @@
                 .catch(err => console.error('Service Worker Fehler:', err));
         }
     </script>
-
 </body>
 
 </html>

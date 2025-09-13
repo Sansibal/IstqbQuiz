@@ -1,26 +1,127 @@
 ﻿@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+@inject NavigationManager NavManager
 
-<nav class="nav flex-column nav-pills sidebar-nav">
-    <NavLink href="/" Match="NavLinkMatch.All" class="nav-link">
-        <i class="bi bi-house-door"></i> Startseite
-    </NavLink>
-    <NavLink href="quiz" class="nav-link">
-        <i class="bi bi-question-circle"></i> Quiz starten
-    </NavLink>
-    <NavLink href="result" class="nav-link">
-        <i class="bi bi-check2-circle"></i> Ergebnis
-    </NavLink>
-    <NavLink href="details" class="nav-link">
-        <i class="bi bi-list-ul"></i> Details
-    </NavLink>
-
-    @if (ShowDebug)
-    {
-        <NavLink class="nav-link" href="debug">
-            <span class="oi oi-bug" aria-hidden="true"></span> Debug
-        </NavLink>
-    }
+<!-- Navigationsleiste für mobile Ansicht -->
+<nav class="navbar navbar-dark bg-primary d-lg-none">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">ISTQB Quiz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile" aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavMobile">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <NavLink href="/" Match="NavLinkMatch.All" class="nav-link mobile-nav-link">
+                        <i class="bi bi-house-door me-1"></i> Startseite
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink href="quiz" class="nav-link mobile-nav-link">
+                        <i class="bi bi-question-circle me-1"></i> Quiz starten
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink href="result" class="nav-link mobile-nav-link">
+                        <i class="bi bi-check2-circle me-1"></i> Ergebnis
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink href="details" class="nav-link mobile-nav-link">
+                        <i class="bi bi-list-ul me-1"></i> Details
+                    </NavLink>
+                </li>
+                @if (ShowDebug)
+                {
+                    <li class="nav-item">
+                        <NavLink href="debug" class="nav-link mobile-nav-link">
+                            <i class="bi bi-bug me-1"></i> Debug
+                        </NavLink>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
 </nav>
+
+<!-- Navigationsleiste für Desktop-Ansicht -->
+<nav class="navbar navbar-dark bg-primary d-none d-lg-flex">
+    <div class="main-nav-container">
+        <div class="nav-brand">
+            <a href="/">ISTQB Quiz</a>
+        </div>
+
+        <div class="nav-links">
+            <NavLink href="/" Match="NavLinkMatch.All">
+                <i class="bi bi-house-door me-1"></i> Startseite
+            </NavLink>
+            <NavLink href="quiz">
+                <i class="bi bi-question-circle me-1"></i> Quiz starten
+            </NavLink>
+            <NavLink href="result">
+                <i class="bi bi-check2-circle me-1"></i> Ergebnis
+            </NavLink>
+            <NavLink href="details">
+                <i class="bi bi-list-ul me-1"></i> Details
+            </NavLink>
+            @if (ShowDebug)
+            {
+                <NavLink href="debug">
+                    <i class="bi bi-bug me-1"></i> Debug
+                </NavLink>
+            }
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Allgemeine Styles für die Navigationsleiste */
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        color: white !important;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    /* Desktop-spezifische Stile */
+    .main-nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-brand a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+            .nav-links a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+</style>
 
 @code {
 #if DEBUG
@@ -28,4 +129,71 @@
 #else
     private bool ShowDebug = false;
 #endif
+
+    // Referenz auf die Blazor-Komponente für JavaScript-Interoperabilität
+    private DotNetObjectReference<NavMenu>? navMenuReference;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            navMenuReference = DotNetObjectReference.Create(this);
+            // JavaScript-Funktion aufrufen, um Event-Listener einzurichten
+            await JS.InvokeVoidAsync("setupNavMenuEvents", navMenuReference);
+        }
+    }
+
+    // JS-Invokable-Methode, die aufgerufen wird, wenn die Orientierung geändert wird
+    [JSInvokable]
+    public async Task OnResize()
+    {
+        // Überprüfen, ob das Menü geöffnet ist und die Bildschirmbreite über dem Desktop-Breakpoint liegt
+        if (await JS.InvokeAsync<int>("window.innerWidth") > 991)
+        {
+            // Menü manuell schließen
+            await CloseNavMenu();
+        }
+    }
+
+    private async Task CloseNavMenu()
+    {
+        try
+        {
+            var navMenu = await JS.InvokeAsync<IJSObjectReference>("bootstrap.Collapse.getOrCreateInstance", "#navbarNavMobile");
+            await navMenu.InvokeVoidAsync("hide");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error closing nav menu: {ex.Message}");
+        }
+    }
+
+    // Aufräumen der Ressourcen
+    public void Dispose()
+    {
+        navMenuReference?.Dispose();
+    }
 }
+
+<script>
+    // JavaScript für die Interaktion mit Bootstrap-Ereignissen
+    window.setupNavMenuEvents = (navMenuReference) => {
+        const navbarCollapse = document.getElementById('navbarNavMobile');
+
+        // Listener für Klicks auf mobile Links hinzufügen
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // Listener für das Ändern der Fenstergröße hinzufügen
+        window.addEventListener('resize', () => {
+            navMenuReference.invokeMethodAsync('OnResize');
+        });
+    };
+</script>
