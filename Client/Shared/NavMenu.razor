@@ -154,12 +154,16 @@
             var navMenu = await JS.InvokeAsync<IJSObjectReference>(
                 "bootstrap.Collapse.getOrCreateInstance", "#navbarNavMobile");
             await navMenu.InvokeVoidAsync("hide");
+
+            // zusätzlich den Toggle-Button zurücksetzen
+            await JS.InvokeVoidAsync("resetNavbarToggle");
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error closing nav menu: {ex.Message}");
         }
     }
+
 
     public void Dispose()
     {
@@ -168,6 +172,14 @@
 }
 
 <script>
+    window.resetNavbarToggle = () => {
+        const toggler = document.querySelector('.navbar-toggler');
+        if (toggler) {
+            toggler.classList.add('collapsed');
+            toggler.setAttribute('aria-expanded', 'false');
+        }
+    };
+
     window.setupNavMenuEvents = (navMenuReference) => {
         const navbarCollapse = document.getElementById('navbarNavMobile');
 
