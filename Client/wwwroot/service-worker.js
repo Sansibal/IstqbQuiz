@@ -46,6 +46,11 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
     const url = event.request.url;
 
+    // ❌ BrowserLink & andere Debug-Tools ausschließen
+    if (url.includes("browserLinkSignalR") || url.includes("browserLink")) {
+        return; // ignorieren → Service Worker macht nichts
+    }
+
     // Sonderfall: questions.json → immer frisch vom Server
     if (url.endsWith("questions.json")) {
         event.respondWith(

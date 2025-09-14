@@ -401,7 +401,7 @@
       "TF 002",
       "TF 001"
     ],
-    "PostText": "Welcher Testfall sollte als Nächstes ausgeführt werden?",
+    "PostText": "Welcher der folgenden Testfälle soll als dritter ausgeführt werden?",
     "CorrectIndex": 0,
     "Explanation": "Der Test TF 001 muss zuerst durchgeführt werden, gefolgt von TF 002, um die Abhängigkeiten zu berücksichtigen. Danach folgt TF 003, um die maximale Priorität zu berücksichtigen, und dann TF 004, gefolgt von TF 005."
   },

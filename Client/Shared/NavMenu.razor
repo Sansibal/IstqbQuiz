@@ -3,11 +3,12 @@
 @inject IJSRuntime JS
 @inject NavigationManager NavManager
 
-<!-- Navigationsleiste für mobile Ansicht -->
+<!-- Mobile Navigation (Burger) -->
 <nav class="navbar navbar-dark bg-primary d-lg-none">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">ISTQB Quiz</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile" aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile"
+                aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavMobile">
@@ -45,7 +46,7 @@
     </div>
 </nav>
 
-<!-- Navigationsleiste für Desktop-Ansicht -->
+<!-- Desktop Navigation -->
 <nav class="navbar navbar-dark bg-primary d-none d-lg-flex">
     <div class="main-nav-container">
         <div class="nav-brand">
@@ -76,7 +77,6 @@
 </nav>
 
 <style>
-    /* Allgemeine Styles für die Navigationsleiste */
     .navbar {
         padding: 1rem;
     }
@@ -88,7 +88,6 @@
         font-size: 1.25rem;
     }
 
-    /* Desktop-spezifische Stile */
     .main-nav-container {
         display: flex;
         justify-content: space-between;
@@ -130,7 +129,6 @@
     private bool ShowDebug = false;
 #endif
 
-    // Referenz auf die Blazor-Komponente für JavaScript-Interoperabilität
     private DotNetObjectReference<NavMenu>? navMenuReference;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -138,28 +136,23 @@
         if (firstRender)
         {
             navMenuReference = DotNetObjectReference.Create(this);
-            // JavaScript-Funktion aufrufen, um Event-Listener einzurichten
             await JS.InvokeVoidAsync("setupNavMenuEvents", navMenuReference);
         }
     }
 
-    // JS-Invokable-Methode, die aufgerufen wird, wenn die Orientierung geändert wird
     [JSInvokable]
     public async Task OnResize()
     {
-        // Überprüfen, ob das Menü geöffnet ist und die Bildschirmbreite über dem Desktop-Breakpoint liegt
-        if (await JS.InvokeAsync<int>("window.innerWidth") > 991)
-        {
-            // Menü manuell schließen
-            await CloseNavMenu();
-        }
+        // Immer Menü schließen bei Resize (Querformat/Hochformat)
+        await CloseNavMenu();
     }
 
     private async Task CloseNavMenu()
     {
         try
         {
-            var navMenu = await JS.InvokeAsync<IJSObjectReference>("bootstrap.Collapse.getOrCreateInstance", "#navbarNavMobile");
+            var navMenu = await JS.InvokeAsync<IJSObjectReference>(
+                "bootstrap.Collapse.getOrCreateInstance", "#navbarNavMobile");
             await navMenu.InvokeVoidAsync("hide");
         }
         catch (Exception ex)
@@ -168,7 +161,6 @@
         }
     }
 
-    // Aufräumen der Ressourcen
     public void Dispose()
     {
         navMenuReference?.Dispose();
@@ -176,11 +168,9 @@
 }
 
 <script>
-    // JavaScript für die Interaktion mit Bootstrap-Ereignissen
     window.setupNavMenuEvents = (navMenuReference) => {
         const navbarCollapse = document.getElementById('navbarNavMobile');
 
-        // Listener für Klicks auf mobile Links hinzufügen
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -191,7 +181,6 @@
             });
         });
 
-        // Listener für das Ändern der Fenstergröße hinzufügen
         window.addEventListener('resize', () => {
             navMenuReference.invokeMethodAsync('OnResize');
         });
