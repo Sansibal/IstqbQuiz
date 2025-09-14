@@ -33,15 +33,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-Zz2e\/DXLOFIL8nuAo4DBGI2OL3I4Ihzc23MOxkBaHXM=",
+      "hash": "sha256-ZElmPuqCG3LzwOgMCEK8SNmCoPQWsasu4jK5t34VSQ8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-bBwwCsWSJ9swbrd5XF7yK9\/vpgTbz4KqszF8RcmSNYY=",
+      "hash": "sha256-hhAKLkWgRhsItNmVPicGA+0EV5idZjuNHtpiBaHIjdY=",
       "url": "_framework\/IstqbQuiz.Client.wasm"
     },
     {
-      "hash": "sha256-5fn\/66g50roJfIzfnhB+owEJvHHPvzda3pDQldNIQAw=",
+      "hash": "sha256-BriZXpI7+O1DrDLWMNkY4kZctEN9CnYxtWh0N63E\/bY=",
       "url": "_framework\/IstqbQuiz.Shared.wasm"
     },
     {
@@ -113,7 +113,7 @@
       "url": "_framework\/System.ComponentModel.wasm"
     },
     {
-      "hash": "sha256-sbb4AHDd7JI1wn7\/nq2x6m39AzYgmCcsfzfMwRmjL3Q=",
+      "hash": "sha256-6dtv8QUO439HEcXOQqYGPFu2gbqX7mFVQIf49Lgd7Ko=",
       "url": "_framework\/System.Console.wasm"
     },
     {
@@ -153,7 +153,7 @@
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-GWicwJ0bEYrJnXprrYEVsqd4f6gzTAlfXFyX+J0W58U=",
+      "hash": "sha256-pMFA7GvhXdyW68axKh5duNa7kbqJTrVrLN1Gm1zwK2c=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -177,7 +177,7 @@
       "url": "404.html"
     },
     {
-      "hash": "sha256-phd\/r5qZkKrMalrsS35ot5Or5I1JgydpdpBs0jYcXvs=",
+      "hash": "sha256-lBHmVrpUR6CM7FOsbcRlCVFle4SHW5u72vzJgGmwWZQ=",
       "url": "css\/app.css"
     },
     {
@@ -257,17 +257,25 @@
       "url": "images\/frage33_diagramm.png"
     },
     {
-      "hash": "sha256-ZGRw8OCEaDEh6d6u8fh6EEdogduq63kEHJfEkmeEf3I=",
+      "hash": "sha256-Vu136JtLAbOLLQmzuFKqULx+GmGRtF0j1G3TgYyuDTY=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-PA5oDus8XEOwiawC\/XvQpVpJ\/pcPkVw3WAii22SjidY=",
+      "url": "js\/site.js"
     },
     {
       "hash": "sha256-VH3lICNAUSMNynjtE0oKXNA\/H1O76XeaqfrB7zCZ2b0=",
       "url": "manifest.json"
     },
     {
+      "hash": "sha256-EhqgWc\/LZkNaSU3wkSVgDzF6IKdUDX2AxRczHdXhppA=",
+      "url": "offline.html"
+    },
+    {
       "hash": "sha256-OpwIlcPDrdJ1HQdoT0itDvnsg7gNoQIlMoSFvPStV54=",
       "url": "sw-update.js"
     }
   ],
-  "version": "NhFq0o8l"
+  "version": "Oo0+CArk"
 };
