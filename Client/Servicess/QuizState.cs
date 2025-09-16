@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace IstqbQuiz.Client.Services
 {
@@ -6,7 +6,10 @@ namespace IstqbQuiz.Client.Services
     {
         // Fragen wie sie aus JSON geladen werden
         public List<QuestionDto> Questions { get; set; } = new();
-        public List<int?> Answers { get; set; } = new();
+
+        // Statt nur eine Antwort pro Frage (int?), speichern wir mehrere (Liste)
+        public List<List<int>> Answers { get; set; } = new();
+
         public int Score { get; set; }
 
         public void Clear()
@@ -17,16 +20,19 @@ namespace IstqbQuiz.Client.Services
         }
     }
 
-    // DTO passend zur questions.json Struktur
+    // DTO passend zur neuen questions.json Struktur
     public class QuestionDto
     {
         public int Id { get; set; }
         public string Text { get; set; } = string.Empty;
         public List<string> Options { get; set; } = new();
-        public int CorrectIndex { get; set; }
+
+        // ✅ Mehrere richtige Antworten
+        public List<int> CorrectIndexes { get; set; } = new();
+
         public string? Explanation { get; set; } // optional
         public string? Diagram { get; set; } // optional
-        public List<Dictionary<string,string>>? Table { get; set; } // optional
+        public List<Dictionary<string, string>>? Table { get; set; } // optional
         public string? PostText { get; set; } // optional
     }
 }

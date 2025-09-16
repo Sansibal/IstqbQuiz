@@ -80,17 +80,17 @@ else if (currentIndex < State.Questions.Count)
         </div>
     }
 
-    <!-- Antwort-Buttons -->
+    <!-- Antwort-Optionen (Buttons mit Toggle) -->
     <div class="d-grid gap-2 mt-3">
         @for (int i = 0; i < State.Questions[currentIndex].Options.Count; i++)
         {
             var localIdx = i;
-            <button class="btn @(State.Answers.Count > currentIndex && State.Answers[currentIndex] == localIdx
-                                                     ? "btn-primary"
-                                                     : "btn-outline-secondary") text-start"
-            @onclick="() => Select(localIdx)">
-        @State.Questions[currentIndex].Options[i]
-    </button>
+            var isSelected = State.Answers[currentIndex].Contains(localIdx);
+
+            <button class="btn @(isSelected ? "btn-primary" : "btn-outline-secondary") text-start"
+                    @onclick="() => ToggleAnswer(localIdx)">
+                <strong>@(Convert.ToChar('A' + i)).</strong> @State.Questions[currentIndex].Options[i]
+            </button>
         }
     </div>
 
@@ -104,7 +104,7 @@ else if (currentIndex < State.Questions.Count)
 
         <button class="btn btn-primary"
                 @onclick="Next"
-                disabled="@(State.Answers.Count <= currentIndex || State.Answers[currentIndex] == null)">
+                disabled="@(State.Answers[currentIndex].Count == 0)">
             Weiter
         </button>
     </div>
@@ -142,14 +142,16 @@ else
                     Id = q.Id,
                     Text = q.Text,
                     Options = q.Options,
-                    CorrectIndex = q.CorrectIndex,
+                    CorrectIndexes = q.CorrectIndexes,
                     Explanation = q.Explanation,
                     Diagram = q.Diagram,
                     Table = q.Table,
                     PostText = q.PostText
                 }).ToList();
 
-                State.Answers = Enumerable.Repeat<int?>(null, State.Questions.Count).ToList();
+                State.Answers = Enumerable.Range(0, State.Questions.Count)
+                                          .Select(_ => new List<int>())
+                                          .ToList();
             }
         }
         catch (Exception ex)
@@ -163,10 +165,15 @@ else
         }
     }
 
-    void Select(int idx)
+    void ToggleAnswer(int idx)
     {
         if (currentIndex < 0 || currentIndex >= State.Questions.Count) return;
-        State.Answers[currentIndex] = idx;
+
+        var answers = State.Answers[currentIndex];
+        if (answers.Contains(idx))
+            answers.Remove(idx);
+        else
+            answers.Add(idx);
     }
 
     void Next()
@@ -180,7 +187,10 @@ else
     void Finish()
     {
         State.Score = State.Questions.Zip(State.Answers, (q, a) => (q, a))
-                                     .Count(t => t.a.HasValue && t.a.Value == t.q.CorrectIndex);
+                                     .Count(t =>
+                                         t.q.CorrectIndexes.OrderBy(x => x)
+                                         .SequenceEqual(t.a.OrderBy(x => x))
+                                     );
         Nav.NavigateTo("result");
     }
 
