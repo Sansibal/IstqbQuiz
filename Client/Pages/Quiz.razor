@@ -76,7 +76,7 @@ else if (currentIndex < State.Questions.Count)
     @if (!string.IsNullOrEmpty(State.Questions[currentIndex].PostText))
     {
         <div class="alert alert-secondary">
-            @ToMarkup(State.Questions[currentIndex].PostText)
+            @((MarkupString)ToMarkup(State.Questions[currentIndex].PostText))
         </div>
     }
 

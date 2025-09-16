@@ -297,7 +297,7 @@
     "Id": 22,
     "Text": "Neu eingestellte Mitarbeitende einer Firma können individuelle Ziele mit ihren Vorgesetzten vereinbaren, an deren Erreichung die Auszahlung einer Prämie gekoppelt ist. Diese Prämie wird ihnen aber erst ausgezahlt, wenn sie länger als ein Jahr im Unternehmen beschäftigt sind.<br><br>Dieser Sachverhalt lässt sich in einer Entscheidungstabelle darstellen:",
     "Diagram": "images/frage22_diagramm.png",
-    "PostText": "Welcher der folgenden Testfälle beschreibt eine in der Praxis gültige, durchführbare Situation und fehlt in der oben aufgeführten Entscheidungstabelle?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "PostText": "Welcher der folgenden Testfälle beschreibt eine in der Praxis gültige, durchführbare Situation und fehlt in der oben aufgeführten Entscheidungstabelle?\n\nWählen Sie EINE Option! (1 aus 4)",
     "Options": [
       "Bedingung1 = „J“, Bedingung2 = „N“, Bedingung3 = „J“, Aktion = „N“",
       "Bedingung1 = „J“, Bedingung2 = „J“, Bedingung3 = „N“, Aktion = „J“",
@@ -313,7 +313,7 @@
     "Id": 23,
     "Text": "Welche der folgenden Aussagen zum Zustandsübergangsdiagramm und der dargestellten Tabelle von Testfällen ist WAHR?",
     "Diagram": "images/frage23_diagramm.png",
-    "PostText": "<br>Wählen Sie EINE Option! (1 aus 4)",
+    "PostText": "Wählen Sie EINE Option! (1 aus 4)",
     "Table": [
       {
         "Testfall": "Startzustand",
@@ -487,7 +487,7 @@
       "TF 002",
       "TF 001"
     ],
-    "PostText": "Welcher der folgenden Testfälle soll als dritter ausgeführt werden?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "PostText": "Welcher der folgenden Testfälle soll als dritter ausgeführt werden?\n\nWählen Sie EINE Option! (1 aus 4)",
     "Explanation": "Der Test TF 001 muss zuerst durchgeführt werden, gefolgt von TF 002, um die Abhängigkeiten zu berücksichtigen. Danach folgt TF 003, um die maximale Priorität zu berücksichtigen, und dann TF 004, gefolgt von TF 005.",
     "CorrectIndexes": [
       0
