@@ -33,15 +33,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-9oHBU15+mW7wJs9\/NbSR17h\/WGExsx7a+UNvFSKa\/to=",
+      "hash": "sha256-XDRHWavFFavPAUImKBPY2\/nV4ONd7zAD4BOrb5SO7N0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-I+Z5o+qTyvggMqDsN7BaY6MNyZCLkR34FJsiRaXaAF4=",
+      "hash": "sha256-T70WrDynAkpY\/xtX5sSy2excDfZpa0eaqoFgBMAYkgU=",
       "url": "_framework\/IstqbQuiz.Client.wasm"
     },
     {
-      "hash": "sha256-RmucmT\/kK6NjoFy8R99xKtTN\/+iYS\/fYsbscgM6LemA=",
+      "hash": "sha256-C93WE9nwUr+wXfbUdid4KNoIK9Mjwq06qawaPFoQvDw=",
       "url": "_framework\/IstqbQuiz.Shared.wasm"
     },
     {
@@ -257,6 +257,10 @@
       "url": "images\/frage33_diagramm.png"
     },
     {
+      "hash": "sha256-+ptI50ccv4oNfEuk3g4tL+MCneUiTLIaDtiwL7dxLGA=",
+      "url": "images\/frage63_diagramm.png"
+    },
+    {
       "hash": "sha256-Vu136JtLAbOLLQmzuFKqULx+GmGRtF0j1G3TgYyuDTY=",
       "url": "index.html"
     },
@@ -277,5 +281,5 @@
       "url": "sw-update.js"
     }
   ],
-  "version": "dhwtGQvd"
+  "version": "wEeZlPQU"
 };

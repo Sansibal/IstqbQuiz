@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "IstqbQuiz.Client",
   "resources": {
-    "hash": "sha256-YlxCykDS7/BcGCEcFeY2CxdDtLBBFgEDuaxUO3Cpp/A=",
+    "hash": "sha256-AhTcJcImaeOWJyCrUma5yMk2L6AZ9oRuKSMPlaomfL0=",
     "jsModuleNative": {
       "dotnet.native.8.0.20.elargmqivm.js": "sha256-D0bzod5lwwSzPR43JC8TTCcZKw+3jIHOk8CZFCRj5is="
     },
@@ -17,8 +17,8 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "IstqbQuiz.Client.wasm": "sha256-I+Z5o+qTyvggMqDsN7BaY6MNyZCLkR34FJsiRaXaAF4=",
-      "IstqbQuiz.Shared.wasm": "sha256-RmucmT/kK6NjoFy8R99xKtTN/+iYS/fYsbscgM6LemA=",
+      "IstqbQuiz.Client.wasm": "sha256-T70WrDynAkpY/xtX5sSy2excDfZpa0eaqoFgBMAYkgU=",
+      "IstqbQuiz.Shared.wasm": "sha256-C93WE9nwUr+wXfbUdid4KNoIK9Mjwq06qawaPFoQvDw=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-sqgFeMGOA4aVlR5RUD0q5rRcHXN3wjryXZGiks2jysU=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-UdabQmEdSLOGD4+cj+Mt9wno+yHjl/3npq94tk7jDx0=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-Ws5szf6fWPAXna+XyWsAhavx+WDFcA/91DQ7iPRPCMs=",
