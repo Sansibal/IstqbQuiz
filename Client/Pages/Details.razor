@@ -12,6 +12,7 @@
 }
 else
 {
+    <!-- Buttons für Steuerung -->
     <div class="mb-3">
         <button class="btn btn-primary me-2" @onclick="ExpandAll">Alles aufklappen</button>
         <button class="btn btn-secondary me-2" @onclick="CollapseAll">Alles zuklappen</button>
@@ -20,19 +21,23 @@ else
         </button>
     </div>
 
+    <!-- Fragenliste -->
     @for (int i = 0; i < State.Questions.Count; i++)
     {
         var q = State.Questions[i];
         int index = i;
 
+        // Deine Antworten (Liste)
         var given = index < State.Answers.Count ? State.Answers[index] : new List<int>();
 
+        // Korrekt, wenn Menge der Antworten exakt übereinstimmt
         bool correct = q.CorrectIndexes.OrderBy(x => x).SequenceEqual(given.OrderBy(x => x));
 
         if (showOnlyWrong && correct)
             continue;
 
         <div class="card mb-3 shadow-sm" @key="q.Id">
+            <!-- Kopfzeile mit Status -->
             <div class="card-header bg-light d-flex justify-content-between align-items-center"
                  style="cursor:pointer;" role="button" tabindex="0"
                  @onclick="() => Toggle(index)">
@@ -48,11 +53,14 @@ else
                 </div>
             </div>
 
+            <!-- Inhalt der Karte -->
             @if (expanded.Contains(index))
             {
                 <div class="card-body">
+                    <!-- Fragetext -->
                     <p class="fs-5 mb-3">@((MarkupString)FormatText(q.Text))</p>
 
+                    <!-- Diagramm -->
                     @if (!string.IsNullOrEmpty(q.Diagram))
                     {
                         <div class="text-center mb-3">
@@ -60,6 +68,7 @@ else
                         </div>
                     }
 
+                    <!-- Tabelle -->
                     @if (q.Table != null && q.Table.Count > 0)
                     {
                         <table class="table table-bordered table-sm mb-3">
@@ -85,11 +94,13 @@ else
                         </table>
                     }
 
+                    <!-- PostText -->
                     @if (!string.IsNullOrEmpty(q.PostText))
                     {
                         <p>@((MarkupString)FormatText(q.PostText))</p>
                     }
 
+                    <!-- Deine Antworten -->
                     <div class="mb-3">
                         <strong>Deine Antwort(en):</strong>
                         @if (given.Count > 0)
@@ -110,6 +121,7 @@ else
                         }
                     </div>
 
+                    <!-- Richtige Antworten -->
                     <div class="mb-3">
                         <strong>Korrekte Antwort(en):</strong>
                         <ul class="ms-3">
@@ -122,11 +134,27 @@ else
                         </ul>
                     </div>
 
-                    @if (!string.IsNullOrWhiteSpace(q.Explanation))
+                    <!-- Erklärung(en) -->
+                    @if (!string.IsNullOrWhiteSpace(q.Explanation) || !string.IsNullOrWhiteSpace(q.Explanation2))
                     {
                         <details class="mt-3">
                             <summary class="text-primary" style="cursor:pointer;">Warum ist das richtig?</summary>
-                            <p class="mt-2">@((MarkupString)FormatText(q.Explanation))</p>
+                            <ul class="mt-2">
+                                @if (!string.IsNullOrWhiteSpace(q.Explanation) && q.CorrectIndexes.Count > 0)
+                                {
+                                    <li>
+                                        <strong>@q.Options[q.CorrectIndexes[0]]:</strong>
+                                        <span>@((MarkupString)FormatText(q.Explanation))</span>
+                                    </li>
+                                }
+                                @if (!string.IsNullOrWhiteSpace(q.Explanation2) && q.CorrectIndexes.Count > 1)
+                                {
+                                    <li>
+                                        <strong>@q.Options[q.CorrectIndexes[1]]:</strong>
+                                        <span>@((MarkupString)FormatText(q.Explanation2))</span>
+                                    </li>
+                                }
+                            </ul>
                         </details>
                     }
                 </div>
@@ -139,6 +167,7 @@ else
     private HashSet<int> expanded = new();
     private bool showOnlyWrong = false;
 
+    // Karte auf- und zuklappen
     void Toggle(int idx)
     {
         if (expanded.Contains(idx))
@@ -149,15 +178,20 @@ else
         StateHasChanged();
     }
 
+    // Alle Karten öffnen
     void ExpandAll() => expanded = State.Questions.Select((q, index) => index).ToHashSet();
+
+    // Alle Karten schließen
     void CollapseAll() => expanded.Clear();
 
+    // Umschalten: nur falsche Fragen anzeigen
     void ToggleWrongOnly()
     {
         showOnlyWrong = !showOnlyWrong;
         expanded.Clear();
     }
 
+    // Hilfsfunktion für sauberes HTML mit Zeilenumbrüchen
     string FormatText(string? text)
     {
         if (string.IsNullOrWhiteSpace(text))

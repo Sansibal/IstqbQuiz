@@ -6,19 +6,17 @@ namespace IstqbQuiz.Shared.Models
         public string Text { get; set; } = string.Empty;
         public List<string> Options { get; set; } = new();
 
-        // ✅ Mehrere richtige Antworten
+        // ✅ Mehrere richtige Antworten (max 2 in deinem Fall)
         public List<int> CorrectIndexes { get; set; } = new();
 
         public string? Diagram { get; set; }
         public List<Dictionary<string, string>>? Table { get; set; }
 
-        // Erklärung
+        // Erklärung für die erste und zweite richtige Antwort
         public string? Explanation { get; set; }
+        public string? Explanation2 { get; set; }
 
-        // Zusätzlicher Text nach Bild/Tabelle
         public string? PostText { get; set; }
-
-        // Optional: Zusätzlicher Text vor Bild/Tabelle
         public string? PreText { get; set; }
     }
 }

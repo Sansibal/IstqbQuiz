@@ -80,7 +80,7 @@ else if (currentIndex < State.Questions.Count)
         </div>
     }
 
-    <!-- Antwort-Optionen (Buttons mit Toggle) -->
+    <!-- Antwort-Optionen (Buttons mit Toggle, modernes Design behalten) -->
     <div class="d-grid gap-2 mt-3">
         @for (int i = 0; i < State.Questions[currentIndex].Options.Count; i++)
         {
@@ -137,18 +137,21 @@ else
             }
             else
             {
+                // Fragen in den State laden
                 State.Questions = list.Select(q => new QuestionDto
                 {
                     Id = q.Id,
                     Text = q.Text,
                     Options = q.Options,
                     CorrectIndexes = q.CorrectIndexes,
-                    Explanation = q.Explanation,
+                    Explanation = q.Explanation,   // ✅ passt jetzt zur JSON
+                    Explanation2 = q.Explanation2, // ✅ zweite Erklärung optional
                     Diagram = q.Diagram,
                     Table = q.Table,
                     PostText = q.PostText
                 }).ToList();
 
+                // Für jede Frage eine leere Liste der Antworten
                 State.Answers = Enumerable.Range(0, State.Questions.Count)
                                           .Select(_ => new List<int>())
                                           .ToList();
@@ -165,6 +168,7 @@ else
         }
     }
 
+    // Antwort toggeln (mehrfach möglich)
     void ToggleAnswer(int idx)
     {
         if (currentIndex < 0 || currentIndex >= State.Questions.Count) return;
@@ -176,6 +180,7 @@ else
             answers.Add(idx);
     }
 
+    // Navigation
     void Next()
     {
         if (currentIndex < State.Questions.Count - 1) currentIndex++;
@@ -184,6 +189,7 @@ else
 
     void Prev() => currentIndex = Math.Max(0, currentIndex - 1);
 
+    // Ergebnis berechnen (nur 1 Punkt, wenn exakt alle richtigen Antworten gewählt wurden)
     void Finish()
     {
         State.Score = State.Questions.Zip(State.Answers, (q, a) => (q, a))
@@ -194,6 +200,7 @@ else
         Nav.NavigateTo("result");
     }
 
+    // Text so formatieren, dass Zeilenumbrüche korrekt angezeigt werden
     string ToMarkup(string? s)
     {
         var text = s ?? string.Empty;
