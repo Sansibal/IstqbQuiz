@@ -76,4 +76,4 @@ self.addEventListener("fetch", event => {
         })
     );
 });
-/* Manifest version: wEeZlPQU */
+/* Manifest version: NWn+k/77 */
