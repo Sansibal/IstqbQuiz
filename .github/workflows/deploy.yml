@@ -1,33 +1,40 @@
-name: Deploy Blazor PWA to GitHub Pages
+name: Build-and-test
 
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.0.x'
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
 
-      - name: Publish Blazor WebAssembly (Client)
-        run: dotnet publish ./Client/IstqbQuiz.Client.csproj -c Release -o release --nologo
+    - name: Restore dependencies
+      run: dotnet restore
 
-      - name: Create .nojekyll
-        run: |
-          cd release/wwwroot
-          touch .nojekyll
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./release/wwwroot
-          publish_branch: gh-pages
+    - name: Test with coverage
+      run: dotnet test --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+
+    - name: Install ReportGenerator
+      run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+    - name: Generate coverage report
+      run: reportgenerator "-reports:TestResults/coverage.info" "-targetdir:CoverageReport" -reporttypes:Html
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: CoverageReport
