@@ -1,6 +1,8 @@
 @page "/quiz"
 @using IstqbQuiz.Client.Services
+@using IstqbQuiz.Shared.Services;
 @using IstqbQuiz.Shared.Models
+@using IstqbQuiz.Shared.Utils;
 @inject QuizState State
 @inject QuestionService QuestionService
 @inject NavigationManager Nav
@@ -192,13 +194,36 @@ else
     // Ergebnis berechnen (nur 1 Punkt, wenn exakt alle richtigen Antworten gewählt wurden)
     void Finish()
     {
-        State.Score = State.Questions.Zip(State.Answers, (q, a) => (q, a))
-                                     .Count(t =>
-                                         t.q.CorrectIndexes.OrderBy(x => x)
-                                         .SequenceEqual(t.a.OrderBy(x => x))
-                                     );
+        // Anzahl der Fragen im State
+        var questions = State.Questions;
+
+        // Antworten des Users
+        var answers = State.Answers;
+
+        // ✅ Score zentral über die Helper-Methode berechnen
+        //    - questions: aus dem State (List<QuestionDto>)
+        //    - answers:   Liste von Antworten (List<List<int>>)
+        //    - Achtung: QuestionDto -> Question mappen, damit es zum Helper passt
+        var mappedQuestions = questions.Select(q => new Question
+        {
+            Id = q.Id,
+            Text = q.Text,
+            Options = q.Options,
+            CorrectIndexes = q.CorrectIndexes,
+            Explanation = q.Explanation,
+            Explanation2 = q.Explanation2,
+            Diagram = q.Diagram,
+            Table = q.Table,
+            PostText = q.PostText,
+            PreText = q.PreText
+        }).ToList();
+
+        State.Score = QuizHelper.Score(mappedQuestions, answers);
+
+        // ✅ Weiterleiten auf Ergebnisseite
         Nav.NavigateTo("result");
     }
+
 
     // Text so formatieren, dass Zeilenumbrüche korrekt angezeigt werden
     string ToMarkup(string? s)
