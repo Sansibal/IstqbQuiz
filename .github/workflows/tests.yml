@@ -29,8 +29,11 @@ jobs:
         run: >
           dotnet test --no-build --configuration Release
           /p:CollectCoverage=true
-          /p:CoverletOutput=ISTQB_UnitTest/TestResults/
+          /p:CoverletOutput=ISTQB_UnitTest/TestResults/coverage.cobertura.xml
           /p:CoverletOutputFormat=cobertura
+
+      - name: Install ReportGenerator
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
 
       - name: List TestResults folder
         run: ls -R ISTQB_UnitTest/TestResults || echo "No TestResults folder found"
