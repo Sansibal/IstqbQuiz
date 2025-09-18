@@ -2,9 +2,9 @@ name: .NET Tests with Coverage
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   build-and-test:
@@ -26,9 +26,13 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Run Tests with Coverage
-        run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory TestResults --logger "trx"
+        run: |
+          dotnet test --no-build --configuration Release \
+            --collect:"XPlat Code Coverage" \
+            --results-directory ./TestResults \
+            /p:CoverletOutputFormat=cobertura
 
-      - name: Install ReportGenerator
+      - name: Install ReportGenerator tool
         run: dotnet tool install --global dotnet-reportgenerator-globaltool
 
       - name: Generate Coverage Report
