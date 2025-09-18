@@ -1,4 +1,4 @@
-name: .NET Tests with Coverage
+name: Build and Test
 
 on:
   push:
@@ -11,48 +11,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore
+    - name: Restore dependencies
+      run: dotnet restore
 
-      - name: Build
-        run: dotnet build --no-restore --configuration Release
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
 
-      - name: Test with coverage
-        run: >
-          dotnet test --no-build --configuration Release
-          /p:CollectCoverage=true
-          /p:CoverletOutput=ISTQB_UnitTest/TestResults/coverage.cobertura.xml
-          /p:CoverletOutputFormat=cobertura
+    - name: Run tests with coverage
+      run: dotnet test ISTQB_UnitTest/ISTQB_Tests.csproj --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory ISTQB_UnitTest/TestResults
 
-      - name: Install ReportGenerator
-        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+    - name: Install ReportGenerator
+      run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
-      - name: List TestResults folder
-        run: ls -R ISTQB_UnitTest/TestResults || echo "No TestResults folder found"
+    - name: Generate coverage report
+      run: reportgenerator -reports:ISTQB_UnitTest/TestResults/**/*.cobertura.xml -targetdir:CoverageReport -reporttypes:Html
+      env:
+        PATH: $PATH:/home/runner/.dotnet/tools
 
-      - name: Generate coverage report
-        run: >
-          reportgenerator
-          -reports:ISTQB_UnitTest/TestResults/coverage.cobertura.xml
-          -targetdir:CoverageReport
-          -reporttypes:Html
+    - name: Upload coverage report
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: CoverageReport
 
-      - name: Upload coverage report as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: CoverageReport
-
-      - name: Deploy coverage report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./CoverageReport
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
