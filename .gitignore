@@ -38,3 +38,25 @@ wwwroot/_content/
 # OS Dateien
 Thumbs.db
 .DS_Store
+
+# Test coverage reports
+coverage/
+coverage.cobertura.xml
+coverage.xml
+*.coverage
+*.coveragexml
+TestResults/
+
+
+# Lokale Konfigurationen / Geheimnisse
+appsettings.Development.json
+secrets.json
+
+# Weitere IDE spezifische Dateien
+*.userprefs    # MonoDevelop/Xamarin
+*.sln.iml      # Rider
+*.sln.docstates
+
+# Publish-Output
+publish/
+dist/
