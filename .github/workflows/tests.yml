@@ -1,18 +1,17 @@
-name: .NET Tests with Coverage
+name: Build and Test
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -29,7 +28,7 @@ jobs:
         run: >
           dotnet test --no-build --configuration Release
           /p:CollectCoverage=true
-          /p:CoverletOutput=TestResults/coverage.xml
+          /p:CoverletOutput=ISTQB_UnitTest/TestResults/coverage.xml
           /p:CoverletOutputFormat=cobertura
 
       - name: Install ReportGenerator
@@ -38,18 +37,12 @@ jobs:
       - name: Generate coverage report
         run: >
           reportgenerator
-          -reports:TestResults/coverage.xml
+          -reports:ISTQB_UnitTest/TestResults/coverage.xml
           -targetdir:CoverageReport
           -reporttypes:Html
 
-      - name: Upload coverage artifact
+      - name: Upload coverage report artifact
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: CoverageReport
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./CoverageReport
