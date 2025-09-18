@@ -33,15 +33,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-IiYyntYD+6hEwDXLKj\/UouNCI3FjKydt7wBk9dc1UQo=",
+      "hash": "sha256-QH8WwVEl3HWKY00ygAwb32J+DBDqWQXCIFrtVbdK00w=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-KFuFq9Mjit+jXP8OwLtZJ+2MSlnpW92zPfNtqLAQ0xM=",
+      "hash": "sha256-LJqsHEYRHOVn0Ib2ypFdxtA3HxHxhCUEqqY\/FLgkWZ4=",
       "url": "_framework\/IstqbQuiz.Client.wasm"
     },
     {
-      "hash": "sha256-UVTE+FPvsPMHlrFJgnWp9LCKpAcUCXyakbmosF5qVVA=",
+      "hash": "sha256-B4VOzcVr9jov5OS80YmKTMtilvDw63dumnWnw3mUOu8=",
       "url": "_framework\/IstqbQuiz.Shared.wasm"
     },
     {
@@ -121,7 +121,7 @@
       "url": "_framework\/System.Diagnostics.DiagnosticSource.wasm"
     },
     {
-      "hash": "sha256-4bDNHVg1FuQARHdPMHygdjHLMR31hQyYiicqW59w+f0=",
+      "hash": "sha256-azkjgFS7Xasy6Wd2sqH93IZ0R7LcoNnRKL2bRDNeyMc=",
       "url": "_framework\/System.Linq.wasm"
     },
     {
@@ -141,7 +141,7 @@
       "url": "_framework\/System.Net.Primitives.wasm"
     },
     {
-      "hash": "sha256-RnEkauLx3vPKqoE4EJTOCKlDj7PA4JUVkl6lpjS6VjA=",
+      "hash": "sha256-5J9qXiXNoocVlH9AVdaTZvfu6j8RRn9\/7RnyZgFAp4I=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -153,7 +153,7 @@
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-ZlB9i+fd6caMoDmELaDfUjk+BgxLot3VClJOJRfjhzU=",
+      "hash": "sha256-ItrAII8SjTVp6wzYwi8zTj3Jvuq5OmstekwENRYm9sU=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -281,5 +281,5 @@
       "url": "sw-update.js"
     }
   ],
-  "version": "mJ2CUWtT"
+  "version": "Nveooytt"
 };
