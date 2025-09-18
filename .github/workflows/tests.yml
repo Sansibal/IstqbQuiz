@@ -1,10 +1,10 @@
-name: Build & Test with Coverage
+name: .NET Tests with Coverage
 
 on:
   push:
-    branches: [ "main" ]   # Deploy nur für main
-  pull_request:            # Bei PRs auch testen & Coverage erzeugen
-    branches: [ "*" ]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build-and-test:
@@ -29,35 +29,30 @@ jobs:
         dotnet test --no-build --configuration Release
         /p:CollectCoverage=true
         /p:CoverletOutput=TestResults/coverage.xml
-        /p:MergeWith=TestResults/coverage.xml
-        /p:CoverletOutputFormat=cobertura,lcov,opencover
+        /p:CoverletOutputFormat=cobertura;opencover
 
-    - name: Generate coverage report (HTML + Badge JSON)
+    - name: Generate coverage report
       run: |
-        dotnet tool install --global dotnet-reportgenerator-globaltool
-        reportgenerator \
-          -reports:TestResults/coverage.xml \
-          -targetdir:CoverageReport \
-          -reporttypes:Html;Badges;JsonSummary
+        dotnet tool install -g dotnet-reportgenerator-globaltool
+        reportgenerator -reports:TestResults/coverage.xml -targetdir:CoverageReport -reporttypes:Html
 
-    # 🔹 Coverage als Artefakt anhängen (immer)
-    - name: Upload coverage artifact
-      uses: actions/upload-artifact@v4
+    - name: Upload coverage report
+      uses: actions/upload-pages-artifact@v3
       with:
-        name: coverage-report
         path: CoverageReport
 
-  # 🔹 Deployment nur bei main
-  deploy:
-    if: github.ref == 'refs/heads/main'
+  deploy-coverage:
     needs: build-and-test
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-    - uses: actions/checkout@v4
-
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: CoverageReport
+      id: deployment
+      uses: actions/deploy-pages@v4
