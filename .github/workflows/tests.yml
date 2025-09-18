@@ -1,44 +1,63 @@
-name: .NET Tests with Coverage
+name: Build & Test with Coverage
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
+    branches: [ "main" ]   # Deploy nur für main
+  pull_request:            # Bei PRs auch testen & Coverage erzeugen
+    branches: [ "*" ]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.x
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore
+    - name: Restore dependencies
+      run: dotnet restore
 
-      - name: Build
-        run: dotnet build --no-restore --configuration Release
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
 
-      - name: Test with coverage
-        run: |
-          dotnet tool install --global dotnet-coverage
-          dotnet tool install --global dotnet-reportgenerator-globaltool
-          dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory TestResults
-          reportgenerator -reports:"TestResults/**/coverage.cobertura.xml" -targetdir:"CoverageReport" -reporttypes:Html
+    - name: Test with coverage
+      run: >
+        dotnet test --no-build --configuration Release
+        /p:CollectCoverage=true
+        /p:CoverletOutput=TestResults/coverage.xml
+        /p:MergeWith=TestResults/coverage.xml
+        /p:CoverletOutputFormat=cobertura,lcov,opencover
 
-      - name: Upload coverage artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: CoverageReport
+    - name: Generate coverage report (HTML + Badge JSON)
+      run: |
+        dotnet tool install --global dotnet-reportgenerator-globaltool
+        reportgenerator \
+          -reports:TestResults/coverage.xml \
+          -targetdir:CoverageReport \
+          -reporttypes:Html;Badges;JsonSummary
 
-      - name: Deploy Coverage to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: CoverageReport
+    # 🔹 Coverage als Artefakt anhängen (immer)
+    - name: Upload coverage artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: CoverageReport
+
+  # 🔹 Deployment nur bei main
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: CoverageReport
