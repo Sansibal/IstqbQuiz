@@ -28,7 +28,7 @@ jobs:
         run: >
           dotnet test --no-build --configuration Release
           /p:CollectCoverage=true
-          /p:CoverletOutput=ISTQB_UnitTest/TestResults/coverage.xml
+          /p:CoverletOutput=ISTQB_UnitTest/TestResults/coverage.cobertura.xml
           /p:CoverletOutputFormat=cobertura
 
       - name: Install ReportGenerator
@@ -37,7 +37,7 @@ jobs:
       - name: Generate coverage report
         run: >
           reportgenerator
-          -reports:ISTQB_UnitTest/TestResults/coverage.xml
+          -reports:ISTQB_UnitTest/TestResults/coverage.cobertura.xml
           -targetdir:CoverageReport
           -reporttypes:Html
 
