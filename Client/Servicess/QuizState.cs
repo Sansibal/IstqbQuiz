@@ -13,6 +13,9 @@ namespace IstqbQuiz.Client.Services
         // Gesamtergebnis / Punkte
         public int Score { get; set; }
 
+        public bool IsDebugQuiz { get; set; } = false;
+
+
         // Setzt den gesamten Zustand zurück
         public void Clear()
         {

@@ -6,6 +6,19 @@
 
 <h3 class="mb-4">Detailauswertung</h3>
 
+@if (State.IsDebugQuiz)
+{
+    <div class="alert alert-warning">
+        <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem <em>Debug-Quiz</em>.
+    </div>
+}
+else
+{
+    <div class="alert alert-info">
+        <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem normalen Quiz.
+    </div>
+}
+
 @if (State?.Questions == null || State.Questions.Count == 0)
 {
     <p>Keine Daten vorhanden. Bitte starte zuerst ein Quiz.</p>
