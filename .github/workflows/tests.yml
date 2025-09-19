@@ -22,17 +22,20 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore IstqbQuiz.sln
 
-    - name: Build solution
-      run: dotnet build IstqbQuiz.sln --configuration Release --no-restore
+    - name: Build
+      run: dotnet build IstqbQuiz.sln --no-restore --configuration Release
 
     - name: Run tests with coverage
-      run: dotnet test ISTQB_UnitTest/ISTQB_Tests.csproj --configuration Release --collect:"XPlat Code Coverage" --results-directory ISTQB_UnitTest/TestResults --no-restore
+      run: dotnet test ISTQB_UnitTest/ISTQB_Tests.csproj --configuration Release --collect:"XPlat Code Coverage" --results-directory ISTQB_UnitTest/TestResults
+
+    - name: Debug - list TestResults
+      run: ls -R ISTQB_UnitTest/TestResults || echo "⚠️ No TestResults folder found"
 
     - name: Install ReportGenerator
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
     - name: Generate coverage report
-      run: reportgenerator -reports:ISTQB_UnitTest/TestResults/**/coverage.cobertura.xml -targetdir:CoverageReport -reporttypes:Html
+      run: reportgenerator -reports:ISTQB_UnitTest/TestResults/**/*.cobertura.xml -targetdir:CoverageReport -reporttypes:Html
       env:
         PATH: $PATH:/home/runner/.dotnet/tools
 
