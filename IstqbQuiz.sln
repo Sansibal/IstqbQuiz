@@ -8,6 +8,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IstqbQuiz.Client", "Client\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IstqbQuiz.Shared", "Shared\IstqbQuiz.Shared.csproj", "{F8D2CBC4-D447-431A-8038-3EA1A607F776}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISTQB_Tests", "ISTQB_UnitTest\ISTQB_Tests.csproj", "{E578B08D-EFC6-0212-3B83-251ABAEE8AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
