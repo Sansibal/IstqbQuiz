@@ -20,13 +20,13 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore IstqbQuiz.sln
 
     - name: Build solution
-      run: dotnet build IstqbQuiz.sln --no-restore --configuration Release
+      run: dotnet build IstqbQuiz.sln --configuration Release --no-restore
 
     - name: Run tests with coverage
-      run: dotnet test ISTQB_UnitTest/ISTQB_Tests.csproj --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory ISTQB_UnitTest/TestResults
+      run: dotnet test ISTQB_UnitTest/ISTQB_Tests.csproj --configuration Release --collect:"XPlat Code Coverage" --results-directory ISTQB_UnitTest/TestResults --no-restore
 
     - name: Install ReportGenerator
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
