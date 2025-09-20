@@ -8,13 +8,37 @@
 {
     <p><strong>Punkte:</strong> @State.Score / @State.Questions.Count</p>
 
-    @if (State.Score >= 26)
+    @if (State.IsAdvancedQuiz)
     {
-        <div class="alert alert-success"><strong>Glückwunsch!</strong> Du hast bestanden.</div>
+        <!-- ✅ Für Advanced-Quiz nur neutrale Anzeige -->
+        <div class="alert alert-info d-flex align-items-center">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <span>
+                <strong>Ergebnis:</strong> Du hast @State.Score von @State.Questions.Count Punkten erreicht.
+            </span>
+        </div>
     }
     else
     {
-        <div class="alert alert-danger"><strong>Nicht bestanden.</strong> Du brauchst mindestens 26 Punkte.</div>
+        <!-- ✅ Normales Quiz mit 26-Punkte-Regel -->
+        @if (State.Score >= 26)
+        {
+            <div class="alert alert-success d-flex align-items-center">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span>
+                    <strong>Glückwunsch!</strong> Du hast bestanden.
+                </span>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger d-flex align-items-center">
+                <i class="bi bi-x-circle-fill me-2"></i>
+                <span>
+                    <strong>Nicht bestanden.</strong> Du brauchst mindestens 26 Punkte.
+                </span>
+            </div>
+        }
     }
 
     <div class="mt-2">

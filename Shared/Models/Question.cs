@@ -18,5 +18,9 @@ namespace IstqbQuiz.Shared.Models
 
         public string? PostText { get; set; }
         public string? PreText { get; set; }
+
+        // Neue Felder für Filter
+        public int KLevel { get; set; }                      // K1, K2 oder K3
+        public string Topic { get; set; } = "";              // Optionell: Thema / Kapitel
     }
 }

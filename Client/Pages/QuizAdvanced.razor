@@ -1,4 +1,4 @@
-@page "/quiz"
+﻿@page "/quizadvanced"
 @using IstqbQuiz.Client.Services
 @using IstqbQuiz.Shared.Services;
 @using IstqbQuiz.Shared.Models
@@ -7,43 +7,84 @@
 @inject QuestionService QuestionService
 @inject NavigationManager Nav
 
-<h3 class="mb-4">ISTQB Quiz</h3>
+<h3 class="mb-4">Quiz Advanced</h3>
 
 @if (!quizStarted)
 {
-    <!-- Start-Button, wenn das Quiz noch nicht begonnen hat -->
-    <button class="btn btn-primary btn-lg" @onclick="StartQuiz">Start (40 Fragen)</button>
+    <!-- Formular für Filtereinstellungen -->
+    <div class="card p-3 mb-4 shadow-sm">
+        <div class="mb-3">
+            <label class="form-label">Anzahl Fragen</label>
+            <input type="number" class="form-control" @bind="questionCount" min="1" max="40" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Min. ID (Optional)</label>
+            <input type="number" class="form-control" @bind="minId" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Max. ID (Optional)</label>
+            <input type="number" class="form-control" @bind="maxId" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">K-Level (Optional)</label>
+            <select class="form-select" @bind="kLevel">
+                <option value="">-- Beliebig --</option>
+                <option value="1">K1</option>
+                <option value="2">K2</option>
+                <option value="3">K3</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Themen (Optional, Mehrfachauswahl)</label>
+            <div>
+                @foreach (var topic in allTopics)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                               value="@topic"
+                               @onchange="(ChangeEventArgs e) => ToggleTopic(topic, e.Value is bool b && b)"
+                               checked="@selectedTopics.Contains(topic)" />
+                        <label class="form-check-label">@topic</label>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="shuffleCheck" @bind="shuffle" />
+            <label class="form-check-label" for="shuffleCheck">Fragen mischen</label>
+        </div>
+
+        <button class="btn btn-primary btn-lg" @onclick="StartQuiz">Quiz starten</button>
+    </div>
 }
 else if (loading)
 {
-    <!-- Ladeanzeige, während die Fragen geladen werden -->
     <div class="alert alert-info">Fragen werden geladen...</div>
 }
 else if (!string.IsNullOrEmpty(errorMessage))
 {
-    <!-- Fehlermeldung, falls beim Laden etwas schief geht -->
     <div class="alert alert-danger">Ein Fehler ist aufgetreten: @errorMessage</div>
 }
 else if (State.Questions.Count == 0)
 {
-    <!-- Fallback, falls gar keine Fragen im State sind -->
-    <div class="alert alert-warning">Keine Fragen gefunden (prüfe Server/Data/questions.json).</div>
+    <div class="alert alert-warning">Keine Fragen gefunden.</div>
 }
 else if (currentIndex < State.Questions.Count)
 {
-    <!-- =====================
-         Laufendes Quiz (UI)
-         ===================== -->
+    <!-- Quiz-UI wie in Quiz.razor -->
     <p class="fw-bold mb-3">
         Frage @(@currentIndex + 1) / @State.Questions.Count
     </p>
 
-    <!-- Frage -->
     <div class="question-text mb-3">
         @((MarkupString)ToMarkup(State.Questions[currentIndex].Text))
     </div>
 
-    <!-- Diagramm (optional, responsive eingebunden) -->
     @if (!string.IsNullOrEmpty(State.Questions[currentIndex].Diagram))
     {
         <div class="text-center mb-3">
@@ -53,7 +94,6 @@ else if (currentIndex < State.Questions.Count)
         </div>
     }
 
-    <!-- Tabelle (optional) -->
     @if (State.Questions[currentIndex]?.Table?.Count > 0)
     {
         <div class="table-responsive mb-3">
@@ -81,7 +121,6 @@ else if (currentIndex < State.Questions.Count)
         </div>
     }
 
-    <!-- PostText (z. B. Zusatzinfos unterhalb einer Frage) -->
     @if (!string.IsNullOrEmpty(State.Questions[currentIndex].PostText))
     {
         <div class="alert alert-secondary">
@@ -89,7 +128,6 @@ else if (currentIndex < State.Questions.Count)
         </div>
     }
 
-    <!-- Antwort-Optionen (Buttons statt Checkboxes) -->
     <div class="d-grid gap-2 mt-3">
         @for (int i = 0; i < State.Questions[currentIndex].Options.Count; i++)
         {
@@ -103,53 +141,73 @@ else if (currentIndex < State.Questions.Count)
         }
     </div>
 
-    <!-- Navigation (Vor/Zurück/Weiter) -->
     <div class="d-flex justify-content-between mt-4">
-        <button class="btn btn-outline-primary"
-                @onclick="Prev"
-                disabled="@(currentIndex == 0)">
-            Zurück
-        </button>
-
-        <button class="btn btn-primary"
-                @onclick="Next"
-                disabled="@(State.Answers[currentIndex].Count == 0)">
-            Weiter
-        </button>
+        <button class="btn btn-outline-primary" @onclick="Prev" disabled="@(currentIndex == 0)">Zurück</button>
+        <button class="btn btn-primary" @onclick="Next" disabled="@(State.Answers[currentIndex].Count == 0)">Weiter</button>
     </div>
 }
 else
 {
-    <!-- Abschlussanzeige, bevor das Ergebnis berechnet wird -->
     <p>Berechne Ergebnis...</p>
 }
 
 @code {
-    // =========================
-    // Lokale Zustandsvariablen
-    // =========================
-    bool quizStarted = false;     // Steuert, ob das Quiz läuft oder nicht
-    bool loading = false;         // Ladezustand, während die Fragen geholt werden
-    string errorMessage = string.Empty; // Fehlermeldungen (falls beim Laden etwas schief geht)
-    int currentIndex = 0;         // Index der aktuellen Frage (0-basiert)
+    // State Variablen
+    bool quizStarted = false;
+    bool loading = false;
+    string errorMessage = string.Empty;
+    int currentIndex = 0;
 
-    // =========================
-    // Quiz starten
-    // =========================
+    int questionCount = 10;
+    int? minId = null;
+    int? maxId = null;
+    int? kLevel = null;
+    bool shuffle = false;
+
+    // Themenliste (müsste aus JSON kommen, hier Beispielwerte)
+    List<string> allTopics = new() { "Kapitel 1 - Grundlagen des Testens",
+                                     "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+                                     "Kapitel 3 - Statischer Test",
+                                     "Kapitel 4 - Testanalyse und Testentwurf",
+                                     "Kapitel 5 - Management der Testaktivitäten",
+                                     "Kapitel 6 - Testwerkzeuge" };
+    List<string> selectedTopics = new();
+
+    // Toggle für Themenauswahl
+    void ToggleTopic(string topic, bool isChecked)
+    {
+        if (isChecked)
+        {
+            if (!selectedTopics.Contains(topic))
+                selectedTopics.Add(topic);
+        }
+        else
+        {
+            selectedTopics.Remove(topic);
+        }
+    }
+
     async Task StartQuiz()
     {
         quizStarted = true;
         loading = true;
         errorMessage = string.Empty;
-        State.Clear(); // reset: Fragen, Antworten, Score zurücksetzen
+        State.Clear();
 
-        // ✅ Merker: wir sind im normalen Quiz
-        State.IsAdvancedQuiz = false;
+        // ✅ Merker setzen: wir sind im Advanced Quiz
+        State.IsAdvancedQuiz = true;
 
         try
         {
-            // Hole 40 zufällige Fragen aus dem Service
-            var list = await QuestionService.GetRandomAsync(40);
+            var list = await QuestionService.GetDebugQuizAsync(
+                count: questionCount,
+                minId: minId,
+                maxId: maxId,
+                shuffle: shuffle,
+                kLevel: kLevel,
+                topics: selectedTopics
+            );
+
             if (list == null || list.Count == 0)
             {
                 errorMessage = "Keine Fragen gefunden.";
@@ -157,21 +215,22 @@ else
             }
             else
             {
-                // Fragen in den globalen State (QuizState) übernehmen
                 State.Questions = list.Select(q => new QuestionDto
                 {
                     Id = q.Id,
                     Text = q.Text,
                     Options = q.Options,
                     CorrectIndexes = q.CorrectIndexes,
-                    Explanation = q.Explanation,   // ✅ passt jetzt zur JSON
-                    Explanation2 = q.Explanation2, // ✅ zweite Erklärung optional
+                    Explanation = q.Explanation,
+                    Explanation2 = q.Explanation2,
                     Diagram = q.Diagram,
                     Table = q.Table,
-                    PostText = q.PostText
+                    PostText = q.PostText,
+                    PreText = q.PreText,
+                    KLevel = q.KLevel,
+                    Topic = q.Topic
                 }).ToList();
 
-                // Für jede Frage eine leere Liste vorbereiten (User-Antworten)
                 State.Answers = Enumerable.Range(0, State.Questions.Count)
                                           .Select(_ => new List<int>())
                                           .ToList();
@@ -179,54 +238,38 @@ else
         }
         catch (Exception ex)
         {
-            // Fehler (z. B. Datei nicht gefunden oder JSON kaputt)
             errorMessage = ex.Message;
         }
         finally
         {
             loading = false;
-            currentIndex = 0; // Quiz immer bei erster Frage starten
+            currentIndex = 0;
         }
     }
 
 
-    // =========================
-    // Antwort toggeln (Mehrfach möglich)
-    // =========================
     void ToggleAnswer(int idx)
     {
         if (currentIndex < 0 || currentIndex >= State.Questions.Count) return;
 
         var answers = State.Answers[currentIndex];
         if (answers.Contains(idx))
-            answers.Remove(idx);  // Klick auf bereits gewählte Option -> abwählen
+            answers.Remove(idx);
         else
-            answers.Add(idx);     // Neue Option wählen
+            answers.Add(idx);
     }
 
-    // =========================
-    // Navigation
-    // =========================
     void Next()
     {
-        if (currentIndex < State.Questions.Count - 1)
-            currentIndex++;  // zur nächsten Frage
-        else
-            Finish();        // Ende erreicht -> Ergebnis berechnen
+        if (currentIndex < State.Questions.Count - 1) currentIndex++;
+        else Finish();
     }
 
-    void Prev() => currentIndex = Math.Max(0, currentIndex - 1); // zur vorherigen Frage
+    void Prev() => currentIndex = Math.Max(0, currentIndex - 1);
 
-    // =========================
-    // Ergebnis berechnen
-    // =========================
     void Finish()
     {
-        var questions = State.Questions;
-        var answers = State.Answers;
-
-        // ✅ Mappen: QuestionDto -> Question, damit es mit QuizHelper kompatibel ist
-        var mappedQuestions = questions.Select(q => new Question
+        var mappedQuestions = State.Questions.Select(q => new Question
         {
             Id = q.Id,
             Text = q.Text,
@@ -237,21 +280,15 @@ else
             Diagram = q.Diagram,
             Table = q.Table,
             PostText = q.PostText,
-            PreText = q.PreText
+            PreText = q.PreText,
+            KLevel = q.KLevel,
+            Topic = q.Topic
         }).ToList();
 
-        // ✅ Score berechnen über den zentralen Helper
-        State.Score = QuizHelper.Score(mappedQuestions, answers);
-
-        // ✅ Weiterleiten auf die Ergebnisseite
+        State.Score = QuizHelper.Score(mappedQuestions, State.Answers);
         Nav.NavigateTo("result");
     }
 
-    // =========================
-    // Hilfsfunktion: Text als HTML
-    // - Wandelt Zeilenumbrüche (\r\n, \n) in <br> um
-    // - Dekodiert HTML Entities (&lt; -> <)
-    // =========================
     string ToMarkup(string? s)
     {
         var text = s ?? string.Empty;

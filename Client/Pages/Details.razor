@@ -9,15 +9,25 @@
 @if (State.IsDebugQuiz)
 {
     <div class="alert alert-warning">
+        <i class="bi bi-bug me-2"></i>
         <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem <em>Debug-Quiz</em>.
+    </div>
+}
+else if (State.IsAdvancedQuiz)
+{
+    <div class="alert alert-info">
+        <i class="bi bi-sliders me-2"></i>
+        <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem <em>Advanced-Quiz</em>.
     </div>
 }
 else
 {
-    <div class="alert alert-info">
-        <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem normalen Quiz.
+    <div class="alert alert-primary">
+        <i class="bi bi-question-circle me-2"></i>
+        <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem <em>normalen Quiz</em>.
     </div>
 }
+
 
 @if (State?.Questions == null || State.Questions.Count == 0)
 {

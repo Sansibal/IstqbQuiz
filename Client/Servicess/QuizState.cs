@@ -13,8 +13,12 @@ namespace IstqbQuiz.Client.Services
         // Gesamtergebnis / Punkte
         public int Score { get; set; }
 
+        // Flag für Debug-Modus (optional genutzt)
         public bool IsDebugQuiz { get; set; } = false;
 
+        // ✅ Neues Flag für erweiterten Quizmodus (QuizAdvanced)
+        // Wird genutzt, um andere Auswertungslogik in Result.razor anzuzeigen
+        public bool IsAdvancedQuiz { get; set; } = false;
 
         // Setzt den gesamten Zustand zurück
         public void Clear()
@@ -22,6 +26,10 @@ namespace IstqbQuiz.Client.Services
             Questions.Clear();
             Answers.Clear();
             Score = 0;
+
+            // Flags zurücksetzen
+            IsDebugQuiz = false;
+            IsAdvancedQuiz = false;
         }
     }
 
@@ -54,5 +62,12 @@ namespace IstqbQuiz.Client.Services
 
         // Optional: Zusätzlicher Text vor Bild oder Tabelle
         public string? PreText { get; set; }
+
+        // ✅ Neue Filterfelder (aus Question.cs übernommen)
+        // K-Level (z. B. K1, K2, K3)
+        public int KLevel { get; set; }
+
+        // Thema / Kapitel (z. B. "Kapitel 4")
+        public string Topic { get; set; } = "";
     }
 }

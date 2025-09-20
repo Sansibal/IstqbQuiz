@@ -34,5 +34,39 @@ namespace IstqbQuiz.Client.Services
 
             return all.Take(count).ToList();
         }
+
+
+        public async Task<List<Question>> GetDebugQuizAsync(
+            int count,
+            int? minId = null,
+            int? maxId = null,
+            bool shuffle = false,
+            int? kLevel = null,
+            List<string>? topics = null) // neu: mehrere Themen
+        {
+            var all = await GetAllAsync();
+
+            // ID Range
+            if (minId.HasValue)
+                all = all.Where(q => q.Id >= minId.Value).ToList();
+            if (maxId.HasValue)
+                all = all.Where(q => q.Id <= maxId.Value).ToList();
+
+            // K-Level
+            if (kLevel.HasValue)
+                all = all.Where(q => q.KLevel == kLevel.Value).ToList();
+
+            // Topics (mehrere möglich)
+            if (topics != null && topics.Any())
+            {
+                all = all.Where(q => topics.Contains(q.Topic, StringComparer.OrdinalIgnoreCase)).ToList();
+            }
+
+            // Shuffle
+            if (shuffle)
+                all = all.OrderBy(_ => Guid.NewGuid()).ToList();
+
+            return all.Take(count).ToList();
+        }
     }
 }
