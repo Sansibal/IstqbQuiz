@@ -1,10 +1,10 @@
 services:
-  - type: static
+  - type: web
     name: istqbquiz
-    env: static
-    buildCommand: ./build.sh
-    publishDir: Client/bin/Release/net8.0/publish/wwwroot
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DOTNET_RUNNING_IN_CONTAINER
+        value: true
