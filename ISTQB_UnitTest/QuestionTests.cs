@@ -27,6 +27,8 @@ namespace ISTQB_Tests
             q.Explanation2 = "Alternative Erklärung.";
             q.PostText = "Nach der Frage.";
             q.PreText = "Vor der Frage.";
+            q.KLevel = 2;
+            q.Topic = "Grundlagen";
 
             // Assert
             Assert.Equal(42, q.Id);
@@ -39,6 +41,8 @@ namespace ISTQB_Tests
             Assert.Equal("Alternative Erklärung.", q.Explanation2);
             Assert.Equal("Nach der Frage.", q.PostText);
             Assert.Equal("Vor der Frage.", q.PreText);
+            Assert.Equal(2, q.KLevel);
+            Assert.Equal("Grundlagen", q.Topic);
         }
     }
 }
