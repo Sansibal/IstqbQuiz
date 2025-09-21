@@ -1806,7 +1806,7 @@
       "Zweigtests basieren auf Black-Box-Verfahren, daher deckt vollständige Zweigüberdeckung alle Black-Box-Tests ab.",
       "White-Box-Verfahren liefern direkt anwendbare Testelemente für Black-Box-Tests."
     ],
-    "CorrectIndexes": [0],
+    "CorrectIndexes": [ 0 ],
     "Explanation": "Die reine Durchführung von Black-Box-Tests liefert kein Maß für die tatsächliche Codeüberdeckung. White-Box-Überdeckungsmessungen bieten eine objektive Messung der Überdeckung und liefern die notwendigen Informationen, um die Generierung zusätzlicher Tests zu ermöglichen, um diese Überdeckung zu erhöhen und anschließend das Vertrauen in den Code zu stärken (siehe CTFL-Lehrplan V4.0, Abschnitt 4.3.3).",
     "KLevel": 2,
     "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
@@ -2022,6 +2022,649 @@
     ],
     "CorrectIndexes": [ 3 ],
     "Explanation": "Ein entscheidender Vorteil der Testautomatisierung ist die Konsistenz und Wiederholbarkeit der Tests, die menschliche Fehler minimiert. Automatisierte Tests werden immer mit derselben Genauigkeit und in der gleichen Reihenfolge ausgeführt (siehe CTFL-Lehrplan V4.0, Abschnitt 6.2).",
+    "KLevel": 1,
+    "Topic": "Kapitel 6 - Testwerkzeuge"
+  },
+  {
+    "Id": 121,
+    "Text": "Welche der folgenden Aussagen beschreibt AM BESTEN, warum Testen im Softwareentwicklungslebenszyklus notwendig ist? <br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Dynamisches Testen ist die einzige Möglichkeit, die Qualität eines Testobjekts zu bewerten.",
+      "Das Testen stellt sicher, dass die Benutzer die Bedürfnisse der Entwickler verstehen und nachvollziehen können.",
+      "Testen wird ausschließlich durchgeführt, um regulatorische Standards zu erfüllen.",
+      "Testen hilft, Fehlerzustände aufzudecken und damit die Qualität des Testobjekts zu verbessern."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Der CTFL-Lehrplan V4.0 erklärt, dass Testen Fehlerzustände identifiziert, die durch Debugging behoben werden können, was implizit zu einer höheren Qualität des Testobjekts beiträgt.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 122,
+    "Text": "Was ist der Unterschied zwischen Testen und Qualitätssicherung? <br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Testen ist ein prozessorientierter, präventiver Ansatz, während Qualitätssicherung ein produktorientierter, korrigierender Ansatz ist.",
+      "Qualitätssicherung ist prozessorientiert und zielt auf deren Verbesserung, während Testen durch produktorientierte Maßnahmen auf angemessene Qualität zielt.",
+      "Testen und Qualitätssicherung sind identisch und können synonym verwendet werden.",
+      "Qualitätssicherung bezieht sich nur auf den Testprozess, während Testen den gesamten Entwicklungsprozess umfasst."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Diese Aussage ist korrekt und stimmt mit dem Lehrplantext überein, der angibt, dass Testen sich auf die Unterstützung des Erreichens eines angemessenen Qualitätsniveaus durch produktorientierte Aktivitäten konzentriert, während Qualitätssicherung prozessorientiert ist und die Implementierung und Verbesserung von Prozessen fokussiert (siehe CTFL Lehrplan V4.0, Abschnitt 1.2.2, 2. Absatz).",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 123,
+    "Text": "Ein Tester hat über einen Zeitraum von 5 Jahren Softwareanwendungen auf mobilen Geräten getestet. Über einen langen Zeitraum hat der Tester die bestehenden Testfälle nicht verändert und auch keine neuen Testfälle erstellt. Bei neueren Versionen der mobilen Plattform sind mehr Fehlerwirkungen von den Nutzern gemeldet worden. <br><br>Welchen Grundsatz des Testens hat der Tester nicht beachtet? <br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Testen ist abhängig vom Umfeld.",
+      "Vollständiges Testen ist nicht möglich.",
+      "Tests nutzen sich ab.",
+      "Fehlerzustände treten gehäuft auf."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Der Grundsatz “Tests nutzen sich ab” (siehe CTFL-Lehrplan V4.0, Abschnitt 1.3, 5. Grundsatz) besagt, dass die Wiederholung unveränderter Tests beim Auffinden von Fehlerzuständen zunehmend ineffektiv wird („Wiederholungen haben keine Wirksamkeit“). Um neue Fehlerzustände zu finden, müssen bestehende Tests und Testdaten modifiziert und neue Tests erstellt werden.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 124,
+    "Text": "Betrachten Sie das folgende Testmittel:",
+    "Diagram": "images/frage124_diagramm.png",
+    "PostText": "In welcher Testaktivität wird dieses Testmittel erstellt? <br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Testplanung",
+      "Testüberwachung und Teststeuerung",
+      "Testanalyse",
+      "Testentwurf"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Der Testentwurf ist die Ableitung und Spezifikation von Testfällen aus Testbedingungen. Ein Testfall ist ein Satz von Eingaben, Vorbedingungen, Aktionen (falls anwendbar), erwarteten Ergebnissen und Nachbedingungen, der für ein bestimmtes Testziel oder eine bestimmte Testbedingung entwickelt wird. Eine Test-Charta ist eine Form des Testentwurfs, die festlegt, was getestet werden soll, wie getestet werden soll und wonach beim explorativen Testen gesucht werden soll. Bei dem obigen Testmittel handelt es sich um eine Test-Charta. Test-Chartas sind das Ergebnis der Testentwicklung (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.3).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 125,
+    "Text": "Welcher der folgenden Aspekte beeinflusst AM EHESTEN die Durchführung von Tests für ein bestimmtes Testobjekts? <br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die durchschnittliche Erfahrung des Marketingteams des Unternehmens.",
+      "Das Wissen der Benutzer, dass ein neues System für sie entwickelt wird.",
+      "Die Anzahl der Jahre an Testerfahrung der Mitglieder des Testteams.",
+      "Die Organisationsstruktur der Benutzer der zu entwickelnden Anwendung."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Die Anzahl der Jahre an Testerfahrung der Mitglieder des Testteams trägt dazu bei, die Fähigkeiten und das Wissen (z. B. über verschiedene Tools und Fehlertypen) zu bestimmen, die die Teammitglieder beim Testen anwenden und somit nutzen werden (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.2, 2. Aufzählungspunkt).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 126,
+    "Text": "Beachten Sie die folgenden Testaktivitäten: \n\n1. Auswählen von Regressionstests \n2. Bewertung der Vollständigkeit der Testdurchführung \n3. Identifizieren, welche User-Storys offene Fehlerberichte haben \n4. Bewertung, ob die Qualität und Anzahl der Tests für jede Anforderung mit dem Grad des Produktrisikos vereinbar sind \n\nBetrachten Sie die folgenden Möglichkeiten, wie die Verfolgbarkeit beim Testen helfen kann: \n\nA. Verbessern der Verständlichkeit von Teststatusberichten, um den Status der Elemente der Testbasis einzubeziehen \nB. Testaktivitäten nachvollziehbarer/prüfbarer machen \nC. Bereitstellung von Informationen zur Beurteilung der Prozessqualität \nD. Analysieren der Auswirkungen von Änderungen \n\nWelche der folgenden Zuordnungen passt AM BESTEN zu den aufgeführten Testaktivitäten und den Möglichkeiten, wie \"die Verfolgbarkeit\" diese Aktivitäten jeweils unterstützen kann? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "1D, 2B, 3C, 4A",
+      "1B, 2D, 3A, 4C",
+      "1D, 2C, 3A, 4B",
+      "KORREKT."
+    ],
+    "CorrectIndexes": [],
+    "Explanation": "Verfolgbarkeit (engl. traceability) hilft bei: <br><br>• Auswahl von Regressionstests bezogen auf das Ergebnis der Analyse der Auswirkungen von Änderungen (1D). <br><br>• Bewertung der Überdeckung der Testdurchführung, um das Testen nachvollziehbarer zu machen (2B). <br><br>• Identifizieren, welche User-Storys offene Fehlerberichte haben, was die Verständlichkeit von Teststatusberichten verbessert, um den Status von TestbasisElementen (3A) einzubeziehen. <br><br>• Bewertung, ob die Qualität und Anzahl der Tests für jede Anforderung mit dem Grad des Produktrisikos übereinstimmen, was Informationen zur Bewertung der Testprozessqualität liefert, d. h. Ausrichtung des Testaufwands am Risiko (4C).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 127,
+    "Text": "Sie sind Teil eines Testteams, das an der Entwicklung eines Steuerungssystems eines Hubschraubers beteiligt ist. Kürzlich wurde ein erfahrener Hubschrauberpilot als Tester für das Testteam eingestellt. \n\nWelche positiven Auswirkungen werden die allgemeinen Kompetenzen des neuen Testers vermutlich AM EHESTEN auf das Testteam haben? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die Anwendung der 3-Wert-Grenzwertanalyse für einen gründlicheren Testentwurf im Systemtest.",
+      "Inkonsistenzen und Ungenauigkeiten in den fachlichen Anforderungen werden effektiv aufgedeckt.",
+      "Einsatz eines Werkzeugs zur Automatisierung von Zustandsübergangstests.",
+      "Testergebnisse werden konstruktiver und defensiver an die Entwickler kommuniziert."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Das Wissen in der Anwendungsdomäne das der neue Tester gemäß der Frage auf jeden Fall mitbringt, ist sicherlich hilfreich, wenn es um die effektive Aufdeckung von Inkonsistenzen und Ungenauigkeiten geht. Dieses Wissen fällt in die Kategorie „Wissen in der Anwendungsdomäne“ (siehe CTFL-Lehrplan, Abschnitt 1.5.1, 6. Aufzählungspunkt). Ein Tester mit Erfahrung als Pilot ist effektiver im Review der fachlichen Anforderungen.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 128,
+    "Text": "Welche der folgenden Aussagen beschreibt einen Vorteil des Whole- Team-Ansatzes (Whole Team Approach)? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Er ermöglicht es den Teammitgliedern, jederzeit jede Rolle zu übernehmen.",
+      "Es wird nur ein Team benötigt, um das gesamte Entwicklungsprojekt zu unterstützen.",
+      "Tester können isoliert arbeiten, ohne die Entwickler oder die Fachbereichsvertreter mit testspezifischen Informationen abzulenken.",
+      "Oft ergeben sich Synergien, von denen das gesamte Team und das Projekt profitieren."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Durch die optimale Nutzung der unterschiedlichen Fähigkeiten der einzelnen Teammitglieder fördert der Whole-Team-Ansatz die Teamdynamik, eine gute Kommunikation und Zusammenarbeit und erzeugt eine Teamsynergie, von der das gesamte Projekt profitiert (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.2, 2. Absatz).",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 1 - Grundlagen des Testens"
+  },
+  {
+    "Id": 129,
+    "Text": "Welche der folgenden Aussagen über die Wahl des Softwareentwicklungslebenszyklus und dessen Beziehung zum Testen ist KORREKT? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "In der agilen Softwareentwicklung ersetzt die Automatisierung von Systemtests die Notwendigkeit von Regressionstests.",
+      "Wenn ein sequenzielles Entwicklungsmodell verwendet wird, wird das dynamische Testen typischerweise in einer späteren Phase des Lebenszyklus durchgeführt.",
+      "Wenn ein iteratives Entwicklungsmodell verwendet wird, werden Komponententests typischerweise manuell von Entwicklern durchgeführt.",
+      "Wenn ein inkrementelles Entwicklungsmodell verwendet wird, werden statische Tests in frühen Inkrementen und dynamische Tests in späteren Inkrementen durchgeführt."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Wenn ein sequenzielles Entwicklungsmodell verwendet wird, steht in den frühen Phasen des Lebenszyklus kein ausführbarer Code zur Verfügung, so dass in dieser Phase statische Tests (z. B. Verifikationen) durchgeführt werden. Später im Lebenszyklus, wenn Code zur Ausführung verfügbar ist, sind die Durchführungen dynamischer Tests möglich (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.1, 2. Absatz). Es ist jedoch zu beachten, dass die Vorbereitung für dynamische Tests früh im Lebenszyklus der Softwareentwicklung Sinn macht (3. Grundsatz des Testens).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+  },
+  {
+    "Id": 130,
+    "Text": "Welche der folgenden Optionen ist eine gute Testpraktik, unabhängig vom gewählten Modell des Softwareentwicklungslebenszyklus ist? \n\nWählen Sie die BESTE Option! (1 aus 4)",
+    "Options": [
+      "Tester sollten die Arbeitsergebnisse einer Entwicklungsphase in der nächsten",
+      "Tester sollten mit der Überprüfung der Arbeitsergebnisse einer Softwareentwicklungsaktivität beginnen, sobald Entwürfe verfügbar sind.",
+      "Tester sollten Arbeitsergebnisse einer Softwareentwicklungsaktivität nur im Rahmen der Testanalyse und des Testentwurfs überprüfen.",
+      "Tester sollten Arbeitsergebnisse prüfen, sobald sie zur Nutzung freigegeben sind."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Tester sollten damit beginnen, Arbeitsergebnisse zu überprüfen, sobald Entwürfe verfügbar sind, um frühzeitiges Testen im Rahmen eines Shift-Left-Ansatzes unabhängig vom gewählten SDLC zu ermöglichen und unnötige Folgefehler zu vermeiden (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.2, 4. Aufzählungspunkt sowie Abschnitte 2.1.5 und 1.3).",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+  },
+  {
+    "Id": 131,
+    "Text": "Welches der folgenden Beispiele ist ein Test-First-Ansatz für die Entwicklung? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Testgetriebene Entwicklung",
+      "Überdeckungsgetriebene Entwicklung",
+      "Qualitätsgetriebene Entwicklung",
+      "Feature-getriebene Entwicklung"
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Testgetriebene Entwicklung (TDD – Test-Driven Development) ist ein bekanntes Beispiel für einen Test-First-Ansatz in der Entwicklung (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.3, 2. Absatz).",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+  },
+  {
+    "Id": 132,
+    "Text": "Welche der folgenden Aussagen trifft auf DevOps zu? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Um Releases zu beschleunigen, wird kontinuierliche Integration eingesetzt, die es den Entwicklern ermöglicht, Code schnell und ohne Komponententests auszuliefern.",
+      "Um Systeme schneller zu aktualisieren und freigeben zu können, nutzt die DevOps-Lieferkette Automatisierung, um zeitaufwendige manuelle Regressionstests zu reduzieren.",
+      "Um die Kluft zwischen Entwicklung und Betrieb zu verringern, priorisiert das Testen mit einem Shift-Right-Ansatz den Abnahmetest parallel zur kontinuierlichen Auslieferung.",
+      "Um eine größere Synergie zwischen Testern, Entwicklern und Betrieb zu schaffen, werden die Tests vollständig automatisiert, so dass keine manuellen Tests mehr erforderlich sind."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "DevOps verbessert das Testen auf verschiedene Weise durch Automatisierung in der Auslieferungskette, die den Bedarf an sich wiederholenden manuellen Tests reduziert; durch Erhöhung des Umfangs und der Bandbreite der automatisierten Regressionstests wird das Risiko einer Regression minimiert (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.4, 5. und 6. Aufzählungspunkt).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+  },
+  {
+    "Id": 133,
+    "Text": "Welche der folgenden Maßnahmen werden im Rahmen von Systemtests AM EHESTEN durchgeführt? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "End-to-End-Tests der IT-Sicherheit eines Kreditmanagementsystems durch ein unabhängiges Testteam",
+      "Test des Zusammenwirkens eines Geldwechselsystems mit einer externen Bank oder mit dem System einer externen Bank",
+      "Beta-Test einer Lernplattform durch die Trainer eines Schulungsanbieters",
+      "Test der Interaktion zwischen der Benutzeroberfläche und der Datenbank eines Personalverwaltungssystems"
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Systemtests untersuchen das Verhalten und die Fähigkeiten des gesamten Systems und umfassen nicht-funktionale Tests von Qualitätsmerkmalen, einschließlich Testen der IT-Sicherheit. Der Systemtest wird häufig von einem unabhängigen Testteam auf der Grundlage von Systemspezifikationen durchgeführt (siehe CTFL-Lehrplan V4.0, Abschnitt 2.2.1, 3. Aufzählungspunkt).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+  },
+  {
+    "Id": 134,
+    "Text": "Welche der folgenden Entscheidungen sollte KEIN Auslöser für Wartungstests sein? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die Entscheidung, die Wartbarkeit der Software zu testen.",
+      "Die Entscheidung, das System nach der Migration auf eine neue Betriebsplattform zu testen.",
+      "Die Entscheidung, die Wiederherstellbarkeit archivierter Daten nach Außerbetriebnahme zu testen.",
+      "Die Entscheidung zu testen, nachdem ein \"Hotfix\" auf die Produktivversion aufgespielt wurde."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Die Wartbarkeit ist ein Qualitätsmerkmal, das nicht von der Ausführung des Codes abhängt (siehe CTFL-Lehrplan V4.0, Abschnitt 3.1.3, 1. Absatz, 5. Aufzählungspunkt). Sie ist daher KEIN Auslöser für Wartungstests, die auf Änderungen im Code oder in der Umgebung als dynamische Tests durchgeführt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 2.3, 3. Absatz inkl. Aufzählungspunkte).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+  },
+  {
+    "Id": 135,
+    "Text": "Welche der folgenden Aussagen beschreibt AM BESTEN den Einsatz von statischen Tests? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Statisches Testen kann Fehlerzustände aufdecken, die durch dynamisches Testen nicht gefunden werden können.",
+      "Fehlerzustände im Code können durch dynamische Tests effizienter gefunden werden als durch statische Tests.",
+      "Der statische Test kann erst in einer späten Phase des SDLC durchgeführt werden.",
+      "Um den statischen Test so effizient wie möglich zu gestalten, sollten so wenig Stakeholder wie möglich involviert sein."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Es gibt Fehlerzustände, die nur durch statische Tests erkannt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 3.1.2, 1. Absatz, letzter Satz).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Statischer Test"
+  },
+  {
+    "Id": 136,
+    "Text": "Welche der folgenden Aussagen beschreibt einen Vorteil von frühem und häufigem Stakeholder-Feedback? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Es hilft dem Projektmanagement, weniger produktive Entwickler frühzeitig zu erkennen.",
+      "Es reduziert die Notwendigkeit häufiger Interaktionen zwischen Projektmanagern und Stakeholdern.",
+      "Es erleichtert die frühzeitige Identifikation und Kommunikation möglicher Qualitätsprobleme.",
+      "Es verbessert das Verständnis der Endbenutzer hinsichtlich möglicher Verzögerungen bei der Anwendungsbereitstellung."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Die frühzeitige und häufige Einholung von Feedback von den am Softwareentwicklungsprozess Beteiligten kann sehr vorteilhaft sein, da sie die frühzeitige Kommunikation potenzieller Qualitätsprobleme erleichtert, Missverständnisse bezüglich der Anforderungen vermeiden hilft und sicherstellt, dass Änderungen der Anforderungen der Beteiligten schneller verstanden und umgesetzt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 3.2.1, 1. und 2. Absatz).",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 3 - Statischer Test"
+  },
+  {
+    "Id": 137,
+    "Text": "Die folgenden Aufgaben des Reviewprozesses werden beschrieben: \n\n1. Die zu bewertenden Qualitätsmerkmale und die Endekriterien werden festgelegt. \n2. Das Arbeitsergebnis wird allen Beteiligten zugänglich gemacht. \n3. Anomalien im Arbeitsergebnis werden identifiziert. \n4. Anomalien werden analysiert und diskutiert. \n\nOrdnen Sie diese Aufgabenbeschreibungen den folgenden Review-Aktivitäten zu: \n\nA. Individuelles Review \nB. Reviewbeginn \nC. Planung \nD. Kommunikation und Analyse \n\nWelche der folgenden Zuordnungen von Aufgaben zu Aktivitäten ist KORREKT? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "1B, 2C, 3D, 4A",
+      "1B, 2D, 3C, 4A",
+      "1C, 2A, 3B, 4D",
+      "1C, 2B, 3A, 4D"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Die korrekte Kombination ist: 1C, 2B, 3A, 4D.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Statischer Test"
+  },
+  {
+    "Id": 138,
+    "Text": "Der generische Reviewprozess kennt unter anderem die folgenden Rollen: \n\n1. Protokollant \n2. Reviewleiter \n3. Moderator \n4. Manager \n\nIm Rahmen von Reviews können diese Rollen folgende Verantwortlichkeiten übernehmen: \n\nA. Sorgt für die effektive Durchführung von Reviewsitzungen, einschließlich einer geschützten Reviewumgebung \nB. Zeichnet Reviewinformationen auf, z. B. Entscheidungen und neue Anomalien, die während der Reviewsitzung gefunden wurden \nC. Entscheidet, was geprüft werden soll, und stellt Ressourcen wie Personal und Zeit für das Review zur Verfügung \nD. Übernimmt die Gesamtverantwortung für das Review, z. B. die Organisation, wann und wo das Review stattfindet \n\nWelche der folgenden Zuordnungen von Rollen zu Verantwortlichkeiten ist KORREKT? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "1A, 2B, 3D, 4C",
+      "1A, 2C, 3B, 4D",
+      "1B, 2D, 3A, 4C",
+      "1B, 2D, 3C, 4A"
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Die korrekte Kombination ist: 1B, 2D, 3A, 4C.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 3 - Statischer Test"
+  },
+  {
+    "Id": 139,
+    "Text": "Welche der folgenden Aussagen beschreibt KORREKT die Zuordnung von Verfahrensgrundlagen zu Entscheidungstabellen- und Zweigtests? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Beim Entscheidungstabellentest werden die Testfälle aus den Entscheidungsergebnissen im Code abgeleitet. Beim Zweigtest werden die Testfälle aus der Kenntnis des Kontrollflusses des Testelements abgeleitet.",
+      "Beim Entscheidungstabellentest werden die Testfälle aus der Spezifikation abgeleitet, die die Geschäftslogik beschreibt. Beim Zweigtest basieren die Testfälle auf der Antizipation potenzieller Fehler im Quellcode.",
+      "Beim Entscheidungstabellentest werden die Testfälle aus der Kenntnis des Kontrollflusses des Testelements abgeleitet. Beim Zweigtest werden die Testfälle aus der Spezifikation abgeleitet, die die Geschäftslogik beschreibt.",
+      "Beim Entscheidungstabellentest werden die Testfälle unabhängig vom Zustand der Software abgeleitet. Beim Zweigtest können die Testfälle erst nach dem Entwurf und der Implementierung des Codes erstellt werden."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Entscheidungstabellentests gehören zu den Black-Box-Testverfahren und basieren auf einer Analyse des spezifizierten Verhaltens des Testelements ohne Bezug auf seine interne Struktur. Die Testfälle sind daher unabhängig von der Implementierung der Software. Der Zweigtest ist ein White-Box-Testverfahren, d. h., die Testfälle basieren auf einer Analyse der internen Struktur und Verarbeitung des Testelements. Da die Testfälle davon abhängen, wie die Software entworfen und codiert wird, können sie erst nach dem Entwurf oder der Implementierung des Testelements erstellt werden.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 140,
+    "Text": "Die Kunden der Autowaschanlage TestWash haben Karten, auf denen die Anzahl der bisher gekauften Wäschen gespeichert ist. Der Anfangswert des Zählers ist 0. Bei der Einfahrt in die Waschanlage erhöht das System den Zähler auf der Karte um eins. Dieser Wert stellt die Anzahl der aktuellen Wäschen dar. Anhand der Anzahl der Wäschen entscheidet das System, welchen Rabatt der Kunde erhält. \n\nFür jede zehnte Wäsche gewährt das System einen Rabatt von 10 % und für jede zwanzigste Wäsche gewährt das System einen weiteren Rabatt von 40 % (d. h. insgesamt 50 % Rabatt). \n\nWelche der folgenden Eingaben (bezogen auf die Anzahl der Wäschen) erreicht die höchste Überdeckung der Äquivalenzklassen? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "19, 20, 30",
+      "11, 12, 20",
+      "1, 10, 50",
+      "10, 29, 30, 31"
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "19 deckt die Äquivalenzklasse „Kein Rabatt“, 20 die Äquivalenzklasse „50 % Rabatt“ und 30 die Äquivalenzklasse „10 % Rabatt“ ab. Diese drei Werte decken alle drei gültigen Äquivalenzklassen ab.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 141,
+    "Text": "Ein Weinlagerungssystem verwendet ein Kontrollgerät, das die Temperatur (T) des Weinlagers (gemessen in °C, gerundet auf das nächste Grad) misst und den Benutzer alarmiert, wenn die optimale Temperatur über- oder unterschritten wird: \n\n• Wenn 11 <= T <= 13, meldet das System: \"Optimale Temperatur\" \n• Wenn T < 11 ist, meldet das System: \"Die Temperatur ist zu niedrig!\" \n• Wenn T > 13 ist, meldet das System: \"Die Temperatur ist zu hoch!\" \n\nSie verwenden die 3-Wert-Grenzwertanalyse, um das erwartete Verhalten des Reglers zu überprüfen. Die Testeingabe ist eine vom Gerät gelieferte Temperatur in °C. \n\nWelche Testeingaben ergeben eine 100 %ige Überdeckung? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "11, 12, 13",
+      "9, 13, 15",
+      "9, 10, 11, 12, 13, 14, 15",
+      "10, 11, 12, 13, 14"
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Dies entspricht den oben aufgeführten identifizierten Werten für die 3-Wert- Grenzwertanalyse.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 142,
+    "Text": "Die folgende Entscheidungstabelle enthält die Regeln zur Bestimmung des Risikos für Arteriosklerose (Arterienverkalkung) auf der Grundlage der Cholesterin- und Blutdruckwerte des Patienten.",
+    "Diagram": "images/frage142_diagramm.png",
+    "PostText": "Sie haben die Testfälle mit den folgenden Testdaten entworfen: \n\nTC1: Cholesterin = 125 mg/dl – Blutdruck = 141 mm Hg \nTC2: Cholesterin = 200 mg/dl – Blutdruck = 201 mm Hg \nTC3: Cholesterin = 124 mg/dl – Blutdruck = 201 mm Hg \nTC4: Cholesterin = 109 mg/dl – Blutdruck = 200 mm Hg \nTC5: Cholesterin = 201 mg/dl – Blutdruck = 140 mm Hg \n\nWelche Überdeckung der Entscheidungstabelle wird durch diese Testfälle erreicht? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "40 %",
+      "60 %",
+      "80 %",
+      "100 %"
+    ],
+    "CorrectIndexes": [],
+    "Explanation": "Die Entscheidungstabelle besteht aus fünf Spalten. Jeder Testfall deckt eine dieser Spalten ab. TC1 und TC2 decken beide Regel 4 ab. TC3 und TC4 decken beide Regel 2 ab. TC5 deckt Regel 5 ab. Diese fünf Testfälle decken also drei von fünf Spalten ab und erreichen eine Überdeckung von (3/5) *100 % = 60 % (siehe CTFL-Lehrplan V4.0, Abschnitt 4.2.3, 5. Absatz)",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 143,
+    "Text": "Gegeben sei folgendes Zustandsdiagramm für die Software eines Batterieladegerätes:",
+    "Diagram": "images/frage143_diagramm.png",
+    "PostText": "Welcher der folgenden Testfälle enthält sowohl gültige als auch ungültige Übergänge? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Start → Warten → Aus → Warten → Erhaltungsladen → Warten",
+      "Start → Warten → Erhaltungsladen → Laden → Hoch → Laden",
+      "Start → Warten → Erhaltungsladen → Laden → Niedrig → Laden",
+      "Start → Warten → Aus → Warten → Laden → Niedrig → Laden"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Dieser Testfall enthält den ungültigen Übergang Warten → Laden. Daher ist Testfall d) derjenige, der neben gültigen Übergängen auch einen ungültigen Übergang aufweist.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 144,
+    "Text": "Sie führen zwei Testfälle, T1 und T2, für denselben Code aus. Testfall T1 erreicht eine Anweisungsüberdeckung von 40 % und Testfall T2 erreicht eine Anweisungsüberdeckung von 65 %. \n\nWelche der folgenden Aussagen ist aufgrund der obigen Informationen KORREKT? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die Testsuite, bestehend aus den Testfällen T1 und T2, erreicht eine Anweisungsüberdeckung von 105 %.",
+      "Mindestens eine Anweisung wurde sowohl von T1 als auch von T2 ausgeführt.",
+      "Mindestens 5 % der Anweisungen im getesteten Code sind nicht ausführbar.",
+      "Die aus den Testfällen T1 und T2 bestehende Testsuite erreicht eine Zweigüberdeckung von 100 %."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Wenn die von T1 und T2 ausgeführten Anweisungen disjunkt wären, würde die Überdeckung der Testsuite {T1, T2} 105 % betragen, was unmöglich ist (siehe Antwort a). Daher müssen mindestens 5 % der ausführbaren Anweisungen sowohl von T1 als auch von T2 ausgeführt worden sein.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 145,
+    "Text": "Die Formel für die Zweigüberdeckungsmetrik ist definiert als ZÜ = (X / Y) * 100 %. \n\nWas bedeuten X und Y in dieser Formel? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "X = Anzahl der von den Testfällen ausgeführten Entscheidungsergebnisse",
+      "X = Anzahl der durch die Testfälle ausgeführten bedingten Zweige",
+      "X = Anzahl der von den Testfällen ausgeführten Zweige",
+      "X = Anzahl der von den Testfällen ausgeführten bedingten Zweige"
+    ],
+    "CorrectIndexes": [ 2, 3 ],
+    "Explanation": "Die Zweigüberdeckung wird gemessen als die Anzahl der Zweige, die von den Testfällen mindestens einmal ausgeführt wurden (X), dividiert durch die Gesamtanzahl aller Zweige im Code (Y) und als Prozentsatz ausgedrückt (ZÜ = X / Y * 100 %).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 146,
+    "Text": "Welche der folgenden Aussagen liefert die BESTE Begründung für den effektiven Einsatz explorativer Tests? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die bestehende Teststrategie fordert, dass die Tester Black-Box-Testverfahren verwenden.",
+      "Die Spezifikation ist in einer formalen Sprache geschrieben, die von einem Werkzeug verarbeitet werden kann.",
+      "Die Tester sind Mitglieder eines agilen Teams und verfügen über gute Programmierkenntnisse.",
+      "Die Tester haben Erfahrung in der Anwendungsdomäne und gute analytische Fähigkeiten."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Explorative Tests sind dann sinnvoll, wenn es nur wenige oder unzureichende Spezifikationen gibt oder wenn die Tests unter erheblichem Zeitdruck durchgeführt werden müssen. Explorative Tests eignen sich auch als Ergänzung zu anderen, eher formalen Testverfahren. Explorative Tests sind effektiver, wenn der Tester über Erfahrungen und Fach- bzw. Anwendungskenntnisse verfügt und ein hohes Maß an analytischen Fähigkeiten, Neugier und Kreativität besitzt.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 147,
+    "Text": "Welches ist das BESTE Beispiel für eine Testbedingung bei der Verwendung von checklistenbasierten Tests? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "„Der Entwickler hat bei der Implementierung des Codes eine Fehlhandlung gemacht.“",
+      "„Die erreichte Anweisungsüberdeckung ist größer als 85 %.“",
+      "„Das Programm erfüllt die funktionalen und nicht-funktionalen Anforderungen korrekt.“",
+      "„Die Fehlermeldungen des Systems sind für die Benutzer verständlich.“"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Dies ist ein Beispiel für eine Testbedingung, die von einem Tester auf Basis seines Wissens und seiner Erfahrung, was dem Benutzer wichtig ist, überprüft werden kann (siehe CTFL-Lehrplan V4.0, Abschnitt 4.4.3, 1. Absatz).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 148,
+    "Text": "Betrachten Sie das folgende Akzeptanzkriterium für eine User-Story, das aus der Perspektive eines Online-Shop-Inhabers geschrieben wurde. \n\nAngenommen, der Benutzer ist eingeloggt und befindet sich auf der Startseite: \nWenn der Benutzer auf die Schaltfläche „Artikel hinzufügen“ klickt, \nDann sollte das Formular „Artikel anlegen“ erscheinen, \nUnd der Benutzer sollte in der Lage sein, einen Namen und einen Preis für den neuen Artikel einzugeben. \n\nIn welchem Format ist dieses Akzeptanzkriterium geschrieben? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Regelorientiert",
+      "Szenarioorientiert",
+      "Produktorientiert",
+      "Prozessorientiert"
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Das Akzeptanzkriterium nutzt das Gegeben/Wenn/Dann-Format, das szenarioorientiert ist (siehe CTFL-Lehrplan V4.0, Abschnitt 4.5.2, 3. Absatz, 1. Aufzählungspunkt).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 149,
+    "Text": "Bitte betrachten Sie die folgende User-Story: \n\n„Als Trainer einer Fußballmannschaft möchte ich die Spielberechtigungsliste im DFBNET für einen Spieltag abrufen können, damit ich den Kader für den nächsten Spieltag zusammenstellen kann.“ \n\nWelcher Testfall eignet sich AM BESTEN für eine abnahmetestgetriebene Entwicklung der User-Story? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Login als Trainer ins DFBNET; \nwähle die nächsten Spieltage für meine Mannschaft aus; \nlade die Spielberechtigungslisten.",
+      "GEGEBEN: Ich bin als Trainer im DFBNET mit meiner Trainerkennung angemeldet",
+      "Login als Mannschaftsverantwortlicher; wähle den nächsten Spieltag aus; lade Spielberechtigungsliste; entferne Spieler, die nicht spielberechtigt sind.",
+      "GEGEBEN: Ich habe die nächsten Spieltage für meine Mannschaft ausgewählt"
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "weil am besten GEEIGNET – Bei diesem Testfall wird nach dem Login als Trainer die Spielberechtigungsliste für den nächsten Spieltag geladen und angezeigt. Dies entspricht der Spezifikation der User-Story. Diese Option ist am besten geeignet, da sie die spezifischen Schritte für die Abnahme der Funktionalität klar definiert und die Akzeptanzkriterien direkt in den Testfall integriert.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+  },
+  {
+    "Id": 150,
+    "Text": "Ihr Team folgt einem Prozess, der eine kontinuierliche Integrations- und Auslieferungspipeline (CI/CD) mit einem Shift-Left-Ansatz verwendet. Die ersten drei Schritte dieses Prozesses sind: \n\n(1) Entwicklung und Bereitstellung des Codes \n(2) Übergabe des Codes an das Versionskontrollsystem und Integration des Codes in den Branch „Test“ \n(3) Durchführen des automatisierten Komponententests des übergebenen Codes \n\nWelches der folgenden Kriterien eignet sich AM BESTEN als Eingangskriterium für Schritt (2) dieser Pipeline? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die statische Analyse meldet für den übermittelten Code keine Fehler und keine Warnungen mit hohem Schweregrad.",
+      "Die Versionskontrolle meldet keine Konflikte beim Kompilieren und Integrieren des Codes in den „Test“-Zweig.",
+      "Die Komponententests sind kompiliert und stehen lauffähig für den „Test“- Zweig zur Verfügung.",
+      "Die Anweisungsüberdeckung des Komponententests beträgt mindestens 80 %."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Der CI/CD-Ansatz zusammen mit dem Shift-Left-Ansatz fördert das frühe Testen, so dass Entwickler angehalten sind, ihren hochwertigen Code zusammen mit den Komponententests und der statischen Analyse bereitzustellen (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.4 und 2.1.5). Daher sind die Ergebnisse der statischen Analyse ein sinnvolles und messbares Eingangskriterium vor der Integration des Codes in die CI/CD- Pipeline, vergleichbar einem Smoke-Test (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.3, 2. Absatz).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 151,
+    "Text": "Sie möchten den Testaufwand für ein neues Projekt mit Hilfe einer auf Kennzahlen basierenden Schätzung abschätzen. Sie berechnen das Verhältnis von Testaufwand zu Entwicklungsaufwand, indem Sie die Durchschnittsdaten sowohl für den Entwicklungs- als auch für den Testaufwand aus vier historischen Projekten verwenden, die dem neuen Projekt ähnlich sind. Die Tabelle zeigt unten diese historischen Daten.",
+    "Diagram": "images/frage151_diagramm.png",
+    "PostText": "Der geschätzte Entwicklungsaufwand für das neue Projekt beträgt 800.000 €. \n\nWie hoch schätzen Sie den Testaufwand in diesem Projekt ein? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "40.000 €",
+      "80.000 €",
+      "81.250 €",
+      "82.500 €"
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Die Gesamtkosten für Entwicklung und Test in den vier Projekten betragen: 800.000+1.200.000+600.000+1.000.000 = 3.600.000 € (Entwicklung) und 40.000+130.000+70.000+120.000 = 360.000 € (Test). Der Durchschnitt beträgt 360.000/3.600.000 = 0,1. Bei einem Entwicklungsaufwand von 800.000 € ergibt sich ein Testaufwand von 800.000 * 0,1 = 80.000 €. Da die Antwortmöglichkeit 81.250 € dem Wert am nächsten kommt, ist dies korrekt.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 152,
+    "Text": "Sie wurden gebeten, eine optimale, risikobasierte Ausführungsreihenfolge der folgenden Testfälle festzulegen, die bereits priorisiert und auf mögliche Abhängigkeiten hin untersucht wurden:",
+    "PostText": "Priorität 1 ist dringlicher als Priorität 2 usw. \n\nWelche der folgenden Testabläufe berücksichtigt die oben genannten Abhängigkeiten und Prioritäten? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Table": [
+      {
+        "Testfall-ID": "T1",
+        "Priorität": "3",
+        "Abhängig von": "-"
+      },
+      {
+        "Testfall-ID": "T2",
+        "Priorität": "1",
+        "Abhängig von": "T1"
+      },
+      {
+        "Testfall-ID": "T3",
+        "Priorität": "3",
+        "Abhängig von": "T2"
+      },
+      {
+        "Testfall-ID": "T4",
+        "Priorität": "3",
+        "Abhängig von": "T2"
+      },
+      {
+        "Testfall-ID": "T5",
+        "Priorität": "1",
+        "Abhängig von": "T3"
+      },
+      {
+        "Testfall-ID": "T6",
+        "Priorität": "2",
+        "Abhängig von": "T4"
+      }
+    ],
+    "Options": [
+      "T1 → T2 → T4 → T5 → T3 → T6",
+      "T1 → T2 → T3 → T4 → T5 → T6",
+      "T1 → T2 → T4 → T3 → T5 → T6",
+      "T1 → T2 → T3 → T5 → T4 → T6"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Dieser Testausführungsplan berücksichtigt die Abhängigkeiten und Prioritäten korrekt. Der Testfall mit der höchsten Priorität (T5) benötigt T3. Dadurch wird T3 früher ausgeführt als der gleich priorisierte Testfall T4. T4 wird nach T5 ausgeführt, damit abschließend T6 ausgeführt werden kann.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 153,
+    "Text": "Welches der folgenden Elemente wird im Testquadrantenmodell dem Testquadranten Q1 („technologieorientiert“ und „Unterstützung des Teams“) zugeordnet? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Gebrauchstauglichkeitstests",
+      "Smoke-Tests",
+      "Benutzerabnahmetests",
+      "Komponentenintegrationstests"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Komponentenintegrationstests sind technologieorientierte Tests, die das Team (die Entwicklung) unterstützen (Q1).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 154,
+    "Text": "Welche Aussage im Zusammenhang mit dem Risikomanagement beschreibt die Beziehung zwischen Produktrisiko und Testplanung NICHT genau? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die potenziellen Auswirkungen von IT-Sicherheitsschwachstellen wurden als signifikant hoch bewertet, so dass das Endekriterium für den IT- Sicherheitstest auf 99 bestandene Testfälle erhöht wurde.",
+      "Die geforderte Qualität des Netzwerkmoduls ist unklar, was zu weiteren Risikoanalysen in diesem Bereich führen wird.",
+      "Die Benutzer hatten Probleme mit der Benutzungsschnittstelle des bestehenden Systems, so dass zusätzliche Gebrauchstauglichkeitstests für das Nachfolgesystem geplant sind.",
+      "Die Ladezeit von Webseiten ist entscheidend für den Erfolg der neuen Website, daher wird ein Experte für Performanztests in das Projekt einbezogen."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Wenn die Qualität eines Moduls unklar ist, ist eine zusätzliche Risikoanalyse notwendig, aber dies ist keine Aufgabe der Risikosteuerung. Die Testplanung sollte darauf abzielen, die Unsicherheiten zu beseitigen und die Qualität sicherzustellen (siehe CTFL-Lehrplan V4.0, Abschnitt 5.2.4).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 155,
+    "Text": "Welche der folgenden Kennzahlen ist eine Produktqualitätsmetrik? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Mittlere Betriebsdauer bis zum Ausfall (Mean time to Failure)",
+      "Anzahl der aufgedeckten Fehlerzustände",
+      "Anforderungsüberdeckung",
+      "Fehlerdichte"
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Produktqualitätsmetriken messen Qualitätsmerkmale. Die mittlere Zeit bis zum Ausfall misst die Reife und ist somit eine Kennzahl für die Produktqualität (siehe CTFL-Lehrplan V4.0, Abschnitt 5.3.1, 3. Aufzählungspunkt).",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 156,
+    "Text": "Stellen Sie sich vor, Sie sind Mitglied eines Testteams in Europa und entwickeln ein Produkt für einen Kunden in Nordamerika. Das Team arbeitet nach dem DevOps-Ansatz und verwendet eine Pipeline für kontinuierliche Integration und kontinuierliche Bereitstellung für die Entwicklung. \n\nWelche der folgenden Kommunikationsmethoden wäre angesichts der geografischen Entfernung und des agilen Charakters des Projekts AM WENIGSTEN effektiv, um den Testfortschritt an den Kunden zu übermitteln? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Persönliche Treffen (von Angesicht zu Angesicht)",
+      "Interaktive Dashboards",
+      "E-Mail-Aktualisierungen",
+      "Videokonferenzen"
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Der Kunde befindet sich an einem anderen, weit entfernten Ort und in einer anderen Zeitzone, so dass es nicht immer möglich ist, persönlich zu kommunizieren (siehe CTFL-Lehrplan V4.0, Abschnitt 5.3.3, 2. Absatz, 2. Satz).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 157,
+    "Text": "Welche der folgenden Aussagen beschreibt ein Beispiel dafür, wie Konfigurationsmanagement (KM) das Testen unterstützt? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Über die Versionsnummer der Testumgebung und die gespeicherten Beziehungen kann das KM-Werkzeug die Versionsnummern der in dieser Umgebung verwendeten Bibliotheken, Platzhalter und Treiber abrufen.",
+      "Die Änderung von Baselines wird durch KM-Werkzeuge flexibel und pragmatisch unterstützt, wenn die Tester dies aufgrund unerwarteter Ereignisse während der Testdurchführung für notwendig erachten.",
+      "Das Konfigurationsmanagement unterstützt die Verfolgung von Testskripten und Testfällen. Testergebnisse werden hingegen durch das Fehlermanagement verwaltet.",
+      "Das Konfigurationsmanagement fasst komplexe Konfigurationselemente in einer Baseline zusammen. Um diese als Basis zu etablieren, können Tester später nicht mehr auf eine frühere Baseline zurückgreifen."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Für ein komplexes Konfigurationselement (z. B. eine Testumgebung) zeichnet KM die Elemente auf, aus denen es besteht, sowie ihre Beziehungen und Versionen (siehe CTFL-Lehrplan V4.0, Abschnitt 5.4, 2. Absatz, 1. Satz).",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 158,
+    "Text": "Sie testen eine Sortierfunktion, die eine Reihe von Zahlen als Eingabe erhält und dieselben Zahlen in aufsteigender Reihenfolge sortiert zurückgibt. \n\nDas Protokoll der Testausführung sieht wie folgt aus:",
+    "Diagram": "images/frage158_diagramm.png",
+    "PostText": "Welche der folgenden Beschreibung ist die BESTE Fehlerbeschreibung,, die in einem Fehlerbericht verwendet werden kann? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Das System kann mehrere Zahlensätze nicht sortieren. Referenz: TC3, TC4, TC5.",
+      "Das System scheint Duplikate beim Sortieren zu ignorieren. Referenz: TC3, TC4, TC5.",
+      "Das System kann keine negativen Zahlen sortieren. Referenz: TC4, TC5.",
+      "TC3, TC4 und TC5 sind fehlerhaft (doppelte Eingabedaten) und sollten korrigiert werden."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Aus den Testergebnissen geht hervor, dass das System Duplikate ignoriert und die Liste ohne Berücksichtigung der Wiederholungen sortiert bzw. die duplizierten Werte nur einmal zurückgibt. Dies ist wahrscheinlich die Ursache für Fehler in TC3, TC4, TC5. Solche Informationen können dem Entwickler helfen, den Fehler zu finden und ihn effizient zu beheben.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+  },
+  {
+    "Id": 159,
+    "Text": "Berücksichtigen Sie die folgenden Beschreibungen: \n\n1. Unterstützung der Verfolgung von Arbeitsabläufen \n2. Kommunikation erleichtern \n3. Virtuelle Maschinen \n4. Unterstützung von Auswertungen bei Reviews \n\nund die folgenden Kategorien von Testwerkzeugen: \n\nA. Statische Testwerkzeuge \nB. Werkzeuge zur Unterstützung der Skalierbarkeit und Standardisierung der Bereitstellung \nC. DevOps-Werkzeuge \nD. Werkzeuge für die Zusammenarbeit \n\nWelche der folgenden Optionen ordnet die Beschreibungen und Kategorien AM BESTEN einander zu? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "1A, 2B, 3C, 4D",
+      "1B, 2D, 3C, 4A",
+      "1C, 2D, 3B, 4A",
+      "1D, 2C, 3A, 4B"
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Die richtige Übereinstimmung ist: 1C, 2D, 3B, 4A.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 6 - Testwerkzeuge"
+  },
+  {
+    "Id": 160,
+    "Text": "Welcher der folgenden Vorteile trifft AM EHESTEN auf die Testautomatisierung zu? \n\nWählen Sie EINE Option! (1 aus 4)",
+    "Options": [
+      "Die Testautomatisierung ermöglicht auch die Messung komplexerer Überdeckungskriterien.",
+      "Durch die Testautomatisierung wird ein Teil der Verantwortung für das Testen dem Werkzeuganbieter übertragen.",
+      "Die Testautomatisierung macht kritisches Denken bei der Analyse von Testergebnissen überflüssig.",
+      "Testautomatisierung generiert Testfälle auf Systemebene aus einer Analyse des Programmcodes."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Die Testautomatisierung kann Messungen bereitstellen, die zu kompliziert sind, um von Menschen abgeleitet zu werden, z. B. White-Box-Testüberdeckungsmaße für alle Codes außer den trivialsten (siehe CTFL-Lehrplan V4.0, Abschnitt 6.2, 3. Aufzählungspunkt).",
+    "Explanation2": "",
     "KLevel": 1,
     "Topic": "Kapitel 6 - Testwerkzeuge"
   }
