@@ -7,15 +7,23 @@
 
 @if (questions.Count == 0)
 {
-    <!-- Button zum Laden aller Fragen -->
-    <button class="btn btn-primary" @onclick="LoadQuestions">Alle Fragen laden</button>
+    <!-- Auswahl der Kategorie + Button -->
+    <div class="mb-3 d-flex align-items-center">
+        <label class="me-2">Kategorie:</label>
+        <select class="form-select w-auto" @bind="selectedCategory">
+            <option value="ctfl">CTFL (Foundation Level)</option>
+            <option value="ctmat">CT-MAT (Mobile Application Testing)</option>
+        </select>
+        <button class="btn btn-primary ms-3" @onclick="LoadQuestions">Alle Fragen laden</button>
+    </div>
 }
 else
 {
     <!-- Auswahl der Frage per Eingabe -->
     <div class="mb-3 d-flex align-items-center">
         <label class="me-2">Frage-Nr:</label>
-        <input type="number" min="1" max="@questions.Count" @bind="debugIndex" style="width:80px" class="form-control d-inline-block" />
+        <input type="number" min="1" max="@questions.Count" @bind="debugIndex"
+               style="width:80px" class="form-control d-inline-block" />
         <button class="btn btn-warning btn-sm ms-2" @onclick="ShowQuestion">Anzeigen</button>
         <span class="ms-3 text-muted">(Gesamt: @questions.Count)</span>
     </div>
@@ -24,7 +32,9 @@ else
     {
         <div class="card shadow-sm mb-4">
             <div class="card-body">
-                <h5 class="card-title">Frage @debugIndex</h5>
+                <h5 class="card-title">
+                    Frage @debugIndex <span class="text-muted">(@selectedCategory)</span>
+                </h5>
 
                 <!-- Fragetext -->
                 <div class="question-text">@ToMarkup(currentQuestion.Text)</div>
@@ -71,8 +81,6 @@ else
 
                 <!-- ===============================
                      Antwortoptionen
-                     - Alle Antworten auflisten
-                     - Richtige werden grün markiert
                      =============================== -->
                 <ul class="list-group mt-3">
                     @for (int i = 0; i < currentQuestion.Options.Count; i++)
@@ -90,26 +98,20 @@ else
 
                 <!-- ===============================
                      Erklärung(en) anzeigen
-                     - Nur, wenn vorhanden
-                     - Pro richtige Antwort eine Erklärung
                      =============================== -->
-                @if (!string.IsNullOrWhiteSpace(currentQuestion.Explanation) || !string.IsNullOrWhiteSpace(currentQuestion.Explanation2))
+                @if (!string.IsNullOrWhiteSpace(currentQuestion.Explanation) ||
+                        !string.IsNullOrWhiteSpace(currentQuestion.Explanation2))
                 {
                     <div class="mt-3">
                         <h6>Erklärung:</h6>
                         <ul>
                             @if (!string.IsNullOrWhiteSpace(currentQuestion.Explanation) && currentQuestion.CorrectIndexes.Count > 0)
                             {
-                                <li>
-
-                                    @ToMarkup(currentQuestion.Explanation)
-                                </li>
+                                <li>@ToMarkup(currentQuestion.Explanation)</li>
                             }
                             @if (!string.IsNullOrWhiteSpace(currentQuestion.Explanation2) && currentQuestion.CorrectIndexes.Count > 1)
                             {
-                                <li>
-                                    @ToMarkup(currentQuestion.Explanation2)
-                                </li>
+                                <li>@ToMarkup(currentQuestion.Explanation2)</li>
                             }
                         </ul>
                     </div>
@@ -123,16 +125,17 @@ else
     // ===============================
     // State / Felder
     // ===============================
-    List<Question> questions = new(); // alle geladenen Fragen
-    int debugIndex = 1;               // aktuell gewählte Frage (1-basiert)
-    Question? currentQuestion;        // aktuell angezeigte Frage
+    List<Question> questions = new();   // alle geladenen Fragen
+    int debugIndex = 1;                 // aktuell gewählte Frage (1-basiert)
+    Question? currentQuestion;          // aktuell angezeigte Frage
+    string selectedCategory = "ctfl";   // Default: CTFL
 
     // ===============================
-    // Alle Fragen laden
+    // Alle Fragen laden (Kategorie-basiert)
     // ===============================
     async Task LoadQuestions()
     {
-        questions = await QService.GetAllAsync();
+        questions = await QService.GetAllAsync(selectedCategory);
         debugIndex = 1;
         currentQuestion = questions.FirstOrDefault();
     }
@@ -148,8 +151,6 @@ else
 
     // ===============================
     // Hilfsfunktion: Text als HTML
-    // - Wandelt \n in <br> um
-    // - Dekodiert Entities
     // ===============================
     MarkupString ToMarkup(string? s)
     {

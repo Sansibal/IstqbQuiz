@@ -10,7 +10,13 @@
 
     @if (State.IsAdvancedQuiz)
     {
-        <!-- ✅ Für Advanced-Quiz nur neutrale Anzeige -->
+        <!-- ✅ Advanced-Quiz -->
+        <div class="alert alert-secondary d-flex align-items-center mb-2">
+            <i class="bi bi-sliders me-2"></i>
+            <span>
+                <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem <em>Advanced-Quiz</em>.
+            </span>
+        </div>
         <div class="alert alert-info d-flex align-items-center">
             <i class="bi bi-info-circle-fill me-2"></i>
             <span>
@@ -18,9 +24,32 @@
             </span>
         </div>
     }
-    else
+    else if (State.Category == "ctmat")
     {
-        <!-- ✅ Normales Quiz mit 26-Punkte-Regel -->
+        <!-- ✅ CT-MAT-Quiz -->
+        <div class="alert alert-warning d-flex align-items-center mb-2">
+            <i class="bi bi-journal-code me-2"></i>
+            <span>
+                <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem <em>CT-MAT Quiz</em>.
+            </span>
+        </div>
+        <div class="alert alert-info d-flex align-items-center">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <span>
+                <strong>Ergebnis:</strong> Du hast @State.Score von @State.Questions.Count Punkten erreicht.
+            </span>
+        </div>
+    }
+    else if (State.Category == "ctfl")
+    {
+        <!-- ✅ CTFL-Quiz -->
+        <div class="alert alert-info d-flex align-items-center mb-2">
+            <i class="bi bi-journal-text me-2"></i>
+            <span>
+                <strong>Hinweis:</strong> Dieses Ergebnis stammt aus dem <em>CTFL Quiz</em>.
+            </span>
+        </div>
+
         @if (State.Score >= 26)
         {
             <div class="alert alert-success d-flex align-items-center">
@@ -52,6 +81,15 @@ else
 }
 
 @code {
-    void StartNew() => Nav.NavigateTo("quiz");
+    void StartNew()
+    {
+        if (State.IsAdvancedQuiz)
+            Nav.NavigateTo("quizadvanced");
+        else if (State.Category == "ctmat")
+            Nav.NavigateTo("quizctmat");
+        else
+            Nav.NavigateTo("quiz"); // Default = CTFL
+    }
+
     void ShowDetails() => Nav.NavigateTo("details");
 }

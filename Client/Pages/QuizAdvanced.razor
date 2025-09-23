@@ -13,6 +13,16 @@
 {
     <!-- Formular für Filtereinstellungen -->
     <div class="card p-3 mb-4 shadow-sm">
+
+        <!-- Kategorie Auswahl -->
+        <div class="mb-3">
+            <label class="form-label">Quiz-Kategorie</label>
+            <select class="form-select" @bind="selectedCategory">
+                <option value="ctfl">CTFL (Foundation Level)</option>
+                <option value="ctmat">CT-MAT (Model-Based Tester)</option>
+            </select>
+        </div>
+
         <div class="mb-3">
             <label class="form-label">Anzahl Fragen</label>
             <input type="number" class="form-control" @bind="questionCount" min="1" max="40" />
@@ -76,7 +86,7 @@ else if (State.Questions.Count == 0)
 }
 else if (currentIndex < State.Questions.Count)
 {
-    <!-- Quiz-UI wie in Quiz.razor -->
+    <!-- Quiz-UI -->
     <p class="fw-bold mb-3">
         Frage @(@currentIndex + 1) / @State.Questions.Count
     </p>
@@ -94,20 +104,20 @@ else if (currentIndex < State.Questions.Count)
         </div>
     }
 
-    @if (State.Questions[currentIndex]?.Table?.Count > 0)
+    @if (State.Questions[currentIndex].Table != null && State.Questions[currentIndex].Table.Any())
     {
         <div class="table-responsive mb-3">
             <table class="table table-bordered table-sm">
                 <thead class="table-light">
                     <tr>
-                        @foreach (var col in State.Questions[currentIndex].Table[0].Keys)
+                        @foreach (var col in State.Questions[currentIndex].Table!.First().Keys)
                         {
                             <th>@col</th>
                         }
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var row in State.Questions[currentIndex].Table)
+                    @foreach (var row in State.Questions[currentIndex].Table!)
                     {
                         <tr>
                             @foreach (var val in row.Values)
@@ -164,7 +174,10 @@ else
     int? kLevel = null;
     bool shuffle = false;
 
-    // Themenliste (müsste aus JSON kommen, hier Beispielwerte)
+    // ✅ Kategorie Auswahl (default CTFL)
+    string selectedCategory = "ctfl";
+
+    // Themenliste (nur Beispielwerte für CTFL)
     List<string> allTopics = new() { "Kapitel 1 - Grundlagen des Testens",
                                      "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
                                      "Kapitel 3 - Statischer Test",
@@ -194,7 +207,7 @@ else
         errorMessage = string.Empty;
         State.Clear();
 
-        // ✅ Merker setzen: wir sind im Advanced Quiz
+        // Merker setzen: wir sind im Advanced Quiz
         State.IsAdvancedQuiz = true;
 
         try
@@ -205,7 +218,8 @@ else
                 maxId: maxId,
                 shuffle: shuffle,
                 kLevel: kLevel,
-                topics: selectedTopics
+                topics: selectedTopics,
+                category: selectedCategory   // ✅ Auswahl aus Dropdown
             );
 
             if (list == null || list.Count == 0)
@@ -246,7 +260,6 @@ else
             currentIndex = 0;
         }
     }
-
 
     void ToggleAnswer(int idx)
     {

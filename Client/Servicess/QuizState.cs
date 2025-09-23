@@ -20,6 +20,9 @@ namespace IstqbQuiz.Client.Services
         // Wird genutzt, um andere Auswertungslogik in Result.razor anzuzeigen
         public bool IsAdvancedQuiz { get; set; } = false;
 
+        // ✅ NEU: Kategorie-Merker
+        public string Category { get; set; } = "ctfl";
+
         // Setzt den gesamten Zustand zurück
         public void Clear()
         {
@@ -30,6 +33,7 @@ namespace IstqbQuiz.Client.Services
             // Flags zurücksetzen
             IsDebugQuiz = false;
             IsAdvancedQuiz = false;
+            Category = "ctfl";
         }
     }
 

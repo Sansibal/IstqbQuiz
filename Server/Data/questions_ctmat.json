@@ -1,0 +1,606 @@
+[
+  {
+    "Id": 1,
+    "Text": "Sie sind Qualitätsspezialist in einem Entwicklungsteam für mobile Applikationen. Für welchen der folgenden Zwecke wird die Analyse mobiler Nutzungsdaten in der Teststrategie oder im Testkonzept verwendet?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Zum Definieren der erwarteten Benutzerbasis der Applikation.",
+      "Zum Ableiten von Teststufen, Testfällen und Testdaten.",
+      "Zur Auswahl des Geräteportfolios und zur Priorisierung für die Testausführung.",
+      "Zur Auswahl des Applikationstyps und des zu befolgenden Entwicklungsmodells."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Da die Tests nicht auf allen möglichen Geräten ausgeführt werden können, sollten das ausgewählte Geräteportfolio und die Priorisierung auf den Geräten und Plattformen basieren, die auf dem Zielmarkt am häufigsten anzutreffen sind. Die Informationen zu den gängigsten Geräten und Plattformen auf dem Zielmarkt werden durch die Analyse mobiler Nutzungsdaten bereitgestellt.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+    "Id": 2,
+    "Text": "Ihr Team entwickelt eine kostenfreie App, mit der öffentlich zugängliche Nachrichten aus vom Benutzer ausgewählten Quellen gesammelt werden, sodass der Benutzer alle Nachrichten aus seinen Lieblingsquellen an einem einzigen Ort lesen kann. Welches der folgenden Geschäftsmodelle ist basierend auf diesen Informationen AM BESTEN geeignet?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Freemium App.",
+      "Anzeigenbasierte App.",
+      "Kostenpflichtige App.",
+      "Transaktionsbasierte App."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Die angezeigten Daten sind öffentlich verfügbar und daher ist es unwahrscheinlich, dass der Benutzer für das Lesen der Daten in der App bezahlt. Der Benutzer ist jedoch gewohnt, Werbung auf Nachrichtenseiten zu sehen.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+    "Id": 3,
+    "Text": "Welche der folgenden Aussagen trifft auf Feature-Phones zu?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Feature-Phones bieten eingeschränkte Unterstützung für die Installation von Apps.",
+      "Feature-Phones ähneln Smartphones, sind jedoch größer.",
+      "Feature-Phones sind Smartphones der nächsten Generation mit erweiterten Funktionen.",
+      "Feature-Phones sind mit Kameras, GPS und anderen Sensoren ausgestattet."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Auf Feature-Phones sind einige Apps installiert, z.B. ein Browser. Die Benutzeroptionen zum Installieren zusätzlicher Apps sind jedoch normalerweise auf eine kleine Anzahl von Apps beschränkt, die vom Gerätehersteller bereitgestellt werden.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+    "Id": 4,
+    "Text": "Ihr Team entwickelt ein Android-Spiel, das viele Gerätefunktionen wie Kamera, GPS und Geräteausrichtung nutzt. Welche der folgenden Antworten nennt den AM BESTEN geeigneten Applikationstyp, wenn die Verwendung gerätespezifischer Funktionen wesentlich ist?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Hybride Apps.",
+      "Mobile Web-Apps.",
+      "Native Apps.",
+      "Desktop-Apps."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Das Spiel ist nur für eine Plattform und nutzt viele Gerätefunktionen, die von nativen Apps am besten genutzt werden können.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+    "Id": 5,
+    "Text": "Welche Architekturentscheidungen passen zur jeweiligen Anwendung?\n\nA – Taschenlampen-App \nB – Chat-App \nC – Navigations-App \nD – Fernsehprogramm-App \n\n1 - Nie verbundene App \n2 - Teilstreckenverfahren \n3 - Immer verbundene App \n4 - Thin-Client",
+    "PostText": "Wählen Sie EINE Option!",
+    "Options": [
+      "A4 - B2 - C1 - D3",
+      "A1 - B3 - C2 - D4",
+      "A4 - B4 - C2 - D3",
+      "A1 - B2 - C3 - D4"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "A1: Eine Taschenlampen-App benötigt keine Verbindung zu irgendwelchen Netzwerken bzw. Servern. B2: Bei einer Chat-App können Nachrichten auch dann verfasst werden, wenn das Gerät gerade nicht verbunden ist. Diese können gesendet werden, sobald eine Verbindung hergestellt wurde. C3: Für die Navigations-App ist es günstig immer die aktuellen Staumeldungen und Routenoptionen zu bekommen, daher sollte sie immer verbunden sein. D4: Das Fernsehprogramm wird nur bei Bedarf benötigt. Hier reicht ein Thin-Client aus, da auch keine Sensoren etc. benötigt werden.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+    "Id": 6,
+    "Text": "Ihre Analyse mobiler Nutzungsdaten zeigen, dass alle Ihre Benutzer das iPhone verwenden. Welche der folgenden Entscheidungen ist für Ihre Teststrategie AM BESTEN geeignet, wenn die App eine niedrige Risikostufe hat?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Einen Dienst für den Fernzugriff auf Geräte nutzen.",
+      "Den Einzelplattform-Ansatz verwenden.",
+      "Den Ansatz für maximale Überdeckung verwenden.",
+      "Ausschließlich iOS-Simulatoren verwenden."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Es geht um eine Benutzerbasis, die nur eine Plattform nutzt, und die App hat eine niedrige Risikostufe. Daher ist der Einzelplattform-Ansatz am besten geeignet.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+    "Id": 7,
+    "Text": "Welche der folgenden Antworten beschreibt KEINE Herausforderung beim Testen mobiler Apps?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Unbekannte Befehlsparameter für den Start der Applikation, die das Verhalten der Applikation ändern.",
+      "Verschiedene Benutzer und Benutzergruppen.",
+      "Mehrere Netzwerktypen und -anbieter.",
+      "Nichtverfügbarkeit von neu auf den Markt gebrachten Geräten, die den Einsatz von Emulatoren/Simulatoren erfordern."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Mobile Apps werden normalerweise durch Antippen der grafischen Benutzungsoberfläche gestartet. Somit hat der Benutzer keine Möglichkeit, beim Start der App zusätzliche Parameter anzugeben.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+    "Id": 8,
+    "Text": "Ein Unternehmen hat sich für das Crowdtesten entschieden. Welches der folgenden Risiken wird durch diese Entscheidung gemindert?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Nichtverfügbarkeit wichtiger Stakeholder während der Entwicklung.",
+      "Kosten für die Unterstützung mehrerer Plattformen.",
+      "Nichtverfügbarkeit wichtiger Geräte während des Tests.",
+      "Gute Bewertungen im App-Store des Plattformanbieters."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Die Masse von Testern beim Crowdtesten nutzt viele verschiedene Geräte. Dadurch wird das Risiko der Nichtverfügbarkeit wichtiger Geräte während des Tests gemindert.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+  },
+  {
+  "Id": 9,
+  "Text": "Welche nachstehend genannte Gerätehardware muss beim Testen einer nativen App zur Videokonferenz mit verschiedenen Gerätefunktionen bei der Testdurchführung AM WENIGSTEN Berücksichtigung finden?\n\nWählen Sie EINE Option!",
+  "Options": [
+    "Radioempfänger.",
+    "Integrierte Lautsprecher.",
+    "Integrierte Kamera.",
+    "Kopfhöreranschluss."
+  ],
+  "CorrectIndexes": [0],
+  "Explanation": "Wie im Text erwähnt, ist das SUT eine native App und gängige native Apps können ohne Internetverbindung verwendet werden. Daher sollte das Testen des WLAN-Moduls im Vergleich zu den Tests der anderen Hardwarefunktionen die niedrigste Priorität haben.",
+  "Explanation2": "",
+  "KLevel": 2,
+  "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+  "Id": 10,
+  "Text": "Welche der folgenden potenziellen Auswirkungen wird NICHT durch eine Überhitzung eines Mobilgeräts beim Testen verursacht?\n\nWählen Sie EINE Option!",
+  "Options": [
+    "Die Applikation wird langsam.",
+    "Teile des Systems funktionieren nicht mehr.",
+    "Deinstallation der App.",
+    "Fehlerhafte Funktionalität von Apps."
+  ],
+  "CorrectIndexes": [2],
+  "Explanation": "Apps werden nicht aufgrund von Überhitzung deinstalliert. Überhitzung kann jedoch dazu führen, dass die CPU-Frequenz sinkt (App wird langsam), Teile des Systems heruntergefahren werden oder Apps fehlerhaft funktionieren.",
+  "Explanation2": "",
+  "KLevel": 2,
+  "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 11,
+    "Text": "Welche der folgenden Aussagen ist KEIN gültiges Szenario zum Testen der Eingabesensoren eines Mobilgeräts?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Verifizieren der Empfangsqualität des GPS-Signals.",
+      "Verifizieren der korrekten Funktion des Gyroskops.",
+      "Validieren der vom Bewegungssensor bereitgestellten Daten.",
+      "Korrekte Bildschirmgröße im Quer- und Hochformat."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "In diesem Szenario wird kein Eingabesensor getestet. Das GPS-Signal, das Gyroskop und der Bewegungssensor gehören zu den Eingabesensoren.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 12,
+    "Text": "Welche der folgenden Antworten beschreibt Tests, die sich AUSSCHLIESSLICH auf verschiedene Eingabemethoden beziehen?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Wischen zum nächsten Bildschirm, Doppeltippen auf eine Schaltfläche, Scannen eines QR-Codes, Audioaufzeichnung.",
+      "Aufnehmen eines Fotos mit der Kamera, Verwenden der Bildschirmtastatur, Drucken des Bildschirminhalts, Verwenden der GPS-Koordinaten.",
+      "Objekt auf dem Bildschirm ziehen, Öffnen einer anderen App, Bilderfassung, Senden einer SMS an einen Freund.",
+      "Anzeigen von Geostandortdaten, Durchführen von Entfernungsmessungen, Verwenden einer TV-Fernbedienungs-App, Aufnehmen von Videos aus dem Internet."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Dies ist die beste Antwort, da hier nur Szenarien aufgeführt werden, die verschiedene Eingabemethoden betreffen. Die anderen Optionen enthalten Ausgabemethoden.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 13,
+    "Text": "Sie arbeiten als Tester für mobile Applikationen für ein Unternehmen, das eine Navigations-App entwickelt. Eine der Anforderungen ist, dass die App sowohl im Hoch- als auch im Querformat ausgeführt wird und dem Benutzer in beiden Ausrichtungen dieselben Funktionen zur Verfügung stellt. Welche der folgenden Antworten listet die BESTEN Aspekte auf, die bei der Verifizierung der korrekten Funktionalität beim Ändern der Bildschirmausrichtung zu berücksichtigen sind?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Bewegungssensor, Sicherheitsprobleme, Richtigkeit der Ausgabedaten.",
+      "Gebrauchstauglichkeitsprobleme, Beibehaltung der Eingabedaten, Beibehaltung des aktuellen Zustands.",
+      "Mehrmaliges Umschalten der Bildschirmausrichtung, Probleme mit der Performanz, Funktionen der Benutzungsoberfläche.",
+      "WLAN-Unterbrechungen, Darstellungsprobleme in der grafischen Benutzungsoberfläche, Verlust eingegebener Daten."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Diese Aufzählung enthält nur Aspekte, die im Lehrplan für die Änderung der Bildschirmausrichtung aufgeführt sind. Sicherheitsaspekte, Performanztests oder WLAN-Unterbrechungen gehören nicht dazu.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 14,
+    "Text": "Sie arbeiten als Testmanager für ein Bankunternehmen, das eine neue Version seiner Online-Banking-Software entwickelt. Diese Software wird als Web-App realisiert. Bei der Vorbereitung geeigneter Tests konzentrieren Sie sich auf die Fehlertoleranz der App in Bezug auf benutzerinitiierte Unterbrechungen. Welche drei der folgenden Testszenarien wären für diesen Zweck die BESTE Wahl? \n\ni. Batteriewarnungen anzeigen. \nii. Mobilgeräte in den Standby-Modus versetzen. \niii. Eingehende Sprachanrufe annehmen. \niv. Benachrichtigung über zu wenig Arbeitsspeicher. \nv. Gerät in den Nicht-Stören-Modus versetzen.",
+    "PostText": "\nWählen Sie EINE Option!",
+    "Options": [
+      "i – ii – iii",
+      "i – ii – iv",
+      "ii – iii – iv",
+      "ii – iii – v"
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Die Aussagen ii, iii und v sind allesamt benutzerinitiierte Unterbrechungen. Aussage i (Batteriewarnung) und Aussage iv (Speichermangel) sind hingegen keine benutzerinitiierten Unterbrechungen.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 15,
+    "Text": "Eine Krankenkasse hat eine aktualisierte Version ihrer Kunden-App veröffentlicht. Das Update enthält eine Funktion, mit der eine Apothekenrechnung gescannt und direkt an die Krankenkasse zur Zahlung gesendet wird. Als die Kunden das Update installierten, stellten sie jedoch fest, dass die Kamera nicht zum Scannen von Rechnungen aufgerufen werden konnte. Dieser Fehler wurde gemeldet und behoben. Jetzt müssen neue Tests entworfen und ausgeführt werden, und es müssen Fehlernachtests durchgeführt werden. Welcher der in den folgenden Antworten genannten Tests ist bei diesem Szenario der WICHTIGSTE?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Performanztest.",
+      "Testen der Barrierefreiheit.",
+      "Testen der Zugriffsberechtigung.",
+      "Testen der Installation."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Dies ist der wichtigste durchzuführende Test, da fehlende oder falsche Zugriffsberechtigungen eine mögliche Grundursache für das behobene Problem sein können.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 16,
+    "Text": "Ihr Unternehmen bietet eine Nachrichten-App mit einer Benachrichtigungsfunktion zum Anzeigen aktueller Nachrichten mit einem Deep-Link zur entsprechenden Nachrichtenseite in der App. Kürzlich haben sich einige Nutzer der App darüber beschwert, dass zu erwartende Benachrichtigungen über hochaktuelle Nachrichten verzögert oder gar nicht angezeigt wurden. Die Grundursache für diesen Fehler wurde von den Entwicklern identifiziert und behoben. Welche funktionalen Tests würden Sie in Ihrer Rolle als Tester für mobile Applikationen vorsehen, um die ordnungsgemäße Funktion der behobenen Version der App zu validieren?\n\ni. Korrekte Anzeige der Benachrichtigung, wenn sich die App im Hintergrund befindet. \nii. Ausführen der Applikation bei schwachem Akku. \niii. Testen der Leistung der App, während die Benachrichtigung angezeigt wird. \niv. Durchführen von Gebrauchstauglichkeitstests für die behobene Version der App. \nv. Testen der Deep-Link-Funktion zur richtigen Nachrichtenseite der App.",
+    "PostText": "Wählen Sie EINE Optione!",
+    "Options": [
+      "i – iv – v",
+      "i – ii – iv",
+      "i – ii – v",
+      "ii – iii – iv"
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Die Aussagen i, ii und v sind funktionale Tests, wie im Text erwähnt. Die Aussagen iii und iv sind nicht-funktionale Tests und machen in diesem Zusammenhang keinen Sinn.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 17,
+    "Text": "Ihr Unternehmen entwickelt eine neue Version einer hybriden App für den Preisvergleich. Diese bietet Schnellzugriffsverknüpfungen zu umfassenden Funktionalitäten. Als Tester für mobile Applikationen ist es Ihre Aufgabe, die fehlerfreie Funktion dieser Schnellzugriffsverknüpfungen zu verifizieren. Welcher der folgenden Ansätze ist hierfür der BESTE?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Verifizieren des korrekten Verhaltens der Force Touch-Funktionalität der iOS-App.",
+      "Sicherstellen, dass die bevorzugten Lesezeichen in Mobile Chrome im Betriebssystem Android OS vorhanden sind.",
+      "Verifizieren, ob alle physischen Tasten eines mobilen Endgeräts wie erwartet funktionieren.",
+      "Verwenden eines geeigneten Werkzeugs zum Identifizieren defekter Links in der mobilen Web-App."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Das Testen der Force Touch-Funktionalität ist ein Beispiel für das Testen von Schnellzugriffsverknüpfungen und damit der beste Ansatz in diesem Szenario.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 18,
+    "Text": "Sie testen eine native iOS-App, die verschiedene Sensoren verwendet. Welche der folgenden Testarten trifft NICHT zu?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Performanztests.",
+      "Testen der Nutzung von Gerätefunktionen.",
+      "Browserübergreifendes Testen.",
+      "Testen der Gerätekompatibilität."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Eine native App verwendet keine verschiedenen Browser. Daher trifft browserübergreifendes Testen in diesem Szenario nicht zu.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 19,
+    "Text": "Welche der folgenden Testarten ist typisch für das Testen der Interoperabilität mit Betriebssystemversionen?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Testen auf Sicherheitsprobleme.",
+      "Testen auf Performanzprobleme.",
+      "Testen auf Einhaltung von Barrierefreiheitsstandards.",
+      "Testen der Abwärtskompatibilität."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Das Testen der Abwärtskompatibilität konzentriert sich auf die Verifizierung der korrekten Interoperabilität mit verschiedenen Betriebssystemversionen, wie im Lehrplan als Beispiel angegeben.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 20,
+    "Text": "Welche der folgenden Antworten beschreibt ein PRIMÄRES Testziel für das Testen der Koexistenz eines zu testenden Systems (SUT) mit anderen Apps auf dem Gerät?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Verifizieren, dass das SUT keine Benutzerdaten beschädigt.",
+      "Identifizieren vorhandener Sicherheitsprobleme beim Gerät.",
+      "Bewerten von Gebrauchstauglichkeitsproblemen im SUT.",
+      "Prüfen, ob das SUT die Barrierefreiheitsstandards erfüllt."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Dies ist ein Testziel zum Testen des SUT auf Koexistenz mit anderen auf dem Gerät installierten Applikationen.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 21,
+    "Text": "Sie entwickeln eine Testvorgehensweise für das Testen der Verbindungsfähigkeit auf verschiedenen mobilen Gerätetypen. Welche der folgenden Optionen sollten bei diesem Testansatz KEINE Berücksichtigung finden?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Das Wechseln von GSM in den Flugmodus und zurück zu GSM.",
+      "Das Initiieren eines Zahlungsvorgangs über NFC.",
+      "Die Nutzung von Bluetooth zum Koppeln mit Wearables.",
+      "Das Anschließen eines USB-Kabels an eine Stromversorgung."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Beim Anschließen einer Stromversorgung über USB geht es nicht um die Verbindungsfähigkeit; dies kann jedoch als geeignetes Szenario für das Testen von Unterbrechungen verwendet werden.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  },
+  {
+    "Id": 22,
+    "Text": "Sie haben die Aufgabe, Installationstests für eine Android-Applikation durchzuführen. Welcher der folgenden Installationstests sollte NICHT verwendet werden?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Ausführen der Datei App-Installer.exe auf dem mobilen Testgerät.",
+      "Das Gerät zur Installation an einen PC anschließen und Befehle für die Installation ausführen.",
+      "Installation aus dem Google Play Beta-Programm.",
+      "Sideloading durch Bereitstellen und Ausführen des Installationspakets auf einer SD-Karte."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Exe ist ein ausführbares Dateiformat nur für Windows. Auf Android funktioniert es nicht.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 23,
+    "Text": "Welche der folgenden Punkte sind potenzielle Sicherheitsprobleme für mobile Apps?\n\ni. Code-Injection über Eingabefelder. \nii. Unverschlüsselte Übertragung von Daten. \niii. App reagiert nicht nach einer Unterbrechung. \niv. Probleme beim Rendern nach Ändern der Geräteausrichtung. \nv. Überlappung von Bildschirmelementen auf kleinen Bildschirmen.",
+    "PostText": "Wählen Sie EINE Option!",
+    "Options": [
+      "i und iii.",
+      "ii und v.",
+      "i und ii.",
+      "ii und iv."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Sowohl Aussage i (Code-Injection über Eingabefelder) als auch Aussage ii (unverschlüsselte Übertragung von Daten) betreffen die Sicherheit. Aussagen iii, iv und v sind keine Sicherheitsprobleme.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 24,
+    "Text": "Welche der folgenden Vorgehensweisen werden Sie wahrscheinlich verwenden, um einen Performanztest des Zeitverhaltens einer App durchzuführen?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Instrumentierter Build, um genaue chronometrische Zahlen zu erhalten.",
+      "Lastgenerator zur Beobachtung des Serververhaltens unter hoher Last.",
+      "Ausführen der App auf einem Emulator/Simulator.",
+      "Ein Endgerät und eine Stoppuhr, um die Performanz des Geräts zu überprüfen."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Nur ein instrumentierter Build kann genaue chronometrische Zahlen darüber liefern, wie lange ein Verarbeitungsschritt in der App tatsächlich gedauert hat. Eine Stoppuhr reicht im Millisekundenbereich nicht aus. Außerdem ist keine Unterscheidung zwischen der von der App beanspruchten Zeit, der des Backendsystems und der Zeit für die Netzwerkkommunikation möglich.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 25,
+    "Text": "Sie haben die Aufgabe, einen Gebrauchstauglichkeitstest für eine mobile App durchzuführen. Welchen der folgenden Schritte werden Sie NICHT ausführen?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Den Manager bitten, eine Testsitzung in einem Gebrauchstauglichkeitslabor zu reservieren.",
+      "Testen der App auf Konformität mit den Richtlinien für die Benutzungsschnittstellen.",
+      "Aktivieren der VoiceOver-Funktion des Geräts.",
+      "Informationen über die Erwartungen an das Look-and-Feel der Plattform einholen."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Das Aktivieren der VoiceOver-Funktion des Geräts gehört nicht zu den Schritten, die im Rahmen eines Gebrauchstauglichkeitstests durchgeführt werden sollten. Die anderen genannten Schritte sind hingegen typische Bestandteile solcher Tests.",
+    "Explanation2": "",
+    "KLevel": 3,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 26,
+    "Text": "Wofür steht die Merkhilfe \"CRUD\" im Zusammenhang mit Datenvalidierungstests?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Copy, Rename, Update, Delete.",
+      "Create, Read, Undo, Delete.",
+      "Create, Read, Update, Delete.",
+      "Create, Read, Undo, Deploy."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "CRUD steht für Create, Read, Update, Delete, gemäß Lehrplan und Glossar.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 27,
+    "Text": "Sie führen Internationalisierungstests durch. Bei Ausführung der Tests sehen Sie teilweise Pseudo-Strings und teilweise englische Zeichenfolgen. Welche der folgenden Ursachen ist am WAHRSCHEINLICHSTEN?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Fehlende Übersetzungen.",
+      "Fest kodierte englische Zeichenfolgen.",
+      "Falsche Spracheinstellungen des Geräts.",
+      "Während des Builds ist ein Fehler aufgetreten."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Internationalisierungstests sollen sicherstellen, dass alle Zeichenfolgen aus einer Ressource stammen. Wenn die App nicht die Pseudo-Strings, sondern reale englische Zeichenfolgen anzeigt, stammen diese aus fest kodierten Strings und nicht aus der vorgesehenen Ressource.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 28,
+    "Text": "Warum sollten Tests der Barrierefreiheit bei mobilen Applikationen durchgeführt werden? Wählen Sie die BESTMÖGLICHSTE Antwort.",
+    "Options": [
+      "Um festzustellen, ob die App für Benutzer mit unterschiedlichen Bedürfnissen geeignet ist.",
+      "Weil es vom W3C Konsortium und von den jeweiligen Plattformanbietern verlangt wird.",
+      "Um die Applikation vollständig zu testen.",
+      "Da generische Testfälle existieren, die für jede Applikation ausgeführt werden müssen."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Tests der Barrierefreiheit werden durchgeführt, um festzustellen, wie einfach Benutzer mit Behinderungen eine Komponente oder ein System verwenden können.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 29,
+    "Text": "Sie sind Tester in einem Team, das eine mobile App entwickelt. Ihr Team hat die aktuelle Version der App fertiggestellt und für den App-Store freigegeben. Welche der folgenden Aktivitäten ist Ihre nächste?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Archivieren der Testmittel.",
+      "Post-Release-Test.",
+      "App-Store Freigabetests.",
+      "Abschluss der Testaktivitäten."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Wenn die App im App-Store verfügbar ist, muss getestet werden, ob sie von dort installiert werden kann und ob sie wie im getesteten Build funktioniert. Das ist der Post-Release-Test.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 30,
+    "Text": "Sie sind ein neues Mitglied in einem Team, das mobile Applikationen testet. Ihr Teamleiter bittet Sie, folgendes jeweils 1 Stunde lang zu testen: Eingaben in die App, Funktionen der App, Unterbrechungen, usw. Welche der folgenden Methoden wendet der Teamleiter an?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Risikoorientiertes Testmanagement",
+      "Übertragung seiner Verantwortung an Sie.",
+      "Steuerung von Performanztests.",
+      "Sitzungsbasiertes Testmanagement."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Der Teamleiter verwendet das sitzungsbasierte Testmanagement, da das Testen in einstündige Testsitzungen mit jeweils einem definierten Fokus unterteilt ist.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 31,
+    "Text": "Bei welcher der folgenden Testmethoden handelt es sich um eine effektive Methode zur Durchführung von Feldtests?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Verwendung von Touren als eine Art explorativer Testverfahren.",
+      "Verwendung eines Vor-Ort-Labors für die Ausführung von Test auf verschiedenen Smartphones.",
+      "Verwendung eines Cloud-basierten Vorgehens.",
+      "Verwendung eines Testwerkzeugs, um automatisierte Tests auf mobilen Browsern durchzuführen."
+    ],
+    "CorrectIndexes": [ 0 ],
+    "Explanation": "Touren werden verwendet, um eine Applikation explorativ kennenzulernen und zu verstehen, wie die App funktioniert. In diesem Kontext sind Touren sehr effektiv für die Durchführung von Feldtests.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 32,
+    "Text": "Warum wird beim Testen mobiler Applikationen die Testpyramide häufig umgedreht?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Komponententests sind bei mobilen Apps viel komplizierter. Daher ist es zweckmäßig, nur wenige Komponententests durchzuführen.",
+      "Aufgrund fehlender Werkzeugunterstützung für Komponenten- und Integrationstests für mobile Apps.",
+      "Mobile Apps sind immer monolithisch. Daher kann alles auf Systemebene getestet werden, und es ist nicht erforderlich, auf niedrigeren Teststufen zu testen.",
+      "Mobile Apps erfordern viele manuelle Tests, genau wie Gebrauchstauglichkeits- oder Feldtests."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Die Markt- und Gerätefragmentierung, die Benutzererwartungen in Bezug auf die Gebrauchstauglichkeit und die Variabilität der Nutzungsszenarien führen zu Testbedingungen, die nur manuell getestet werden können. Deshalb wird die Testpyramide häufig umgedreht.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+  },
+  {
+    "Id": 33,
+    "Text": "Welche der folgenden Aussagen über die Entwicklungsumgebungen zur Entwicklung mobiler Applikationen ist richtig?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "iOS-Entwickler verwenden Visual Studio IDE als Entwicklungsumgebung.",
+      "Android-Entwickler verwenden die Universal Studio IDE, während iOS-Entwickler Xcode als Entwicklungsumgebung verwenden.",
+      "Android-Entwickler verwenden die Xcode IDE als Entwicklungsumgebung.",
+      "iOS-Entwickler verwenden die Xcode IDE als Entwicklungsumgebung."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Gemäß Lehrplan kann für die Entwicklung von Android-Apps Android Studio und für die Entwicklung von iOS-Apps Xcode verwendet werden. Daher ist die Aussage, dass iOS-Entwickler die Xcode IDE nutzen, korrekt.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+  },
+  {
+    "Id": 34,
+    "Text": "Welche der folgenden Aufgaben kann in der Regel NICHT mit einem Software Development Kit (SDK) für mobile Applikationen ausgeführt werden?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Erstellen von Screenshots.",
+      "Entwerfen von Testfällen.",
+      "Senden zufälliger Ereignisse an die Applikation.",
+      "Erstellen virtueller Geräte."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Das Entwerfen von Testfällen ist keine typische Aufgabe eines Software Development Kits (SDK) für mobile Applikationen. SDKs unterstützen dagegen Aufgaben wie Screenshots, das Senden zufälliger Ereignisse an die App oder das Erstellen virtueller Geräte.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+  },
+  {
+    "Id": 35,
+    "Text": "Sie haben als Tester die Aufgabe, eine mobile App mit einer Client-Server-Architektur zu testen. Um die verfügbare Hardware besser nutzen zu können, beschließt das Unternehmen, zum Testen der grundlegenden Funktionen in den frühen Testphasen den PC des Mitarbeiters zu verwenden, ohne dass die Applikation mit einem echten Server verbunden ist. \n\nWelche der beschriebenen Testumgebungen sollte - gemäß Ihrer Empfehlung - der Entwickler der Android App in den frühen Testphasen der Entwicklung verwenden, um die funktionale Eignung der Grundfunktionen zu verifizieren?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Den Server-Emulator auf dem PC des Entwicklers und den Simulator der mobilen Applikation auf einem echten Endgerät installieren.",
+      "Den Simulator der mobilen App auf einem der Android Virtual Device (AVD) Geräteemulatoren und den Server-Emulator auf dem PC des Entwicklers installieren.",
+      "Den Server-Simulator auf dem PC des Entwicklers und die mobile Applikation auf einem der Android Virtual Device (AVD) Geräteemulatoren installieren.",
+      "Den Server-Simulator und die emulierte mobile Applikation direkt auf dem PC des Entwicklers installieren."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Es ist möglich, dass ein Simulator die Serverseite darstellt und die Applikation auf dem Android Virtual Device-Emulator installiert ist, um die Testumgebung in frühen Testphasen besser nutzen zu können (alles auf einem PC). Darüber hinaus ist es sinnvoll, wenn der Tester den Entwickler bezüglich der Umgebung berät. Auch ist es eine gute Alternative, die Serverseite für grundlegende Funktionstests zu simulieren, falls es Probleme mit der Serverseite gibt oder diese vom Testteam in frühen Testphasen in Anspruch genommen werden soll.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+  },
+  {
+    "Id": 36,
+    "Text": "Sie sind Testmanager im Geschäftsbereich Digitales Banking eines Fintech-Unternehmens, das mit der Aktualisierung der Android-basierten Mobile-Banking-App eines mittelständischen Finanzinstituts beauftragt ist. Das Upgrade beinhaltet einen innovativen Sicherheitsmechanismus, der Fingerabdruck- und Gesichtserkennungsfunktionen für eine verbesserte Sicherheit der App verwendet. \n\nWelcher der folgenden Ansätze ist für die Einrichtung eines Testlabors zum Testen dieses Upgrades der BESTE?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Einrichtung eines entlegenen Testlabors, um die neue innovative Mobile-Banking-App auf möglichst vielen Gerätetypen zu testen.",
+      "Einrichtung eines Vor-Ort-Labors, um die neuen einzigartigen gerätebezogenen Funktionen der innovativen Mobile-Banking-App effektiv zu testen.",
+      "Einrichtung eines entlegenen Testlabors, um die Mobile-Banking-App auf vielen verschiedenen Gerätetypen zu testen, sowie eines Vor-Ort-Labor, um die größtmögliche Zahl der möglichen Geräte abzudecken.",
+      "Einrichtung eines entlegenen Testlabors, um die neue innovative Mobile-Banking-App auf vielen Android Gerätetypen verschiedener Gerätehersteller zu testen, und um Kosten für das Unternehmen zu sparen."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Der Hauptvorteil eines Vor-Ort-Labors besteht darin, spezifische Tests für Sensoren, Akkus und gerätespezifische Funktionen oder technische Teile zu ermöglichen, insbesondere wenn diese Tests von Geräteherstellern durchgeführt werden. Die Frage prüft, ob zwischen den Laborarten unterschieden werden kann, indem ihre Vorteile wirksam eingesetzt werden.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+  },
+  {
+    "Id": 37,
+    "Text": "Welche der folgenden Aussagen unterscheidet NICHT korrekt zwischen den gängigen Testautomatisierungsansätzen für das Testen mobiler Applikationen?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Agent-basierte Testansätze eignen sich am besten zum Ausführen mobiler Web-Apps, während gerätebasierte Tests für alle Arten mobiler Applikationen am besten geeignet sind.",
+      "Der Agent-basierte Testansatz verwendet eine vom Browser gesendete Zeichenkette, um einem Browser ein bestimmtes Gerät vorzutäuschen, während der gerätebasierte Testansatz auf einem bestimmten mobilen Endgerät ausgeführt werden muss.",
+      "Native Apps lassen sich am besten mit den allgemeinen Webapplikations-Automatisierungswerkzeugen testen, während mobile Apps spezifische Werkzeuge benötigen.",
+      "Die Funktionsweise des Agent-basierten Testansatzes besteht darin, die Browsereigenschaften zu imitieren, während die Funktionsweise des gerätebasierten Testansatzes auf dem tatsächlichen Browser basiert."
+    ],
+    "CorrectIndexes": [ 2 ],
+    "Explanation": "Es sind die mobilen Apps, die mit den allgemeinen Webapplikationswerkzeugen getestet werden, während native Apps sich am besten mit spezifischen Werkzeugen testen lassen. Daher unterscheidet Aussage c die Ansätze nicht korrekt.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+  },
+  {
+    "Id": 38,
+    "Text": "Welche der folgenden Aussagen ist WAHR in Bezug auf die Skripterstellungsmethoden, die bei der Automatisierung mobiler Tests verwendet werden?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Das Erstellen von Skripten mithilfe der Objektidentifikation ist schneller als mithilfe der visuellen Erkennung (optische Zeichenerkennung/Texterkennung) und reduziert daher den für die Testausführung insgesamt erforderlichen Zeitaufwand.",
+      "Die objektbasierte Skripterstellung ist die zuverlässigere Methode zum Erstellen von Testautomatisierungscode, da das Testframework das richtige Objekt der mobilen Applikation unabhängig von dem zu testenden Gerät automatisch zuordnen kann.",
+      "Wenn Objektidentifizierung bei der Skripterstellung verwendet wird, erhöht dies den laufenden Wartungsaufwand, wenn sich der Softwarecode der App häufig ändert, und sich das auf die Vergleichsbilder auswirkt.",
+      "Wenn man sich bei der Skripterstellung auf optische Zeichenerkennung/Texterkennung und Objektelernen verlässt, stellt dies kein Risiko für die Zuverlässigkeit oder Robustheit der Testautomatisierung dar."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Die objektbasierte Skripterstellung ist die zuverlässigste Methode zum Erstellen von Testautomatisierungscode, da das Testframework das richtige Objekt der mobilen Applikation unabhängig vom verwendeten Gerät automatisch zuordnen kann.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+  },
+  {
+    "Id": 39,
+    "Text": "Welcher der folgenden Faktoren spielt bei der Bewertung von Testautomatisierungswerkzeugen für das Testen mobiler Applikationen KEINE große Rolle?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Die Testautomatisierungsfähigkeiten der Tester, die das Werkzeug verwenden werden.",
+      "Die Automatisierungsanforderungen und -komplexitäten, z.B. die Verwendung neuer Funktionen wie FaceID, Fingerprint, Chatbots durch die App.",
+      "Es ist wichtig, Automatisierungsanforderungen und -komplexitäten zu berücksichtigen.",
+      "Fähigkeit des Testframeworks, unabhängig von anderen in der Organisation verwendeten Werkzeugen zu arbeiten."
+    ],
+    "CorrectIndexes": [ 3 ],
+    "Explanation": "Die Fähigkeit des Testframeworks, unabhängig von anderen in der Organisation verwendeten Werkzeugen zu arbeiten, spielt bei der Bewertung von Testautomatisierungswerkzeugen keine große Rolle. Wichtige Faktoren sind dagegen die Automatisierungsfähigkeiten der Tester sowie die Anforderungen und Komplexitäten.",
+    "Explanation2": "",
+    "KLevel": 1,
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+  },
+  {
+    "Id": 40,
+    "Text": "Welche der folgenden Aussagen spricht AM WENIGSTEN für die Verwendung eines entlegenen Testlabors?\n\nWählen Sie EINE Option!",
+    "Options": [
+      "Tests in späteren Phasen der App-Entwicklung, die in einem vollständigen Mobilgeräte-Testlabor durchgeführt werden müssen, werden am besten mit einem entlegenen Testlabor durchgeführt.",
+      "Ein entlegenes Mobilgeräte-Testlabor deckt höchstwahrscheinlich einen kleinen Satz der neuesten Geräte-/Betriebssystemkonfigurationen ab, damit Entwickler und Tester die frühen Entwurfsphasen der App schnell validieren können.",
+      "Entlegene Mobilgeräte-Testlabore stellen sicher, dass eine ausreichende Vielfalt an Geräten und Betriebssystemen zur Verfügung steht, damit Teams eine größere Vielfalt an Testgeräten für ihre Tests nutzen können.",
+      "Entlegene Labore sind besser für umfangreiche Tests geeignet, da sie in der Regel entworfen wurden, um sicherzustellen, dass Stabilitätsprobleme in den meisten Fällen aus dem Gesamtprozess eliminiert werden."
+    ],
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Das Testen mit einem Vor-Ort-Mobilgeräte-Testlabor ist typischerweise der Ansatz, bei dem in den frühen Phasen nur eine kleine Auswahl an Geräten verwendet wird. Ein entlegenes Testlabor wird dagegen eher für umfangreiche Tests mit einer Vielzahl an Geräten genutzt. Daher spricht Aussage b am wenigsten für ein entlegenes Testlabor.",
+    "Explanation2": "",
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+  }
+]

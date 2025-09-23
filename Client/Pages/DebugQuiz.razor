@@ -160,7 +160,7 @@ else
     string errorMessage = string.Empty;
     int currentIndex = 0;
 
-    // Quiz starten (Debug-Modus)
+   // Quiz starten (Debug-Modus)
     async Task StartQuiz()
     {
         quizStarted = true;
@@ -171,7 +171,13 @@ else
         try
         {
             // Fragen über Debug-Service laden (inkl. Filter)
-            var list = await QuestionService.GetDebugQuizAsync(questionCount, minId, maxId, shuffle);
+            var list = await QuestionService.GetDebugQuizAsync(
+                count: questionCount,
+                minId: minId,
+                maxId: maxId,
+                shuffle: shuffle,
+                category: "ctfl"   // ✅ explizit CTFL
+            );
 
             if (list == null || list.Count == 0)
             {
@@ -196,8 +202,8 @@ else
 
                 // Antworten initialisieren
                 State.Answers = Enumerable.Range(0, State.Questions.Count)
-                                          .Select(_ => new List<int>())
-                                          .ToList();
+                                        .Select(_ => new List<int>())
+                                        .ToList();
             }
         }
         catch (Exception ex)
@@ -210,6 +216,7 @@ else
             currentIndex = 0;
         }
     }
+
 
     // Antwort toggeln (mehrfach möglich)
     void ToggleAnswer(int idx)

@@ -15,47 +15,77 @@ namespace IstqbQuiz.Server.Controllers
             _env = env;
         }
 
-        [HttpGet]
-        public IActionResult GetAllQuestions()
+        // ============================================
+        // Hilfsfunktion: Lädt Fragen aus einer JSON-Datei
+        // - category = ctfl, ctmat, ...
+        // - Standard: ctfl
+        // ============================================
+        private List<Question> LoadQuestions(string category = "ctfl")
         {
-            var filePath = Path.Combine(_env.ContentRootPath, "Data", "questions.json");
+            var fileName = category.ToLower() switch
+            {
+                "ctfl" => "questions_ctfl.json",
+                "ctmat" => "questions_ctmat.json",
+                _ => "questions_ctfl.json" // Fallback
+            };
+
+            var filePath = Path.Combine(_env.ContentRootPath, "Data", fileName);
 
             if (!System.IO.File.Exists(filePath))
-                return NotFound($"questions.json not found! Path: {filePath}");
+                throw new FileNotFoundException($"Datei {fileName} nicht gefunden! Pfad: {filePath}");
 
+            var json = System.IO.File.ReadAllText(filePath);
+            return JsonSerializer.Deserialize<List<Question>>(json) ?? new();
+        }
+
+        // ============================================
+        // GET api/questions/{category?}
+        // -> Lädt ALLE Fragen für die Kategorie
+        // -> Standard: ctfl
+        // ============================================
+        [HttpGet("{category?}")]
+        public IActionResult GetAllQuestions(string category = "ctfl")
+        {
             try
             {
-                var json = System.IO.File.ReadAllText(filePath);
-                var questions = JsonSerializer.Deserialize<List<Question>>(json);
+                var questions = LoadQuestions(category);
                 return Ok(questions);
+            }
+            catch (FileNotFoundException ex)
+            {
+                return NotFound(ex.Message);
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error deserializing questions.json: {ex.Message}");
+                return StatusCode(500, $"Fehler beim Laden der Fragen ({category}): {ex.Message}");
             }
         }
 
-        [HttpGet("random/{count}")]
-        public IActionResult GetRandomQuestions(int count = 40)
+        // ============================================
+        // GET api/questions/{category}/random/{count}
+        // -> Lädt ZUFÄLLIGE Fragen für die Kategorie
+        // ============================================
+        [HttpGet("{category}/random/{count}")]
+        public IActionResult GetRandomQuestions(string category, int count = 40)
         {
-            var filePath = Path.Combine(_env.ContentRootPath, "Data", "questions.json");
-
-            if (!System.IO.File.Exists(filePath))
-                return NotFound($"questions.json not found! Path: {filePath}");
-
             try
             {
-                var json = System.IO.File.ReadAllText(filePath);
-                var questions = JsonSerializer.Deserialize<List<Question>>(json) ?? new();
+                var questions = LoadQuestions(category);
 
                 var rnd = new Random();
-                var randomSet = questions.OrderBy(_ => rnd.Next()).Take(Math.Min(count, questions.Count)).ToList();
+                var randomSet = questions.OrderBy(_ => rnd.Next())
+                                         .Take(Math.Min(count, questions.Count))
+                                         .ToList();
 
                 return Ok(randomSet);
             }
+            catch (FileNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error reading questions.json: {ex.Message}");
+                return StatusCode(500, $"Fehler beim Lesen der Fragen ({category}): {ex.Message}");
             }
         }
     }

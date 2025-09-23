@@ -1,4 +1,4 @@
-@page "/quiz"
+@page "/quizctmat"
 @using IstqbQuiz.Client.Services
 @using IstqbQuiz.Shared.Services;
 @using IstqbQuiz.Shared.Models
@@ -7,7 +7,7 @@
 @inject QuestionService QuestionService
 @inject NavigationManager Nav
 
-<h3 class="mb-4">ISTQB Quiz</h3>
+<h3 class="mb-4">ISTQB CT-MAT Quiz</h3>
 
 @if (!quizStarted)
 {
@@ -27,7 +27,7 @@ else if (!string.IsNullOrEmpty(errorMessage))
 else if (State.Questions.Count == 0)
 {
     <!-- Fallback, falls gar keine Fragen im State sind -->
-    <div class="alert alert-warning">Keine Fragen gefunden (prüfe Server/Data/questions.json).</div>
+    <div class="alert alert-warning">Keine Fragen gefunden (prüfe Server/Data/questions_ctmat.json).</div>
 }
 else if (currentIndex < State.Questions.Count)
 {
@@ -143,16 +143,15 @@ else
         errorMessage = string.Empty;
         State.Clear(); // reset: Fragen, Antworten, Score zurücksetzen
 
-        // ✅ Merker: wir sind im normalen Quiz
+        // ✅ Merker: wir sind im CT-MAT Quiz
         State.IsAdvancedQuiz = false;
 
-        // ✅ Kategorie merken
-        State.Category = "ctfl"; 
+        State.Category = "ctmat";
 
         try
         {
-            // Hole 40 zufällige Fragen aus dem Service
-            var list = await QuestionService.GetRandomAsync(40, "ctfl");
+            // Hole 40 zufällige Fragen aus der Kategorie "ctmat"
+            var list = await QuestionService.GetRandomAsync(40, "ctmat");
             if (list == null || list.Count == 0)
             {
                 errorMessage = "Keine Fragen gefunden.";
@@ -191,7 +190,6 @@ else
             currentIndex = 0; // Quiz immer bei erster Frage starten
         }
     }
-
 
     // =========================
     // Antwort toggeln (Mehrfach möglich)
