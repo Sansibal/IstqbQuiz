@@ -13,7 +13,8 @@
       2
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 2,
@@ -29,7 +30,8 @@
       0
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 3,
@@ -45,7 +47,8 @@
       0
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 4,
@@ -61,7 +64,8 @@
       1
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 5,
@@ -77,7 +81,8 @@
       1
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 6,
@@ -93,7 +98,8 @@
       1
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 7,
@@ -109,7 +115,8 @@
       3
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 8,
@@ -125,7 +132,8 @@
       3
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 9,
@@ -141,7 +149,8 @@
       2
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 10,
@@ -157,7 +166,8 @@
       2
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 11,
@@ -173,7 +183,8 @@
       3
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 12,
@@ -189,7 +200,8 @@
       2
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 13,
@@ -205,7 +217,8 @@
       0
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 14,
@@ -221,7 +234,8 @@
       0
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 15,
@@ -237,7 +251,8 @@
       0
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 16,
@@ -253,7 +268,8 @@
       3
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 17,
@@ -269,7 +285,8 @@
       1
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 18,
@@ -285,7 +302,8 @@
       3
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 19,
@@ -301,7 +319,8 @@
       2
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 20,
@@ -317,7 +336,8 @@
       0
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 21,
@@ -333,7 +353,8 @@
       2
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 22,
@@ -351,7 +372,8 @@
       3
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 23,
@@ -395,7 +417,8 @@
       1
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 24,
@@ -411,7 +434,8 @@
       1
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 25,
@@ -427,7 +451,8 @@
       3
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 26,
@@ -443,7 +468,8 @@
       0
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 27,
@@ -459,7 +485,8 @@
       2
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 28,
@@ -475,7 +502,8 @@
       1
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 29,
@@ -491,7 +519,8 @@
       3
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 30,
@@ -507,7 +536,8 @@
       2
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 31,
@@ -523,7 +553,8 @@
       2
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 32,
@@ -539,7 +570,8 @@
       1
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 33,
@@ -557,7 +589,8 @@
       0
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 34,
@@ -573,7 +606,8 @@
       0
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 35,
@@ -589,7 +623,8 @@
       2
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 36,
@@ -605,7 +640,8 @@
       2
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 37,
@@ -619,7 +655,10 @@
     "Explanation": "Um das Testen zu unterstützen, kann das Konfigurationsmanagement die Versionsverwaltung aller Testelemente beinhalten (vgl. CTFL-Lehrplan V4.0, Abschnitt 5.4, 4. Absatz, 1. Satz).",
     "CorrectIndexes": [
       2
-    ]
+    ],
+    "KLevel": 2,
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 38,
@@ -635,7 +674,8 @@
       2
     ],
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 39,
@@ -651,7 +691,8 @@
       2
     ],
     "KLevel": 2,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 40,
@@ -667,7 +708,8 @@
       1
     ],
     "KLevel": 1,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET A v2.2"
   },
   {
     "Id": 41,
@@ -683,7 +725,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Das Vertrauen in die Qualität des Testobjekts wird durch das Ausführen von Tests, die bestanden werden, aufgebaut (siehe CTFL-Lehrplan V4.0, Abschnitt 1.1.1, 8. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 42,
@@ -699,7 +742,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Der Fehler wird vom Programmierer gemacht, und dieser Fehler wird dadurch verursacht, dass der Programmierer unter großem Zeitdruck arbeitet, was die eigentliche Ursache für den nachfolgenden Fehler ist (siehe CTFL-Lehrplan V4.0, Abschnitt 1.2.3, 1. + 4. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 43,
@@ -715,7 +759,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Das Prinzip des „Tests nutzen sich ab“ befasst sich mit der Idee, dass die Wiederholung identischer Tests an unverändertem Code wahrscheinlich keine neuen Fehler aufdeckt und daher eine Änderung der Tests unerlässlich sein kann. Durch die Verwendung von Testbedingungen, um jedes Mal neue Tests zu generieren, sind die Tests nicht identisch und das Risiko des „Tests nutzen sich ab“ wird reduziert (siehe CTFL-Lehrplan V4.0, Abschnitt 1.3, 5. Grundsatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 44,
@@ -731,7 +776,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Die KORREKTE Zuordnung ist: 1B, 2D, 3C, 4A. <br>• 1B: Testentwurf umfasst das Ableiten von Testfällen aus Testbedingungen. <br>• 2D: Testabschluss schließt die Identifikation wiederverwendbarer Testware ein. <br>• 3C: Testrealisierung organisiert Testfälle in Testabläufen. <br>• 4A: Testanalyse bewertet die Testbasis und das Testobjekt.",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 45,
@@ -747,7 +793,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Testdaten wie Daten in einer Datenbank, die für Testeingaben und erwartete Ergebnisse verwendet werden, sind ein Ergebnis der Testrealisierung (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.3, 5. Aufzählungspunkt).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 46,
@@ -763,7 +810,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Die Testmanagementrolle umfasst Aktivitäten wie Testplanung, Testüberwachung und Teststeuerung sowie Testabschluss. Das Erstellen des Testabschlussberichts ist eine Hauptaufgabe der Testmanagementrolle im Rahmen der Testabschlussaktivität (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.5, 2. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 47,
@@ -779,7 +827,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Der Whole-Team-Ansatz fördert eine robuste Kommunikation und Zusammenarbeit zwischen den Teammitgliedern, was ein wesentlicher Vorteil ist (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.2, 2. Absatz).",
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 48,
@@ -797,7 +846,8 @@
     "Explanation": "Tester haben oft unterschiedliche Perspektiven und können Annahmen und Spezifikationen hinterfragen, was die Wahrscheinlichkeit erhöht, Fehler und Mängel zu erkennen (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.3, 3. Absatz).",
     "Explanation2": "Tester und Entwickler haben unterschiedliche technische Hintergründe und kognitive Vorurteile, was es Testern ermöglicht, Fehler zu erkennen, die Entwicklern möglicherweise entgehen (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.3, 3. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 49,
@@ -813,7 +863,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Jede Teststufe hat spezifische und eindeutige Testziele, um sicherzustellen, dass unterschiedliche Aspekte des Testobjekts geprüft werden. Überschneidungen der Testziele können zu unnötiger Duplizierung führen (siehe CTFL- Lehrplan V4.0, Abschnitt 2.1.2, 2. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 50,
@@ -829,7 +880,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Verhaltensgetriebene Entwicklung (Behavior-Driven Development, BDD) ist ein bekanntes Beispiel für einen testgetriebenen Entwicklungsansatz (siehe CTFL- Lehrplan V4.0, Abschnitt 2.1.3, 4. Absatz).",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 51,
@@ -845,7 +897,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Eine der größten Herausforderungen bei der Implementierung von DevOps ist das Einrichten und Warten der Testautomatisierung als integraler Bestandteil der Bereitstellungspipeline, einschließlich der Einführung und Pflege von CI/CD-Tools (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.4, 3. Absatz, 3. Aufzählungspunkt).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 52,
@@ -861,7 +914,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Retrospektiven bieten Teams die Möglichkeit, über erfolgreiche Aktivitäten zu sprechen, die beibehalten werden sollten, und über Verbesserungsmöglichkeiten nachzudenken (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.6, 1. Absatz, Aufzählungspunkte).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 53,
@@ -877,7 +931,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Die Überprüfung, ob die Sortierfunktion die Elemente korrekt sortiert, bewertet die funktionale Korrektheit der Funktion und gehört zu den Funktionstests (siehe CTFL-Lehrplan V4.0, Abschnitt 2.2.2, 2. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 54,
@@ -893,7 +948,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Systemänderungen wie Korrekturen oder Erweiterungen sind typische Auslöser für Wartungstests. Das Entfernen der Rückerstattungsoption ist eine Korrektur, die Wartungstests erforderlich macht (siehe CTFL-Lehrplan V4.0, Abschnitt 2.3, 3. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 55,
@@ -909,7 +965,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Verschlüsselter Code ist zu komplex, um von Menschen interpretiert werden zu können, und nicht geeignet für die Analyse durch statische Kapitel 6 - Testwerkzeuge, wenn er korrekt verschlüsselt ist. Daher kann er nicht effektiv durch statisches Testen untersucht werden (siehe CTFL-Lehrplan V4.0, Abschnitt 3.1.1, 3. Absatz).",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 56,
@@ -925,7 +982,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Dies ist die beste Beschreibung des Werts Statischer Tests. Statische Tests können viele Fehler frühzeitig und ohne Codeausführung finden, z. B. Designprobleme oder Verstöße gegen Standards. Dynamische Tests hingegen entdecken nur Fehler, die bei der Ausführung auftreten – nicht aber rein strukturelle oder dokumentationsbezogene Mängel. Diese Aussage betont die Komplementarität und Vorteile Statischer Tests am besten.",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 57,
@@ -941,7 +999,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Diese Reihenfolge stimmt mit dem generischen Reviewprozess überein (siehe CTFL-Lehrplan V4.0, Abschnitt 3.2.2, 3. Absatz): <br>• Planung (4): Ziele und Zeitplan der Reviews werden festgelegt. <br>• Reviewbeginn (5): Teilnehmer erhalten Zugriff auf das zu überprüfende Element. <br>• Individuelles Review (3): Reviewer identifizieren Anomalien und stellen Fragen. <br>• Kommunikation und Analyse (1): Anomalien werden diskutiert und Entscheidungen werden getroffen. <br>• Behebung und Testberichterstattung (2): Probleme werden behoben und Berichte werden erstellt.",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 58,
@@ -957,7 +1016,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Der Moderator (auch Facilitator genannt) ist dafür verantwortlich, sicherzustellen, dass die Reviewsitzungen effektiv ablaufen. Dazu gehören Zeitmanagement, Moderation von Diskussionen und die Schaffung einer sicheren Umgebung, in der alle Teilnehmer ihre Meinungen frei äußern können (siehe CTFL- Lehrplan V4.0, Abschnitt 3.2.3, 3. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 59,
@@ -973,7 +1033,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Die Anforderung spezifiziert das gewünschte Verhalten des Systems und enthält klare Geschäftsregeln, wie „übersteigt 100 €“. Diese Art von Information eignet sich gut für Black- Box-Testverfahren wie Grenzwertanalyse oder Entscheidungstabellentest (siehe CTFL-Lehrplan V4.0, Abschnitt 4.1, 3. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 60,
@@ -991,7 +1052,8 @@
     "Explanation": "CY - BY = 65. Dieser Eingabewert gehört zur Klasse „Rentnerrabatt“, die in den bisherigen Testfällen noch nicht abgedeckt ist.",
     "Explanation2": "CY - BY = 0. Dieser Eingabewert gehört zur Klasse „Kinder-/Jugendrabatt“, die in den bisherigen Testfällen noch nicht abgedeckt ist. Es gibt zwei Äquivalenzklassen, die noch nicht abgedeckt sind, und zwar die Klassen, die dem „Rentnerrabatt“ (b) und dem „Kinder-/Jugendrabatt“ (e) entsprechen.",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 61,
@@ -1007,7 +1069,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Dieses Set deckt alle relevanten Grenzwerte ab: • -1 für die Klasse „Temperatur zu niedrig“ • 0 und 2 für die Klasse „Temperatur OK“ • 3 für die Klasse „Temperatur zu hoch“",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 62,
@@ -1065,7 +1128,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Die Bedingungen „66-jährig“, „nicht registriert“ und „ohne Erfahrung“ entsprechen der Regel R4, die bisher nicht von den bestehenden Testfällen abgedeckt wurde. Das Hinzufügen dieses Testfalls erhöht die Überdeckung der Entscheidungstabelle.",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 63,
@@ -1082,7 +1146,8 @@
     "PostText": "Angenommen, alle Testfälle beginnen im Zustand 'Anfordern'.<br><br>Welcher der folgenden Testfälle (Abfolge von Ereignissen), erreicht die GRÖßTMÖGLICHE ÜBERDECKUNG GÜLTIGER ÜBERGÄNGE?<br><br>Wählen Sie EINE Option! (1 aus 4)",
     "Explanation": "Diese Abfolge von fünf Ereignissen deckt 5 verschiedene Übergänge ab (das erste „Verfügbar“-Ereignis entspricht einem Übergang zwischen S1 und S2 und das zweite „Verfügbar“-Ereignis entspricht einem Übergang zwischen S3 und S2, so dass zwei verschiedene Übergänge abgedeckt werden). Dieser Testfall deckt 5 von 7 gültigen Übergängen ab und erreicht die höchste gültige Übergangsüberdeckung.",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 64,
@@ -1098,7 +1163,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Eine 100 %ige Anweisungsüberdeckung bedeutet, dass jede ausführbare Anweisung mindestens einmal ausgeführt wurde.",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 65,
@@ -1114,7 +1180,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "White-Box-Tests berücksichtigen die gesamte Softwareimplementierung, was die Fehlererkennung erleichtert, selbst wenn die Spezifikation unklar oder unvollständig ist. Dies ermöglicht es, Fehlerzustände zu finden, die nicht durch Black- Box-Tests aufgedeckt werden können, wie z. B. zusätzliche Funktionen im Code, die nicht vorgesehen waren (siehe CTFL-Lehrplan V4.0, Abschnitt 4.3.3, 1. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 66,
@@ -1130,7 +1197,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Dies ist ein Beispiel für eine potenzielle Grundursache eines Defekts, aber keine direkte Vorhersage eines Fehlers, Defekts oder Ausfalls. Es liegt außerhalb des Fokus der intuitiven Testfallermittlung.",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 67,
@@ -1146,7 +1214,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Während des explorativen Testens können Tester alle Testverfahren anwenden, einschließlich Black-Box-Testverfahren, die sie für geeignet halten (siehe CTFL-Lehrplan V4.0, Abschnitt 4.4.2, 4. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 68,
@@ -1162,7 +1231,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Gespräche sind eine kollaborative Praxis, die es dem Team ermöglicht, ein kollektives Verständnis über die Anforderungen zu erreichen. Sie helfen oft bei der Definition von Akzeptanzkriterien und der Klärung von Unklarheiten (siehe CTFL- Lehrplan V4.0, Abschnitt 4.5.1, 2. Aufzählungspunkt).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 69,
@@ -1179,7 +1249,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Dieser Testfall deckt die Akzeptanzkriterien 2 und 3 ab: • Akzeptanzkriterium 2: Überprüfung, ob eine Preisspanne definiert werden kann. • Akzeptanzkriterium 3: Überprüfung, ob die Suchergebnisse dynamisch aktualisiert werden, wenn der Filter angepasst wird (siehe CTFL-Lehrplan V4.0, Abschnitt 4.5.3, 5. Absatz).",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 70,
@@ -1197,7 +1268,8 @@
     "Explanation": "Das Aufbrauchen des Budgets kann als Endekriterium betrachtet werden, da es signalisiert, dass die verfügbaren Ressourcen vollständig genutzt wurden und somit keine weiteren Aktivitäten durchgeführt werden können (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.3, 4. Absatz).",
     "Explanation2": "Überdeckung ist ein typisches Maß für die Gründlichkeit und wird häufig als Endekriterium verwendet, um zu bewerten, ob das Testen abgeschlossen ist (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.3, 3. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 71,
@@ -1213,7 +1285,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Beim Drei-Punkt-Schätzverfahren wird die endgültige Schätzung E wie folgt berechnet: E = (a + 4m + b) / 6, wobei a die optimistischste Schätzung, m die wahrscheinlichste Schätzung und b die pessimistischste Schätzung ist. In diesem Fall beträgt die Schätzung für die Ausführung eines einzelnen Testfalls: E = (1h + 4*3h + 8h) / 6 = 3,5 Stunden Somit beträgt die Gesamtzeit, die der Tester benötigt, um vier Testfälle auszuführen: 3,5h * 4 = 14 Stunden (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.4, Absatz „Drei-Punkt-Schätzung“).",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 72,
@@ -1274,7 +1347,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "TC1 erreicht die höchste Überdeckung (4/7 – Req1, Req3, Req4 und Req7) und sollte daher zuerst ausgeführt werden. Req2, Req5 und Req6 sind noch nicht abgedeckt. Der nächste Testfall, der die höchste zusätzliche Überdeckung der verbleibenden Anforderungen erreicht, ist TC3, der 2 dieser 3 Anforderungen (Req5 und Req6) abdeckt. Daher sollte TC3 als Zweites ausgeführt werden.<br><br>Nun ist die einzige Anforderung, die noch nicht abgedeckt ist, Req2, die von TC4 abgedeckt wird. Daher sollte TC4 als dritter Testfall ausgeführt werden.<br><br>Demnach wird der letzte ausgeführte Testfall TC2 sein. <br><br>Daher:",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 73,
@@ -1290,7 +1364,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Die Testquadranten bieten eine strukturierte Möglichkeit, die Beziehung zwischen Testarten und ihrer Rolle in den Bereichen Teamunterstützung (z. B. geschäftsorientiert) und Produktkritik (z. B. technologieorientiert) zu erklären, was für Stakeholder hilfreich ist (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.7, 2. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 74,
@@ -1306,7 +1381,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Die Risikobewertung kann einen quantitativen oder qualitativen Ansatz oder eine Mischung aus beidem verwenden. Beim quantitativen Ansatz wird die Risikostufe als Produkt aus Eintrittswahrscheinlichkeit und Schadensausmaß des Risikos berechnet. Also, Risikostufe = Eintrittswahrscheinlichkeit * Schadensausmaß des Risikos, daher gilt: <br><br>Schadensausmaß des Risikos = Risikostufe / Eintrittswahrscheinlichkeit. <br><br>In unserem Fall: Schadensausmaß des Risikos = Risikostufe / Eintrittswahrscheinlichkeit = 1.000 € / 50 % = 1.000 € / 0,5 = 2.000 €.",
     "KLevel": 1,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 75,
@@ -1324,7 +1400,8 @@
     "Explanation": "Schlechte Architektur ist ein Produktrisiko, da sie sich direkt auf die interne Struktur und Qualität des Produkts bezieht, was die Funktionalität, Wartbarkeit und Zuverlässigkeit des Produkts beeinflussen kann (siehe CTFL-Lehrplan V4.0, Abschnitt 5.2.2, 4. Absatz).",
     "Explanation2": "Zu lange Antwortzeiten sind ein Produktrisiko, da sie sich auf die Leistungsfähigkeit und Gebrauchstauglichkeit des Produkts auswirken, die wichtige Produkteigenschaften darstellen (siehe CTFL-Lehrplan V4.0, Abschnitt 5.2.2, 4. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 76,
@@ -1340,7 +1417,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Dies ist der Zweck eines Fehlerberichts, nicht eines Testberichts. Testberichte konzentrieren sich auf den Gesamtstatus und die Ergebnisse des Testens, nicht auf die detaillierte Beschreibung einzelner Fehler (siehe CTFL-Lehrplan V4.0, Abschnitt 5.3.2, 1. Absatz und Abschnitt 5.5).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 77,
@@ -1356,7 +1434,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Konfigurationsmanagement ist die Disziplin zur Identifikation, Kontrolle und Nachverfolgung von Arbeitsergebnissen. Es legt Aufzeichnungen über geänderte Konfigurationselemente an, wenn eine neue Basislinie erstellt wird. Mit Hilfe des Konfigurationsmanagements ist es möglich, zu einer vorherigen Basislinie zurückzukehren, um frühere Testergebnisse zu reproduzieren (siehe CTFL-Lehrplan V4.0, Abschnitt 5.4, 3. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 78,
@@ -1372,7 +1451,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Das Hinzufügen solcher Informationen, wie spezifische Benutzer- und Buchdaten, ermöglicht es dem Entwickler, die gleichen Eingabedaten zu verwenden, wodurch die Wahrscheinlichkeit steigt, dass der Fehlerzustand schnell reproduziert wird. Dies beschleunigt den Fehlerbehebungsprozess erheblich (siehe CTFL-Lehrplan V4.0, Abschnitt 5.5, 3. Absatz).",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 79,
@@ -1390,7 +1470,8 @@
     "Explanation": "DevOps-Werkzeuge unterstützen die Lieferpipeline, einschließlich Continuous Integration/Continuous Delivery (CI/CD), die automatische Builds und automatisierte Tests umfasst. Dadurch erleichtern sie die Testausführung erheblich (siehe CTFL-Lehrplan V4.0, Abschnitt 6.1, 6. Aufzählungspunkt).",
     "Explanation2": "Werkzeuge für nicht-funktionale Tests ermöglichen das Testen von Aspekten wie Performanz, Last und Stress, die manuell schwer durchzuführen sind. Diese Werkzeuge erleichtern die dynamische Testausführung in nicht-funktionalen Bereichen (siehe CTFL-Lehrplan V4.0, Abschnitt 6.1, 5. Aufzählungspunkt).",
     "KLevel": 2,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 80,
@@ -1406,7 +1487,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Inkompatibilität mit der Entwicklungsplattform ist ein typisches Risiko der Testautomatisierung, da sie die Integration, Durchführung und den Datenaustausch zwischen Testautomatisierung und Testobjekt erschwert oder unmöglich macht (siehe CTFL-Lehrplan V4.0, Abschnitt 6.2, 3. Absatz, 7. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET D v1.5.0"
   },
   {
     "Id": 81,
@@ -1420,7 +1502,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Das gezielte Hervorrufen von Fehlerwirkungen und die Identifikation von Fehlerzuständen ist ein zentrales Ziel dynamischer Tests (siehe CTFL-Lehrplan V4.0, Abschnitt 1.1.1, 2. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 82,
@@ -1434,7 +1517,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Beim Testen werden Fehler gefunden - direkt (z.B. bei Reviews oder statischer Analyse) oder indirekt (durch das Auslösen von Fehlerwirkungen im dynamischen Test). Debugging ist eine vom Testen getrennte Aktivität, meist durch Entwickler durchgeführt, und umfasst sowohl die Lokalisierung als auch die Behebung von Fehlern (siehe CTFL-Lehrplan V4.0, Abschnitt 1.1.2, 1. und 2. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 83,
@@ -1448,7 +1532,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Durch die Unterstützung des Endbenutzers bei der Durchführung von Abnahmetests sollte es möglich sein, zu validieren, ob das System die Bedürfnisse und Erwartungen der Benutzer erfüllt (siehe CTFL-Lehrplan V4.0, Abschnitt 1.3, 7. Grundsatz, letzter Satz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 84,
@@ -1464,7 +1549,8 @@
     "Explanation": "Beim Testentwurf werden wahrscheinlich Testverfahren eingesetzt, um Testfälle aus Testbedingungen und Überdeckungselemente zu erstellen (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.1, 5. Absatz).",
     "Explanation2": "Die Testanalyse beinhaltet wahrscheinlich den Einsatz von Testverfahren, um Testbedingungen zu identifizieren (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.1, 4. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 85,
@@ -1478,7 +1564,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Die richtige Übereinstimmung ist: 1B, 2D, 3C, 4A (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.3).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 86,
@@ -1492,7 +1579,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "In der agilen Softwareentwicklung können einige der Testmanagementaufgaben vom agilen Team selbst übernommen werden. Bei Testaktivitäten, die mehrere Teams innerhalb einer Organisation betreffen, können diese Aufgaben jedoch auch von Testmanagern außerhalb des Entwicklungsteams durchgeführt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.5, 2. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 87,
@@ -1506,7 +1594,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Der Whole-Team-Ansatz fördert eine bessere Teamdynamik durch stärkere Zusammenarbeit und effektivere Kommunikation. Dies führt zu einer effizienteren Arbeitsweise, da Synergien durch den gezielten Einsatz unterschiedlicher Kompetenzen entstehen (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.2, 2. Absatz).",
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 88,
@@ -1520,7 +1609,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Unabhängige Tester sind effektiver in der Fehlerfindung, da sie eine andere Perspektive und Voreingenommenheit als Entwickler haben. Dies kann jedoch zu Kommunikationsproblemen und einer angespannten Beziehung zwischen Testern und Entwicklern führen. Zudem können unabhängige Tester als Engpass im Releaseprozess wahrgenommen werden (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.3, 1. und 4. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 89,
@@ -1534,7 +1624,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Die Qualitätskontrolle bezieht sich auf alle Entwicklungsaktivitäten, was bedeutet: Für jede Softwareentwicklungsaktivität gibt es eine entsprechende Testaktivität (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.2, 1. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 90,
@@ -1548,7 +1639,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Die Akzeptanztestgetriebene Entwicklung (ATDD) ist ein bekanntes Beispiel für einen Test-First-Ansatz, bei dem Akzeptanztests zur Definition der Anforderungen vor der Implementierung genutzt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.3, 3. Absatz, 2. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 91,
@@ -1562,7 +1654,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Shift-Left betont, wie wichtig es ist, mit dem Testen früher im Softwareentwicklungslebenszyklus (SDLC) zu beginnen. Die Implementierung von Shift-Left-Tests erfordert zusätzliche Schulungen sowie einen höheren Aufwand und höhere Kosten in den frühen Phasen des SDLC, aber die Gesamteinsparungen sollten höher sein (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.5. 1. und 3. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 92,
@@ -1576,7 +1669,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Zu den Teilnehmern an Retrospektiven gehören typischerweise Tester, Entwickler, Architekten, Produktbesitzer und Businessanalysten, aber Endbenutzer werden selten zu diesen Treffen eingeladen oder nehmen selten daran teil – und es ist auch unwahrscheinlich, dass sie Berichte von diesen Treffen erhalten. Daher ist es sehr unwahrscheinlich, dass sie durch Retrospektiven mehr über die Entwicklungs- und Testprozesse erfahren und verstehen (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.6, 1. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 93,
@@ -1590,7 +1684,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Abnahmetests dienen der Überprüfung, ob das System die fachlichen Anforderungen des Benutzers erfüllt und für den Einsatz bereit ist. Im Idealfall werden diese Tests von den Endbenutzern durchgeführt (siehe CTFL-Lehrplan V4.0, Abschnitt 2.2.1, 5. Aufzählungspunkt).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 94,
@@ -1604,7 +1699,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Durch Fehlernachtests wird überprüft, ob die Aktualisierungen zu einer korrekten Implementierung geführt haben. Anschließend werden Regressionstests durchgeführt, um sicherzustellen, dass keine Fehler in unveränderten Bereichen des Systems eingeführt oder aufgedeckt wurden (siehe CTFL-Lehrplan V4.0, Abschnitt 2.2.3, 2. und 4. Absatz).",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 95,
@@ -1620,7 +1716,8 @@
     "Explanation": "Zwei verschiedene Teile der Entwurfsspezifikation stimmen aufgrund der Komplexität des Entwurfs nicht überein – dies ist ein Beispiel für einen Spezifikationsfehler, der Inkonsistenzen, Mehrdeutigkeiten, Widersprüche, Auslassungen, Ungenauigkeiten und Duplikate umfasst, die am einfachsten durch statische Tests gefunden werden können (siehe CTFL-Lehrplan V4.0, Abschnitt 3.1.3, 2. Absatz, 2. Aufzählungspunkt).",
     "Explanation2": "Eine Variable wird deklariert, dann aber nie im Programm verwendet – dies ist ein Beispiel für einen Programmierfehler, der Variablen mit undefinierten Werten, nicht deklarierte Variablen, doppelten oder nicht zugänglichen Code und übermäßige Codekomplexität umfasst und am einfachsten durch statische Tests gefunden werden kann (siehe CTFL-Lehrplan V4.0, Abschnitt 3.1.1 und Abschnitt 3.1.3, 2. Absatz, 3. Aufzählungspunkt).",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 96,
@@ -1634,7 +1731,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Es kann von großem Nutzen sein, frühzeitig und häufig im Softwareentwicklungsprozess Feedback von Stakeholdern einzuholen. Es erleichtert die frühzeitige Kommunikation potenzieller Qualitätsprobleme, kann Missverständnisse über Anforderungen verhindern und stellt sicher, dass Änderungen der Stakeholder-Anforderungen schneller verstanden und umgesetzt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 3.2.1, 2. Absatz, 1. Satz).",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 97,
@@ -1648,7 +1746,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Das technische Review wird von technisch qualifizierten Gutachtern unter der Leitung eines Moderators durchgeführt. Die Ziele bestehen darin, einen Konsens zu erzielen und Entscheidungen über technische Probleme zu treffen, während gleichzeitig die Qualität bewertet und Vertrauen in das Arbeitsprodukt aufgebaut wird, neue Ideen generiert werden, Autoren motiviert und befähigt werden, sich zu verbessern, und Anomalien aufgedeckt werden. → Zuordnung: 1D\n\nDas informelle Review hat das primäre Ziel, Anomalien zu erkennen. Der Prozess ist nicht definiert und erfordert keine formale Dokumentation. → Zuordnung: 2B\n\nDie Inspektion ist die formellste Art eines Reviews, das Hauptziel besteht darin, die meisten Anomalien zu finden. Zudem werden Metriken erhoben, die zur Verbesserung des SDLC beitragen können. → Zuordnung: 3C\n\nDer Walkthrough wird vom Autor geleitet und dient u.a. der Schulung von Gutachtern, der Generierung neuer Ideen, der Konsensfindung und der Motivation der Autoren. → Zuordnung: 4A\n\nSomit ist Antwort b) korrekt.",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 98,
@@ -1662,7 +1761,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Um erfolgreiche Überprüfungen sicherzustellen, ist es wichtig, das Arbeitsergebnis in Teile aufzuteilen, die klein genug sind, um in einem angemessenen Zeitrahmen überprüft zu werden. Damit wird verhindert, dass Prüfer während einzelner Überprüfungen oder Überprüfungsbesprechungen den Fokus verlieren (siehe CTFL-Lehrplan V4.0, Abschnitt 3.2.5, 3. Aufzählungspunkt).",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 99,
@@ -1676,7 +1776,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Black-Box-Testverfahren (auch spezifikationsbasierte Verfahren genannt) basieren auf einer Analyse des spezifizierten Verhaltens des Testobjekts ohne Bezug auf seine interne Struktur. Die Testbasis ist also in der Regel eine Spezifikation. Erfahrungsbasierte Testverfahren nutzen das Wissen und die Erfahrung von Testern effektiv für den Entwurf und die Implementierung von Testfällen. Dies bedeutet, dass der Tester beim Entwerfen von Tests die Spezifikation möglicherweise überhaupt nicht verwenden darf (siehe CTFL-Lehrplan V4.0, Abschnitt 4.1 und Abschnitt 2.2.2).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 100,
@@ -1690,7 +1791,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Die Äquivalenzklassen für gültige und ungültige PINs sind:\n\n1. Gültige PINs: Eine PIN mit genau vier Ziffern, von denen mindestens zwei unterschiedlich sind (z. B. 1234, 1123, 5678).\n2. Ungültige PINs: PINs mit weniger als vier Ziffern (z. B. 1, 12, 123); PINs mit mehr als vier Ziffern (z. B. 123456, 11111); PINs mit vier identischen Ziffern (z. B. 1111, 2222).\n\nOption a) ist korrekt:\n- 112 → Ungültig (weniger als vier Ziffern)\n- 1111 → Ungültig (vier gleiche Ziffern)\n- 1234 → Gültig (vier Ziffern, mindestens zwei verschieden)\n- 123456 → Ungültig (mehr als vier Ziffern)\n\nDamit sind alle relevanten Äquivalenzklassen abgedeckt.",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 101,
@@ -1704,7 +1806,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Die Äquivalenzpartitionen sind: {…, 99, 100}, {101, 102, …, 198, 199}, {200, 201, …}. Somit gibt es 4 Grenzwerte: 100, 101, 199 und 200.\n\nBei der 2-Werte-Grenzwertanalyse gibt es für jeden Grenzwert zwei Überdeckungselemente (den Grenzwert und seinen nächsten Nachbarn, der zur angrenzenden Partition gehört). Da die nächsten Nachbarn auch Grenzwerte in der angrenzenden Partition sind, gibt es nur vier Überdeckungselemente.\n\nAntwort d) ist korrekt, da sie die größte Überdeckung der Grenzwerte erreicht.",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 102,
@@ -1763,7 +1866,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Die Kombination (F, F, F) passt sowohl zu R2 als auch zu R3, aber R2 und R3 haben unterschiedliche Aktionen („Zusätzliche Fahrstunden anfordern“ und „Antrag auf Wiederholung der Prüfung“). Das zeigt einen Widerspruch zwischen den Regeln (siehe CTFL-Lehrplan V4.0, Abschnitt 4.2.3).",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 103,
@@ -1779,6 +1883,7 @@
     "Explanation": "Die Übergänge „ANFRAGE -> BESTÄTIGT“, „WARTELISTE -> BESTÄTIGT“ und „WARTELISTE -> END“ können nicht im selben Testfall vorkommen, was darauf hindeutet, dass mindestens drei Testfälle erforderlich sind. Tatsächlich sind nur drei Sequenzen möglich:\n\nTF1: START -> ANFRAGE (Verfügbar) -> BESTÄTIGT (Bezahlen) -> END\nTF2: START -> ANFRAGE (Nicht verfügbar) -> WARTELISTE (Verfügbar) -> BESTÄTIGT (Stornieren) -> END\nTF3: START -> ANFRAGE (Nicht verfügbar) -> WARTELISTE (Zahlen) -> END\n\nDaher ist Antwort a) korrekt.",
     "KLevel": 3,
     "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0",
     "Diagram": "images/frage103_diagramm.png"
   },
   {
@@ -1795,6 +1900,7 @@
     "Explanation": "Beim Zweigtest sind die Überdeckungselemente Zweige, die durch die Kanten eines Kontrollflussdiagramms dargestellt werden. Es gibt 8 Kanten im Kontrollflussdiagramm. Daher ist Antwort c) korrekt.",
     "KLevel": 2,
     "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0",
     "Diagram": "images/frage104_diagramm.png"
   },
   {
@@ -1809,7 +1915,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Die reine Durchführung von Black-Box-Tests liefert kein Maß für die tatsächliche Codeüberdeckung. White-Box-Überdeckungsmessungen bieten eine objektive Messung der Überdeckung und liefern die notwendigen Informationen, um die Generierung zusätzlicher Tests zu ermöglichen, um diese Überdeckung zu erhöhen und anschließend das Vertrauen in den Code zu stärken (siehe CTFL-Lehrplan V4.0, Abschnitt 4.3.3).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 106,
@@ -1823,7 +1930,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Dies ist eine Liste möglicher Fehler. Fehlerangriffe sind ein methodischer Ansatz zur Implementierung der Fehlerschätzung und erfordern, dass der Tester eine Liste möglicher Fehler, Defekte und Ausfälle erstellt oder erfasst und Tests entwirft, die mit den Fehlern verbundene Defekte identifizieren, die Defekte aufdecken oder die Fehler verursachen Misserfolge (siehe CTFL-Lehrplan V4.0, Abschnitt 4.4.1).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 107,
@@ -1837,7 +1945,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Wenn es sich bei den Checklisten um ein hohes Niveau handelt, ist es wahrscheinlich, dass bei den tatsächlichen Tests eine gewisse Variabilität auftritt, was möglicherweise zu einer größeren Überdeckung, aber einer geringeren Wiederholbarkeit führt. Wenn zwei Tester einer Checkliste mit hochrangigen Elementen folgen, kann jeder von ihnen unterschiedliche Testdaten, Testschritte usw. verwenden. Auf diese Weise wird ein Tester wahrscheinlich einige Bereiche abdecken, die der andere Tester nicht abdeckt, und dies führt zu einer erhöhten Überdeckung (siehe CTFL-Lehrplan V4.0, Abschnitt 4.4.3).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 108,
@@ -1851,7 +1960,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Dieses Akzeptanzkriterium beschreibt ein Beispielszenario, das vom System realisierbar sein muss. Dies ist ein Beispiel für ein szenarioorientiertes Akzeptanzkriterium (siehe CTFL-Lehrplan V4.0, Abschnitt 4.5.2). Laut ISTQB-Lehrplan sind szenarioorientierte Akzeptanzkriterien typischerweise in einem \"Gegeben/Wenn/Dann\"-Format beschrieben und orientieren sich an der verhaltensgetriebenen Entwicklung (BDD).",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 109,
@@ -1865,7 +1975,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Auf diese Weise können wir prüfen, ob ein spezieller Benutzer Zugriff auf Etagen hat, die für einen regulären Benutzer zugänglich sind. Die korrekte Option ist d), da dieser Testfall spezifisch die Zugriffsrechte eines speziellen Benutzers auf die regulären Etagen überprüft, wie es AC3 verlangt.",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 110,
@@ -1879,7 +1990,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Das Testkonzept kann Testdatenanforderungen (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.1, Typische Inhalte eines Testkonzepts, 6. Aufzählungspunkt) als Teil des Testansatzes enthalten, jedoch nicht die detaillierten Testdaten für Testfälle. Testdaten sind Teil der Testfälle, nicht des Testkonzepts. Außerdem ist es in der Regel nicht möglich, solche Daten bei der Testplanerstellung zu definieren, da nicht genau bekannt ist, wie die Komponenten aussehen werden (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.1).",
     "KLevel": 1,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 111,
@@ -1895,7 +2007,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Aus der Grafik ergibt sich: A(4)=6 und A(3)=8. Aus der Formel erhalten wir: E(5) = (3*A(4) + A(3)) / 4 = (3*6+8) / 4 = 26 / 4 = 6,5 Personentage. Die Antwort c) ist korrekt, da die Schätzung von 6,5 Personentagen mit der Formel und den historischen Daten übereinstimmt (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.4).",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 112,
@@ -1911,7 +2024,8 @@
     "CorrectIndexes": [ 0 ],
     "Explanation": "Unter Berücksichtigung der Prioritäten und Abhängigkeiten ergibt sich der Testausführungsplan: TC 4 – TC 7 – TC 1 – TC 2 – TC 5 – TC 3 – TC 6. Der sechste Testfall ist also TC 3 (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.5).",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 113,
@@ -1925,7 +2039,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Das Testpyramidenmodell zeigt, dass Tests in unterschiedlichen Ebenen mit unterschiedlicher Granularität ausgeführt werden. Es illustriert die Granularität von Tests, z. B. von feinkörnigen Unit-Tests bis zu grobkörnigeren End-to-End-Tests (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.6).",
     "KLevel": 1,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 114,
@@ -1939,7 +2054,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Die Testquadranten gruppieren Teststufen, Testarten, Aktivitäten, Testverfahren und Arbeitsprodukte in der agilen Softwareentwicklung. Tests können geschäftsorientiert oder technologieorientiert sein, und sie können das Team unterstützen oder das Produkt kritisieren. Diese Kombination bestimmt die vier Quadranten (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.7).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 115,
@@ -1953,7 +2069,8 @@
     "CorrectIndexes": [ 2 ],
     "Explanation": "Die Risikoanalyse bewertet die Risiken nach Wahrscheinlichkeit und Auswirkung. Diese Bewertung hilft dabei, die Gründlichkeit und den Umfang der Tests für verschiedene Testobjekte festzulegen. Höhere Risiken erfordern gründlichere Tests (siehe CTFL-Lehrplan V4.0, Abschnitt 5.2.3).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 116,
@@ -1967,7 +2084,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Ein Testabschlussbericht wird während des Testabschlusses erstellt, wenn ein Projekt, eine Teststufe oder eine Testart abgeschlossen ist und wenn im Idealfall die Abschlusskriterien erfüllt sind. Dieser Bericht verwendet Informationen aus Testfortschrittsberichten und anderen Daten (siehe CTFL-Lehrplan V4.0, Abschnitt 5.3.2).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 117,
@@ -1981,7 +2099,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Das Zuweisen eines Status zu Fehlerzuständen ist eine Aufgabe des Fehlermanagements, nicht des Konfigurationsmanagements. Das Konfigurationsmanagement konzentriert sich auf die Kontrolle und Verfolgbarkeit von Artefakten und Änderungen (siehe CTFL-Lehrplan V4.0, Abschnitt 5.4).",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 118,
@@ -1995,7 +2114,8 @@
     "CorrectIndexes": [ 1 ],
     "Explanation": "Angaben zur Testumgebung (z. B. Browser, Betriebssystem, Softwareversion) sind essenziell, um Fehler zu reproduzieren und zu beheben. Ohne diese Informationen haben Entwickler Schwierigkeiten, das Problem in derselben Umgebung nachzustellen und die Ursache zu identifizieren (siehe CTFL-Lehrplan V4.0, Abschnitt 5.5).",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 119,
@@ -2009,7 +2129,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Testmanagementwerkzeuge erhöhen die Effizienz des Testprozesses, indem sie die Verwaltung von Anforderungen, Tests, Fehlern und Konfigurationen erleichtern. Sie ermöglichen u. a. die Organisation von Testfällen, die Verknüpfung und Nachverfolgung von Fehlern sowie die Versionierung von Testartefakten (siehe CTFL-Lehrplan V4.0, Abschnitt 6.1).",
     "KLevel": 2,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 120,
@@ -2023,7 +2144,8 @@
     "CorrectIndexes": [ 3 ],
     "Explanation": "Ein entscheidender Vorteil der Testautomatisierung ist die Konsistenz und Wiederholbarkeit der Tests, die menschliche Fehler minimiert. Automatisierte Tests werden immer mit derselben Genauigkeit und in der gleichen Reihenfolge ausgeführt (siehe CTFL-Lehrplan V4.0, Abschnitt 6.2).",
     "KLevel": 1,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET C v2.3.0"
   },
   {
     "Id": 121,
@@ -2038,7 +2160,8 @@
     "Explanation": "Der CTFL-Lehrplan V4.0 erklärt, dass Testen Fehlerzustände identifiziert, die durch Debugging behoben werden können, was implizit zu einer höheren Qualität des Testobjekts beiträgt.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 122,
@@ -2053,7 +2176,8 @@
     "Explanation": "Diese Aussage ist korrekt und stimmt mit dem Lehrplantext überein, der angibt, dass Testen sich auf die Unterstützung des Erreichens eines angemessenen Qualitätsniveaus durch produktorientierte Aktivitäten konzentriert, während Qualitätssicherung prozessorientiert ist und die Implementierung und Verbesserung von Prozessen fokussiert (siehe CTFL Lehrplan V4.0, Abschnitt 1.2.2, 2. Absatz).",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 123,
@@ -2068,7 +2192,8 @@
     "Explanation": "Der Grundsatz “Tests nutzen sich ab” (siehe CTFL-Lehrplan V4.0, Abschnitt 1.3, 5. Grundsatz) besagt, dass die Wiederholung unveränderter Tests beim Auffinden von Fehlerzuständen zunehmend ineffektiv wird („Wiederholungen haben keine Wirksamkeit“). Um neue Fehlerzustände zu finden, müssen bestehende Tests und Testdaten modifiziert und neue Tests erstellt werden.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 124,
@@ -2085,7 +2210,8 @@
     "Explanation": "Der Testentwurf ist die Ableitung und Spezifikation von Testfällen aus Testbedingungen. Ein Testfall ist ein Satz von Eingaben, Vorbedingungen, Aktionen (falls anwendbar), erwarteten Ergebnissen und Nachbedingungen, der für ein bestimmtes Testziel oder eine bestimmte Testbedingung entwickelt wird. Eine Test-Charta ist eine Form des Testentwurfs, die festlegt, was getestet werden soll, wie getestet werden soll und wonach beim explorativen Testen gesucht werden soll. Bei dem obigen Testmittel handelt es sich um eine Test-Charta. Test-Chartas sind das Ergebnis der Testentwicklung (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.3).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 125,
@@ -2100,7 +2226,8 @@
     "Explanation": "Die Anzahl der Jahre an Testerfahrung der Mitglieder des Testteams trägt dazu bei, die Fähigkeiten und das Wissen (z. B. über verschiedene Tools und Fehlertypen) zu bestimmen, die die Teammitglieder beim Testen anwenden und somit nutzen werden (siehe CTFL-Lehrplan V4.0, Abschnitt 1.4.2, 2. Aufzählungspunkt).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 126,
@@ -2115,7 +2242,8 @@
     "Explanation": "Verfolgbarkeit (engl. traceability) hilft bei: <br><br>• Auswahl von Regressionstests bezogen auf das Ergebnis der Analyse der Auswirkungen von Änderungen (1D). <br><br>• Bewertung der Überdeckung der Testdurchführung, um das Testen nachvollziehbarer zu machen (2B). <br><br>• Identifizieren, welche User-Storys offene Fehlerberichte haben, was die Verständlichkeit von Teststatusberichten verbessert, um den Status von TestbasisElementen (3A) einzubeziehen. <br><br>• Bewertung, ob die Qualität und Anzahl der Tests für jede Anforderung mit dem Grad des Produktrisikos übereinstimmen, was Informationen zur Bewertung der Testprozessqualität liefert, d. h. Ausrichtung des Testaufwands am Risiko (4C).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 127,
@@ -2130,7 +2258,8 @@
     "Explanation": "Das Wissen in der Anwendungsdomäne das der neue Tester gemäß der Frage auf jeden Fall mitbringt, ist sicherlich hilfreich, wenn es um die effektive Aufdeckung von Inkonsistenzen und Ungenauigkeiten geht. Dieses Wissen fällt in die Kategorie „Wissen in der Anwendungsdomäne“ (siehe CTFL-Lehrplan, Abschnitt 1.5.1, 6. Aufzählungspunkt). Ein Tester mit Erfahrung als Pilot ist effektiver im Review der fachlichen Anforderungen.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 128,
@@ -2145,7 +2274,8 @@
     "Explanation": "Durch die optimale Nutzung der unterschiedlichen Fähigkeiten der einzelnen Teammitglieder fördert der Whole-Team-Ansatz die Teamdynamik, eine gute Kommunikation und Zusammenarbeit und erzeugt eine Teamsynergie, von der das gesamte Projekt profitiert (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.2, 2. Absatz).",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Grundlagen des Testens"
+    "Topic": "Kapitel 1 - Grundlagen des Testens",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 129,
@@ -2160,7 +2290,8 @@
     "Explanation": "Wenn ein sequenzielles Entwicklungsmodell verwendet wird, steht in den frühen Phasen des Lebenszyklus kein ausführbarer Code zur Verfügung, so dass in dieser Phase statische Tests (z. B. Verifikationen) durchgeführt werden. Später im Lebenszyklus, wenn Code zur Ausführung verfügbar ist, sind die Durchführungen dynamischer Tests möglich (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.1, 2. Absatz). Es ist jedoch zu beachten, dass die Vorbereitung für dynamische Tests früh im Lebenszyklus der Softwareentwicklung Sinn macht (3. Grundsatz des Testens).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 130,
@@ -2175,7 +2306,8 @@
     "Explanation": "Tester sollten damit beginnen, Arbeitsergebnisse zu überprüfen, sobald Entwürfe verfügbar sind, um frühzeitiges Testen im Rahmen eines Shift-Left-Ansatzes unabhängig vom gewählten SDLC zu ermöglichen und unnötige Folgefehler zu vermeiden (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.2, 4. Aufzählungspunkt sowie Abschnitte 2.1.5 und 1.3).",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 131,
@@ -2190,7 +2322,8 @@
     "Explanation": "Testgetriebene Entwicklung (TDD – Test-Driven Development) ist ein bekanntes Beispiel für einen Test-First-Ansatz in der Entwicklung (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.3, 2. Absatz).",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 132,
@@ -2205,7 +2338,8 @@
     "Explanation": "DevOps verbessert das Testen auf verschiedene Weise durch Automatisierung in der Auslieferungskette, die den Bedarf an sich wiederholenden manuellen Tests reduziert; durch Erhöhung des Umfangs und der Bandbreite der automatisierten Regressionstests wird das Risiko einer Regression minimiert (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.4, 5. und 6. Aufzählungspunkt).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 133,
@@ -2220,7 +2354,8 @@
     "Explanation": "Systemtests untersuchen das Verhalten und die Fähigkeiten des gesamten Systems und umfassen nicht-funktionale Tests von Qualitätsmerkmalen, einschließlich Testen der IT-Sicherheit. Der Systemtest wird häufig von einem unabhängigen Testteam auf der Grundlage von Systemspezifikationen durchgeführt (siehe CTFL-Lehrplan V4.0, Abschnitt 2.2.1, 3. Aufzählungspunkt).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 134,
@@ -2235,7 +2370,8 @@
     "Explanation": "Die Wartbarkeit ist ein Qualitätsmerkmal, das nicht von der Ausführung des Codes abhängt (siehe CTFL-Lehrplan V4.0, Abschnitt 3.1.3, 1. Absatz, 5. Aufzählungspunkt). Sie ist daher KEIN Auslöser für Wartungstests, die auf Änderungen im Code oder in der Umgebung als dynamische Tests durchgeführt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 2.3, 3. Absatz inkl. Aufzählungspunkte).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus"
+    "Topic": "Kapitel 2 - Testen während des Softwareentwicklungslebenszyklus",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 135,
@@ -2250,7 +2386,8 @@
     "Explanation": "Es gibt Fehlerzustände, die nur durch statische Tests erkannt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 3.1.2, 1. Absatz, letzter Satz).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 136,
@@ -2265,7 +2402,8 @@
     "Explanation": "Die frühzeitige und häufige Einholung von Feedback von den am Softwareentwicklungsprozess Beteiligten kann sehr vorteilhaft sein, da sie die frühzeitige Kommunikation potenzieller Qualitätsprobleme erleichtert, Missverständnisse bezüglich der Anforderungen vermeiden hilft und sicherstellt, dass Änderungen der Anforderungen der Beteiligten schneller verstanden und umgesetzt werden (siehe CTFL-Lehrplan V4.0, Abschnitt 3.2.1, 1. und 2. Absatz).",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 137,
@@ -2280,7 +2418,8 @@
     "Explanation": "Die korrekte Kombination ist: 1C, 2B, 3A, 4D.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 138,
@@ -2295,7 +2434,8 @@
     "Explanation": "Die korrekte Kombination ist: 1B, 2D, 3A, 4C.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Statischer Test"
+    "Topic": "Kapitel 3 - Statischer Test",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 139,
@@ -2310,7 +2450,8 @@
     "Explanation": "Entscheidungstabellentests gehören zu den Black-Box-Testverfahren und basieren auf einer Analyse des spezifizierten Verhaltens des Testelements ohne Bezug auf seine interne Struktur. Die Testfälle sind daher unabhängig von der Implementierung der Software. Der Zweigtest ist ein White-Box-Testverfahren, d. h., die Testfälle basieren auf einer Analyse der internen Struktur und Verarbeitung des Testelements. Da die Testfälle davon abhängen, wie die Software entworfen und codiert wird, können sie erst nach dem Entwurf oder der Implementierung des Testelements erstellt werden.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 140,
@@ -2325,7 +2466,8 @@
     "Explanation": "19 deckt die Äquivalenzklasse „Kein Rabatt“, 20 die Äquivalenzklasse „50 % Rabatt“ und 30 die Äquivalenzklasse „10 % Rabatt“ ab. Diese drei Werte decken alle drei gültigen Äquivalenzklassen ab.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 141,
@@ -2340,7 +2482,8 @@
     "Explanation": "Dies entspricht den oben aufgeführten identifizierten Werten für die 3-Wert- Grenzwertanalyse.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 142,
@@ -2357,7 +2500,8 @@
     "Explanation": "Die Entscheidungstabelle besteht aus fünf Spalten. Jeder Testfall deckt eine dieser Spalten ab. TC1 und TC2 decken beide Regel 4 ab. TC3 und TC4 decken beide Regel 2 ab. TC5 deckt Regel 5 ab. Diese fünf Testfälle decken also drei von fünf Spalten ab und erreichen eine Überdeckung von (3/5) *100 % = 60 % (siehe CTFL-Lehrplan V4.0, Abschnitt 4.2.3, 5. Absatz)",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 143,
@@ -2374,7 +2518,8 @@
     "Explanation": "Dieser Testfall enthält den ungültigen Übergang Warten → Laden. Daher ist Testfall d) derjenige, der neben gültigen Übergängen auch einen ungültigen Übergang aufweist.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 144,
@@ -2389,7 +2534,8 @@
     "Explanation": "Wenn die von T1 und T2 ausgeführten Anweisungen disjunkt wären, würde die Überdeckung der Testsuite {T1, T2} 105 % betragen, was unmöglich ist (siehe Antwort a). Daher müssen mindestens 5 % der ausführbaren Anweisungen sowohl von T1 als auch von T2 ausgeführt worden sein.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 145,
@@ -2404,7 +2550,8 @@
     "Explanation": "Die Zweigüberdeckung wird gemessen als die Anzahl der Zweige, die von den Testfällen mindestens einmal ausgeführt wurden (X), dividiert durch die Gesamtanzahl aller Zweige im Code (Y) und als Prozentsatz ausgedrückt (ZÜ = X / Y * 100 %).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 146,
@@ -2419,7 +2566,8 @@
     "Explanation": "Explorative Tests sind dann sinnvoll, wenn es nur wenige oder unzureichende Spezifikationen gibt oder wenn die Tests unter erheblichem Zeitdruck durchgeführt werden müssen. Explorative Tests eignen sich auch als Ergänzung zu anderen, eher formalen Testverfahren. Explorative Tests sind effektiver, wenn der Tester über Erfahrungen und Fach- bzw. Anwendungskenntnisse verfügt und ein hohes Maß an analytischen Fähigkeiten, Neugier und Kreativität besitzt.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 147,
@@ -2434,7 +2582,8 @@
     "Explanation": "Dies ist ein Beispiel für eine Testbedingung, die von einem Tester auf Basis seines Wissens und seiner Erfahrung, was dem Benutzer wichtig ist, überprüft werden kann (siehe CTFL-Lehrplan V4.0, Abschnitt 4.4.3, 1. Absatz).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 148,
@@ -2449,7 +2598,8 @@
     "Explanation": "Das Akzeptanzkriterium nutzt das Gegeben/Wenn/Dann-Format, das szenarioorientiert ist (siehe CTFL-Lehrplan V4.0, Abschnitt 4.5.2, 3. Absatz, 1. Aufzählungspunkt).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 149,
@@ -2464,7 +2614,8 @@
     "Explanation": "weil am besten GEEIGNET – Bei diesem Testfall wird nach dem Login als Trainer die Spielberechtigungsliste für den nächsten Spieltag geladen und angezeigt. Dies entspricht der Spezifikation der User-Story. Diese Option ist am besten geeignet, da sie die spezifischen Schritte für die Abnahme der Funktionalität klar definiert und die Akzeptanzkriterien direkt in den Testfall integriert.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 4 - Testanalyse und Testentwurf"
+    "Topic": "Kapitel 4 - Testanalyse und Testentwurf",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 150,
@@ -2479,7 +2630,8 @@
     "Explanation": "Der CI/CD-Ansatz zusammen mit dem Shift-Left-Ansatz fördert das frühe Testen, so dass Entwickler angehalten sind, ihren hochwertigen Code zusammen mit den Komponententests und der statischen Analyse bereitzustellen (siehe CTFL-Lehrplan V4.0, Abschnitt 2.1.4 und 2.1.5). Daher sind die Ergebnisse der statischen Analyse ein sinnvolles und messbares Eingangskriterium vor der Integration des Codes in die CI/CD- Pipeline, vergleichbar einem Smoke-Test (siehe CTFL-Lehrplan V4.0, Abschnitt 5.1.3, 2. Absatz).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 151,
@@ -2496,7 +2648,8 @@
     "Explanation": "Die Gesamtkosten für Entwicklung und Test in den vier Projekten betragen: 800.000+1.200.000+600.000+1.000.000 = 3.600.000 € (Entwicklung) und 40.000+130.000+70.000+120.000 = 360.000 € (Test). Der Durchschnitt beträgt 360.000/3.600.000 = 0,1. Bei einem Entwicklungsaufwand von 800.000 € ergibt sich ein Testaufwand von 800.000 * 0,1 = 80.000 €.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 152,
@@ -2544,7 +2697,8 @@
     "Explanation": "Dieser Testausführungsplan berücksichtigt die Abhängigkeiten und Prioritäten korrekt. Der Testfall mit der höchsten Priorität (T5) benötigt T3. Dadurch wird T3 früher ausgeführt als der gleich priorisierte Testfall T4. T4 wird nach T5 ausgeführt, damit abschließend T6 ausgeführt werden kann.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 153,
@@ -2559,7 +2713,8 @@
     "Explanation": "Komponentenintegrationstests sind technologieorientierte Tests, die das Team (die Entwicklung) unterstützen (Q1).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 154,
@@ -2574,7 +2729,8 @@
     "Explanation": "Wenn die Qualität eines Moduls unklar ist, ist eine zusätzliche Risikoanalyse notwendig, aber dies ist keine Aufgabe der Risikosteuerung. Die Testplanung sollte darauf abzielen, die Unsicherheiten zu beseitigen und die Qualität sicherzustellen (siehe CTFL-Lehrplan V4.0, Abschnitt 5.2.4).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 155,
@@ -2589,7 +2745,8 @@
     "Explanation": "Produktqualitätsmetriken messen Qualitätsmerkmale. Die mittlere Zeit bis zum Ausfall misst die Reife und ist somit eine Kennzahl für die Produktqualität (siehe CTFL-Lehrplan V4.0, Abschnitt 5.3.1, 3. Aufzählungspunkt).",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 156,
@@ -2604,7 +2761,8 @@
     "Explanation": "Der Kunde befindet sich an einem anderen, weit entfernten Ort und in einer anderen Zeitzone, so dass es nicht immer möglich ist, persönlich zu kommunizieren (siehe CTFL-Lehrplan V4.0, Abschnitt 5.3.3, 2. Absatz, 2. Satz).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 157,
@@ -2619,7 +2777,8 @@
     "Explanation": "Für ein komplexes Konfigurationselement (z. B. eine Testumgebung) zeichnet KM die Elemente auf, aus denen es besteht, sowie ihre Beziehungen und Versionen (siehe CTFL-Lehrplan V4.0, Abschnitt 5.4, 2. Absatz, 1. Satz).",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 158,
@@ -2636,7 +2795,8 @@
     "Explanation": "Aus den Testergebnissen geht hervor, dass das System Duplikate ignoriert und die Liste ohne Berücksichtigung der Wiederholungen sortiert bzw. die duplizierten Werte nur einmal zurückgibt. Dies ist wahrscheinlich die Ursache für Fehler in TC3, TC4, TC5. Solche Informationen können dem Entwickler helfen, den Fehler zu finden und ihn effizient zu beheben.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 5 - Management der Testaktivitäten"
+    "Topic": "Kapitel 5 - Management der Testaktivitäten",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 159,
@@ -2651,7 +2811,8 @@
     "Explanation": "Die richtige Übereinstimmung ist: 1C, 2D, 3B, 4A.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET B v1.3.3"
   },
   {
     "Id": 160,
@@ -2666,6 +2827,7 @@
     "Explanation": "Die Testautomatisierung kann Messungen bereitstellen, die zu kompliziert sind, um von Menschen abgeleitet zu werden, z. B. White-Box-Testüberdeckungsmaße für alle Codes außer den trivialsten (siehe CTFL-Lehrplan V4.0, Abschnitt 6.2, 3. Aufzählungspunkt).",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 6 - Testwerkzeuge"
+    "Topic": "Kapitel 6 - Testwerkzeuge",
+    "Source": "CTFL SET B v1.3.3"
   }
 ]

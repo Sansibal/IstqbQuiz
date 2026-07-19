@@ -12,7 +12,8 @@
     "Explanation": "Da die Tests nicht auf allen möglichen Geräten ausgeführt werden können, sollten das ausgewählte Geräteportfolio und die Priorisierung auf den Geräten und Plattformen basieren, die auf dem Zielmarkt am häufigsten anzutreffen sind. Die Informationen zu den gängigsten Geräten und Plattformen auf dem Zielmarkt werden durch die Analyse mobiler Nutzungsdaten bereitgestellt.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 2,
@@ -27,7 +28,8 @@
     "Explanation": "Die angezeigten Daten sind öffentlich verfügbar und daher ist es unwahrscheinlich, dass der Benutzer für das Lesen der Daten in der App bezahlt. Der Benutzer ist jedoch gewohnt, Werbung auf Nachrichtenseiten zu sehen.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 3,
@@ -42,7 +44,8 @@
     "Explanation": "Auf Feature-Phones sind einige Apps installiert, z.B. ein Browser. Die Benutzeroptionen zum Installieren zusätzlicher Apps sind jedoch normalerweise auf eine kleine Anzahl von Apps beschränkt, die vom Gerätehersteller bereitgestellt werden.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 4,
@@ -57,7 +60,8 @@
     "Explanation": "Das Spiel ist nur für eine Plattform und nutzt viele Gerätefunktionen, die von nativen Apps am besten genutzt werden können.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 5,
@@ -73,7 +77,8 @@
     "Explanation": "A1: Eine Taschenlampen-App benötigt keine Verbindung zu irgendwelchen Netzwerken bzw. Servern. B2: Bei einer Chat-App können Nachrichten auch dann verfasst werden, wenn das Gerät gerade nicht verbunden ist. Diese können gesendet werden, sobald eine Verbindung hergestellt wurde. C3: Für die Navigations-App ist es günstig immer die aktuellen Staumeldungen und Routenoptionen zu bekommen, daher sollte sie immer verbunden sein. D4: Das Fernsehprogramm wird nur bei Bedarf benötigt. Hier reicht ein Thin-Client aus, da auch keine Sensoren etc. benötigt werden.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 6,
@@ -88,7 +93,8 @@
     "Explanation": "Es geht um eine Benutzerbasis, die nur eine Plattform nutzt, und die App hat eine niedrige Risikostufe. Daher ist der Einzelplattform-Ansatz am besten geeignet.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 7,
@@ -103,7 +109,8 @@
     "Explanation": "Mobile Apps werden normalerweise durch Antippen der grafischen Benutzungsoberfläche gestartet. Somit hat der Benutzer keine Möglichkeit, beim Start der App zusätzliche Parameter anzugeben.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 8,
@@ -118,7 +125,8 @@
     "Explanation": "Die Masse von Testern beim Crowdtesten nutzt viele verschiedene Geräte. Dadurch wird das Risiko der Nichtverfügbarkeit wichtiger Geräte während des Tests gemindert.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber"
+    "Topic": "Kapitel 1 - Mobilgerätewelt – Geschäftliche und technologische Treiber",
+    "Source": "CT-MAT 2019"
   },
   {
   "Id": 9,
@@ -133,7 +141,8 @@
   "Explanation": "Wie im Text erwähnt, ist das SUT eine native App und gängige native Apps können ohne Internetverbindung verwendet werden. Daher sollte das Testen des WLAN-Moduls im Vergleich zu den Tests der anderen Hardwarefunktionen die niedrigste Priorität haben.",
   "Explanation2": "",
   "KLevel": 2,
-  "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+  "Source": "CT-MAT 2019"
   },
   {
   "Id": 10,
@@ -148,7 +157,8 @@
   "Explanation": "Apps werden nicht aufgrund von Überhitzung deinstalliert. Überhitzung kann jedoch dazu führen, dass die CPU-Frequenz sinkt (App wird langsam), Teile des Systems heruntergefahren werden oder Apps fehlerhaft funktionieren.",
   "Explanation2": "",
   "KLevel": 2,
-  "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+  "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+  "Source": "CT-MAT 2019"
   },
   {
     "Id": 11,
@@ -163,7 +173,8 @@
     "Explanation": "In diesem Szenario wird kein Eingabesensor getestet. Das GPS-Signal, das Gyroskop und der Bewegungssensor gehören zu den Eingabesensoren.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 12,
@@ -178,7 +189,8 @@
     "Explanation": "Dies ist die beste Antwort, da hier nur Szenarien aufgeführt werden, die verschiedene Eingabemethoden betreffen. Die anderen Optionen enthalten Ausgabemethoden.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 13,
@@ -193,7 +205,8 @@
     "Explanation": "Diese Aufzählung enthält nur Aspekte, die im Lehrplan für die Änderung der Bildschirmausrichtung aufgeführt sind. Sicherheitsaspekte, Performanztests oder WLAN-Unterbrechungen gehören nicht dazu.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 14,
@@ -209,7 +222,8 @@
     "Explanation": "Die Aussagen ii, iii und v sind allesamt benutzerinitiierte Unterbrechungen. Aussage i (Batteriewarnung) und Aussage iv (Speichermangel) sind hingegen keine benutzerinitiierten Unterbrechungen.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 15,
@@ -224,7 +238,8 @@
     "Explanation": "Dies ist der wichtigste durchzuführende Test, da fehlende oder falsche Zugriffsberechtigungen eine mögliche Grundursache für das behobene Problem sein können.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 16,
@@ -240,7 +255,8 @@
     "Explanation": "Die Aussagen i, ii und v sind funktionale Tests, wie im Text erwähnt. Die Aussagen iii und iv sind nicht-funktionale Tests und machen in diesem Zusammenhang keinen Sinn.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 17,
@@ -255,7 +271,8 @@
     "Explanation": "Das Testen der Force Touch-Funktionalität ist ein Beispiel für das Testen von Schnellzugriffsverknüpfungen und damit der beste Ansatz in diesem Szenario.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 18,
@@ -270,7 +287,8 @@
     "Explanation": "Eine native App verwendet keine verschiedenen Browser. Daher trifft browserübergreifendes Testen in diesem Szenario nicht zu.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 19,
@@ -285,7 +303,8 @@
     "Explanation": "Das Testen der Abwärtskompatibilität konzentriert sich auf die Verifizierung der korrekten Interoperabilität mit verschiedenen Betriebssystemversionen, wie im Lehrplan als Beispiel angegeben.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 20,
@@ -300,7 +319,8 @@
     "Explanation": "Dies ist ein Testziel zum Testen des SUT auf Koexistenz mit anderen auf dem Gerät installierten Applikationen.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 21,
@@ -315,7 +335,8 @@
     "Explanation": "Beim Anschließen einer Stromversorgung über USB geht es nicht um die Verbindungsfähigkeit; dies kann jedoch als geeignetes Szenario für das Testen von Unterbrechungen verwendet werden.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 2 - Testarten für mobile Applikationen"
+    "Topic": "Kapitel 2 - Testarten für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 22,
@@ -330,7 +351,8 @@
     "Explanation": "Exe ist ein ausführbares Dateiformat nur für Windows. Auf Android funktioniert es nicht.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 23,
@@ -346,7 +368,8 @@
     "Explanation": "Sowohl Aussage i (Code-Injection über Eingabefelder) als auch Aussage ii (unverschlüsselte Übertragung von Daten) betreffen die Sicherheit. Aussagen iii, iv und v sind keine Sicherheitsprobleme.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 24,
@@ -361,7 +384,8 @@
     "Explanation": "Nur ein instrumentierter Build kann genaue chronometrische Zahlen darüber liefern, wie lange ein Verarbeitungsschritt in der App tatsächlich gedauert hat. Eine Stoppuhr reicht im Millisekundenbereich nicht aus. Außerdem ist keine Unterscheidung zwischen der von der App beanspruchten Zeit, der des Backendsystems und der Zeit für die Netzwerkkommunikation möglich.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 25,
@@ -376,7 +400,8 @@
     "Explanation": "Das Aktivieren der VoiceOver-Funktion des Geräts gehört nicht zu den Schritten, die im Rahmen eines Gebrauchstauglichkeitstests durchgeführt werden sollten. Die anderen genannten Schritte sind hingegen typische Bestandteile solcher Tests.",
     "Explanation2": "",
     "KLevel": 3,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 26,
@@ -391,7 +416,8 @@
     "Explanation": "CRUD steht für Create, Read, Update, Delete, gemäß Lehrplan und Glossar.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 27,
@@ -406,7 +432,8 @@
     "Explanation": "Internationalisierungstests sollen sicherstellen, dass alle Zeichenfolgen aus einer Ressource stammen. Wenn die App nicht die Pseudo-Strings, sondern reale englische Zeichenfolgen anzeigt, stammen diese aus fest kodierten Strings und nicht aus der vorgesehenen Ressource.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 28,
@@ -421,7 +448,8 @@
     "Explanation": "Tests der Barrierefreiheit werden durchgeführt, um festzustellen, wie einfach Benutzer mit Behinderungen eine Komponente oder ein System verwenden können.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 29,
@@ -436,7 +464,8 @@
     "Explanation": "Wenn die App im App-Store verfügbar ist, muss getestet werden, ob sie von dort installiert werden kann und ob sie wie im getesteten Build funktioniert. Das ist der Post-Release-Test.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 30,
@@ -451,7 +480,8 @@
     "Explanation": "Der Teamleiter verwendet das sitzungsbasierte Testmanagement, da das Testen in einstündige Testsitzungen mit jeweils einem definierten Fokus unterteilt ist.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 31,
@@ -466,7 +496,8 @@
     "Explanation": "Touren werden verwendet, um eine Applikation explorativ kennenzulernen und zu verstehen, wie die App funktioniert. In diesem Kontext sind Touren sehr effektiv für die Durchführung von Feldtests.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 32,
@@ -481,7 +512,8 @@
     "Explanation": "Die Markt- und Gerätefragmentierung, die Benutzererwartungen in Bezug auf die Gebrauchstauglichkeit und die Variabilität der Nutzungsszenarien führen zu Testbedingungen, die nur manuell getestet werden können. Deshalb wird die Testpyramide häufig umgedreht.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen"
+    "Topic": "Kapitel 3 - Häufig verwendete Testarten und Testprozesse für mobile Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 33,
@@ -496,7 +528,8 @@
     "Explanation": "Gemäß Lehrplan kann für die Entwicklung von Android-Apps Android Studio und für die Entwicklung von iOS-Apps Xcode verwendet werden. Daher ist die Aussage, dass iOS-Entwickler die Xcode IDE nutzen, korrekt.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 34,
@@ -511,7 +544,8 @@
     "Explanation": "Das Entwerfen von Testfällen ist keine typische Aufgabe eines Software Development Kits (SDK) für mobile Applikationen. SDKs unterstützen dagegen Aufgaben wie Screenshots, das Senden zufälliger Ereignisse an die App oder das Erstellen virtueller Geräte.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 35,
@@ -526,7 +560,8 @@
     "Explanation": "Es ist möglich, dass ein Simulator die Serverseite darstellt und die Applikation auf dem Android Virtual Device-Emulator installiert ist, um die Testumgebung in frühen Testphasen besser nutzen zu können (alles auf einem PC). Darüber hinaus ist es sinnvoll, wenn der Tester den Entwickler bezüglich der Umgebung berät. Auch ist es eine gute Alternative, die Serverseite für grundlegende Funktionstests zu simulieren, falls es Probleme mit der Serverseite gibt oder diese vom Testteam in frühen Testphasen in Anspruch genommen werden soll.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 36,
@@ -541,7 +576,8 @@
     "Explanation": "Der Hauptvorteil eines Vor-Ort-Labors besteht darin, spezifische Tests für Sensoren, Akkus und gerätespezifische Funktionen oder technische Teile zu ermöglichen, insbesondere wenn diese Tests von Geräteherstellern durchgeführt werden. Die Frage prüft, ob zwischen den Laborarten unterschieden werden kann, indem ihre Vorteile wirksam eingesetzt werden.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen"
+    "Topic": "Kapitel 4 - Plattformen, Werkzeuge und Umgebung mobiler Applikationen",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 37,
@@ -556,7 +592,8 @@
     "Explanation": "Es sind die mobilen Apps, die mit den allgemeinen Webapplikationswerkzeugen getestet werden, während native Apps sich am besten mit spezifischen Werkzeugen testen lassen. Daher unterscheidet Aussage c die Ansätze nicht korrekt.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 38,
@@ -571,7 +608,8 @@
     "Explanation": "Die objektbasierte Skripterstellung ist die zuverlässigste Methode zum Erstellen von Testautomatisierungscode, da das Testframework das richtige Objekt der mobilen Applikation unabhängig vom verwendeten Gerät automatisch zuordnen kann.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 39,
@@ -586,7 +624,8 @@
     "Explanation": "Die Fähigkeit des Testframeworks, unabhängig von anderen in der Organisation verwendeten Werkzeugen zu arbeiten, spielt bei der Bewertung von Testautomatisierungswerkzeugen keine große Rolle. Wichtige Faktoren sind dagegen die Automatisierungsfähigkeiten der Tester sowie die Anforderungen und Komplexitäten.",
     "Explanation2": "",
     "KLevel": 1,
-    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung",
+    "Source": "CT-MAT 2019"
   },
   {
     "Id": 40,
@@ -601,6 +640,7 @@
     "Explanation": "Das Testen mit einem Vor-Ort-Mobilgeräte-Testlabor ist typischerweise der Ansatz, bei dem in den frühen Phasen nur eine kleine Auswahl an Geräten verwendet wird. Ein entlegenes Testlabor wird dagegen eher für umfangreiche Tests mit einer Vielzahl an Geräten genutzt. Daher spricht Aussage b am wenigsten für ein entlegenes Testlabor.",
     "Explanation2": "",
     "KLevel": 2,
-    "Topic": "Kapitel 5 - Automatisierung der Testausführung"
+    "Topic": "Kapitel 5 - Automatisierung der Testausführung",
+    "Source": "CT-MAT 2019"
   }
 ]

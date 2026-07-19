@@ -22,5 +22,9 @@ namespace IstqbQuiz.Shared.Models
         // Neue Felder für Filter
         public int KLevel { get; set; }                      // K1, K2 oder K3
         public string Topic { get; set; } = "";              // Optionell: Thema / Kapitel
+
+        // Rückverfolgbarkeit zur Quell-PDF (z. B. "CTFL SET A v2.2"). Nur intern/Debug,
+        // wird bewusst nicht an QuestionDto (öffentliche Quiz-Seiten) weitergereicht.
+        public string? Source { get; set; }
     }
 }

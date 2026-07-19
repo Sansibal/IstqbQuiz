@@ -36,6 +36,11 @@ else
                     Frage @debugIndex <span class="text-muted">(@selectedCategory)</span>
                 </h5>
 
+                @if (!string.IsNullOrEmpty(currentQuestion.Source))
+                {
+                    <p class="text-muted small mb-2">Quelle: @currentQuestion.Source</p>
+                }
+
                 <!-- Fragetext -->
                 <div class="question-text">@ToMarkup(currentQuestion.Text)</div>
 

@@ -29,6 +29,7 @@ namespace ISTQB_Tests
             q.PreText = "Vor der Frage.";
             q.KLevel = 2;
             q.Topic = "Grundlagen";
+            q.Source = "CTFL SET A v2.2";
 
             // Assert
             Assert.Equal(42, q.Id);
@@ -43,6 +44,7 @@ namespace ISTQB_Tests
             Assert.Equal("Vor der Frage.", q.PreText);
             Assert.Equal(2, q.KLevel);
             Assert.Equal("Grundlagen", q.Topic);
+            Assert.Equal("CTFL SET A v2.2", q.Source);
         }
     }
 }
