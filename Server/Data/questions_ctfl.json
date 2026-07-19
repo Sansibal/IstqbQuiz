@@ -793,7 +793,7 @@
       "Entwickler gehen davon aus, dass Tester die alleinige Verantwortung für Qualität tragen.",
       "Tester bringen eine andere Sichtweise als Entwickler ein."
     ],
-    "CorrectIndexes": [ 1, 2 ],
+    "CorrectIndexes": [ 1, 4 ],
     "Explanation": "Tester haben oft unterschiedliche Perspektiven und können Annahmen und Spezifikationen hinterfragen, was die Wahrscheinlichkeit erhöht, Fehler und Mängel zu erkennen (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.3, 3. Absatz).",
     "Explanation2": "Tester und Entwickler haben unterschiedliche technische Hintergründe und kognitive Vorurteile, was es Testern ermöglicht, Fehler zu erkennen, die Entwicklern möglicherweise entgehen (siehe CTFL-Lehrplan V4.0, Abschnitt 1.5.3, 3. Absatz).",
     "KLevel": 2,
@@ -2109,9 +2109,9 @@
       "1D, 2B, 3C, 4A",
       "1B, 2D, 3A, 4C",
       "1D, 2C, 3A, 4B",
-      "KORREKT."
+      "1D, 2B, 3A, 4C"
     ],
-    "CorrectIndexes": [],
+    "CorrectIndexes": [ 3 ],
     "Explanation": "Verfolgbarkeit (engl. traceability) hilft bei: <br><br>• Auswahl von Regressionstests bezogen auf das Ergebnis der Analyse der Auswirkungen von Änderungen (1D). <br><br>• Bewertung der Überdeckung der Testdurchführung, um das Testen nachvollziehbarer zu machen (2B). <br><br>• Identifizieren, welche User-Storys offene Fehlerberichte haben, was die Verständlichkeit von Teststatusberichten verbessert, um den Status von TestbasisElementen (3A) einzubeziehen. <br><br>• Bewertung, ob die Qualität und Anzahl der Tests für jede Anforderung mit dem Grad des Produktrisikos übereinstimmen, was Informationen zur Bewertung der Testprozessqualität liefert, d. h. Ausrichtung des Testaufwands am Risiko (4C).",
     "Explanation2": "",
     "KLevel": 2,
@@ -2353,7 +2353,7 @@
       "80 %",
       "100 %"
     ],
-    "CorrectIndexes": [],
+    "CorrectIndexes": [ 1 ],
     "Explanation": "Die Entscheidungstabelle besteht aus fünf Spalten. Jeder Testfall deckt eine dieser Spalten ab. TC1 und TC2 decken beide Regel 4 ab. TC3 und TC4 decken beide Regel 2 ab. TC5 deckt Regel 5 ab. Diese fünf Testfälle decken also drei von fünf Spalten ab und erreichen eine Überdeckung von (3/5) *100 % = 60 % (siehe CTFL-Lehrplan V4.0, Abschnitt 4.2.3, 5. Absatz)",
     "Explanation2": "",
     "KLevel": 3,
@@ -2400,7 +2400,7 @@
       "X = Anzahl der von den Testfällen ausgeführten Zweige",
       "X = Anzahl der von den Testfällen ausgeführten bedingten Zweige"
     ],
-    "CorrectIndexes": [ 2, 3 ],
+    "CorrectIndexes": [ 2 ],
     "Explanation": "Die Zweigüberdeckung wird gemessen als die Anzahl der Zweige, die von den Testfällen mindestens einmal ausgeführt wurden (X), dividiert durch die Gesamtanzahl aller Zweige im Code (Y) und als Prozentsatz ausgedrückt (ZÜ = X / Y * 100 %).",
     "Explanation2": "",
     "KLevel": 2,
@@ -2492,8 +2492,8 @@
       "81.250 €",
       "82.500 €"
     ],
-    "CorrectIndexes": [ 2 ],
-    "Explanation": "Die Gesamtkosten für Entwicklung und Test in den vier Projekten betragen: 800.000+1.200.000+600.000+1.000.000 = 3.600.000 € (Entwicklung) und 40.000+130.000+70.000+120.000 = 360.000 € (Test). Der Durchschnitt beträgt 360.000/3.600.000 = 0,1. Bei einem Entwicklungsaufwand von 800.000 € ergibt sich ein Testaufwand von 800.000 * 0,1 = 80.000 €. Da die Antwortmöglichkeit 81.250 € dem Wert am nächsten kommt, ist dies korrekt.",
+    "CorrectIndexes": [ 1 ],
+    "Explanation": "Die Gesamtkosten für Entwicklung und Test in den vier Projekten betragen: 800.000+1.200.000+600.000+1.000.000 = 3.600.000 € (Entwicklung) und 40.000+130.000+70.000+120.000 = 360.000 € (Test). Der Durchschnitt beträgt 360.000/3.600.000 = 0,1. Bei einem Entwicklungsaufwand von 800.000 € ergibt sich ein Testaufwand von 800.000 * 0,1 = 80.000 €.",
     "Explanation2": "",
     "KLevel": 3,
     "Topic": "Kapitel 5 - Management der Testaktivitäten"
