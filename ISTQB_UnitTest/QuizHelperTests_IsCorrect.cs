@@ -78,5 +78,17 @@ namespace ISTQB_Tests
             // beide leer -> gilt als korrekt
             Assert.True(QuizHelper.IsCorrect(correct, given));
         }
+
+        [Fact]
+        public void IsCorrect_ReturnsFalse_WhenCorrectIsNull()
+        {
+            Assert.False(QuizHelper.IsCorrect(null!, new List<int> { 1 }));
+        }
+
+        [Fact]
+        public void IsCorrect_ReturnsFalse_WhenGivenIsNull()
+        {
+            Assert.False(QuizHelper.IsCorrect(new List<int> { 1 }, null!));
+        }
     }
 }

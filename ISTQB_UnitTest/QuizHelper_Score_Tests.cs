@@ -122,5 +122,31 @@ namespace ISTQB_Tests
 
             Assert.Equal(2, result);
         }
+
+        [Fact]
+        public void Score_Returns0_WhenQuestionsListIsNull()
+        {
+            var result = QuizHelper.Score(null!, new List<IReadOnlyList<int>>());
+
+            Assert.Equal(0, result);
+        }
+
+        [Fact]
+        public void Score_Returns0_WhenAnswersListIsNull()
+        {
+            var questions = new List<Question> { new Question { CorrectIndexes = new List<int> { 1 } } };
+
+            var result = QuizHelper.Score(questions, null!);
+
+            Assert.Equal(0, result);
+        }
+
+        [Fact]
+        public void Score_Returns0_WhenBothQuestionsAndAnswersAreNull()
+        {
+            var result = QuizHelper.Score(null!, null!);
+
+            Assert.Equal(0, result);
+        }
     }
 }

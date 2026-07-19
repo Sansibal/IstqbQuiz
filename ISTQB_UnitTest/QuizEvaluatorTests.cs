@@ -94,5 +94,35 @@ namespace IstqbQuiz.Tests
             // Assert
             Assert.Equal(2, score);
         }
+
+        [Fact]
+        public void Score_Returns0_WhenQuestionsListIsNull()
+        {
+            var score = QuizEvaluator.Score(null!, new List<IReadOnlyList<int>>());
+
+            Assert.Equal(0, score);
+        }
+
+        [Fact]
+        public void Score_Returns0_WhenAnswersListIsNull()
+        {
+            var questions = new List<Question> { new Question { CorrectIndexes = new List<int> { 1 } } };
+
+            var score = QuizEvaluator.Score(questions, null!);
+
+            Assert.Equal(0, score);
+        }
+
+        [Fact]
+        public void IsCorrect_ReturnsFalse_WhenCorrectIsNull()
+        {
+            Assert.False(QuizEvaluator.IsCorrect(null!, new List<int> { 1 }));
+        }
+
+        [Fact]
+        public void IsCorrect_ReturnsFalse_WhenGivenIsNull()
+        {
+            Assert.False(QuizEvaluator.IsCorrect(new List<int> { 1 }, null!));
+        }
     }
 }
