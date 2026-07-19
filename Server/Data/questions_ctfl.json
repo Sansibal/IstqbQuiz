@@ -671,7 +671,7 @@
   },
   {
     "Id": 41,
-    "Text": "Welche der folgenden Aussagen  beschreibt  ein typisches Ziel von Softwaretests?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Text": "Welche der folgenden Aussagen beschreibt ein typisches Ziel von Softwaretests?<br><br>Wählen Sie EINE Option! (1 aus 4)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -751,7 +751,7 @@
   },
   {
     "Id": 46,
-    "Text": "Welche der folgenden Optionen beschreibt AM BESTEN eine typische Aufgabe einer Person in  der Testmanagementrolle?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Text": "Welche der folgenden Optionen beschreibt AM BESTEN eine typische Aufgabe einer Person in der Testmanagementrolle?<br><br>Wählen Sie EINE Option! (1 aus 4)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -767,7 +767,7 @@
   },
   {
     "Id": 47,
-    "Text": "Welche der folgenden Aussagen beschreibt einen einen Vorteil des Whole-Team-Ansatzes?<br><br>Wählen Sie EINE Option (1 aus 4)",
+    "Text": "Welche der folgenden Aussagen beschreibt einen Vorteil des Whole-Team-Ansatzes?<br><br>Wählen Sie EINE Option (1 aus 4)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -929,7 +929,7 @@
   },
   {
     "Id": 57,
-    "Text": "Nachfolgend finden Sie fünf Beschreibungen typischer Aktivitäten im Rahmen eines strukturierten Reviews: <br><br>1. Entdeckte Anomalien werden diskutiert und bezüglich ihres Ihres Status, ihrer Zuständigkeit undmöglicher Folgemaßnahmen bewertet. <br>2. Probleme werden erfasst und notwendige Anpassungen vor der Abnahme des Arbeitsergebnissses vorgenommen. <br>3. Gutachter entwickeln Vorschläge und Fragen zum Arbeitsergebnis und identifizieren dabei mögliche Anomalien. <br>4.  Ziel  und  Zeitplan werden definiert, um den Ablauf fokussiert und effizient zu gestalten. <br>5. Die Teilnehmenden erhalten Zugriff auf das zu prüfende Dokument. <br><br>Welche der folgenden Optionen entspricht der korrekten Reihenfolge dieser Aktivitäten im Reviewprozess?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Text": "Nachfolgend finden Sie fünf Beschreibungen typischer Aktivitäten im Rahmen eines strukturierten Reviews: <br><br>1. Entdeckte Anomalien werden diskutiert und bezüglich ihres Status, ihrer Zuständigkeit und möglicher Folgemaßnahmen bewertet. <br>2. Probleme werden erfasst und notwendige Anpassungen vor der Abnahme des Arbeitsergebnisses vorgenommen. <br>3. Gutachter entwickeln Vorschläge und Fragen zum Arbeitsergebnis und identifizieren dabei mögliche Anomalien. <br>4. Ziel und Zeitplan werden definiert, um den Ablauf fokussiert und effizient zu gestalten. <br>5. Die Teilnehmenden erhalten Zugriff auf das zu prüfende Dokument. <br><br>Welche der folgenden Optionen entspricht der korrekten Reihenfolge dieser Aktivitäten im Reviewprozess?<br><br>Wählen Sie EINE Option! (1 aus 4)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -961,7 +961,7 @@
   },
   {
     "Id": 59,
-    "Text": "Sie testen eine E-Commerce-Webanwendung  und erhalten die folgende Anforderung: <br><br>REQ 05-017. Wenn die Gesamtkosten der Einkäufe 100 € überschreiten, erhält der Kunde einen Rabatt von 5 % auf zukünftige Einkäufe. Andernfalls erhält der Kunde keinen Rabatt. <br><br>Welche Testverfahren eignen sich AM BESTEN zur Ableitung von Testfällen aus dieser Anforderung?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Text": "Sie testen eine E-Commerce-Webanwendung und erhalten die folgende Anforderung: <br><br>REQ 05-017. Wenn die Gesamtkosten der Einkäufe 100 € überschreiten, erhält der Kunde einen Rabatt von 5 % auf zukünftige Einkäufe. Andernfalls erhält der Kunde keinen Rabatt. <br><br>Welche Testverfahren eignen sich AM BESTEN zur Ableitung von Testfällen aus dieser Anforderung?<br><br>Wählen Sie EINE Option! (1 aus 4)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -1020,7 +1020,7 @@
         "R2": "19-65",
         "R3": "19-65",
         "R4": ">65",
-        "R5": "0-8",
+        "R5": "0-18",
         "R6": "19-65",
         "R7": ">65"
       },
@@ -1183,7 +1183,7 @@
   },
   {
     "Id": 70,
-    "Text": "Welche der folgenden Optionen beschreiben AM BESTEN typische Endekriterien in einem Testprojekt?<br><br>Wählen Sie ZWEI Option! (2 aus 5)",
+    "Text": "Welche der folgenden Optionen beschreiben AM BESTEN typische Endekriterien in einem Testprojekt?<br><br>Wählen Sie ZWEI Optionen! (2 aus 5)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -1217,7 +1217,7 @@
   },
   {
     "Id": 72,
-    "Text": "Die Tabelle zeigt die Nachverfolgbarkeitsmatrix zwischen Testfällen undu Anforderungen. Ein „X“ bedeutet, dass ein Testfall die  Anforderung überdeckt.",
+    "Text": "Die Tabelle zeigt die Nachverfolgbarkeitsmatrix zwischen Testfällen und Anforderungen. Ein „X“ bedeutet, dass ein Testfall die Anforderung überdeckt.",
     "Diagram": null,
     "Table": [
       {
@@ -1310,7 +1310,7 @@
   },
   {
     "Id": 75,
-    "Text": "Welche der folgenden Optionen stellen Produktrisiken dar?<br><br>Wählen Sie ZWEI Option! (2 aus 5)",
+    "Text": "Welche der folgenden Optionen stellen Produktrisiken dar?<br><br>Wählen Sie ZWEI Optionen! (2 aus 5)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -1344,7 +1344,7 @@
   },
   {
     "Id": 77,
-    "Text": "Der Benutzer meldete einen Softwarefehler. Ein Ingenieur aus dem Support-Team fragte den Benutzer nach der Softwareversionsnummer, in der der Fehler beobachtet wurde. Basierend auf der Versionsnummer stellte das Team alle Dateien des entsprechenden Release zusammen. Ein Entwickler konnte anschließend eine Analyse durchführen,  den Fehlerzustand identifizieren und beheben.<br><br>Welche der folgenden Optionen ermöglichte dem Team diese Vorgehensweise?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Text": "Der Benutzer meldete einen Softwarefehler. Ein Ingenieur aus dem Support-Team fragte den Benutzer nach der Softwareversionsnummer, in der der Fehler beobachtet wurde. Basierend auf der Versionsnummer stellte das Team alle Dateien des entsprechenden Release zusammen. Ein Entwickler konnte anschließend eine Analyse durchführen, den Fehlerzustand identifizieren und beheben.<br><br>Welche der folgenden Optionen ermöglichte dem Team diese Vorgehensweise?<br><br>Wählen Sie EINE Option! (1 aus 4)",
     "Diagram": null,
     "Table": null,
     "Options": [
@@ -1360,7 +1360,7 @@
   },
   {
     "Id": 78,
-    "Text": "Betrachten Sie den folgenden Fehlerbericht für ein Buchausleihsystem.<br><br> Fehler-ID: 001 <br>Titel: Rückgabe eines Buches wird nicht registriert. <br>Schweregrad: Hoch <br>Priorität: nicht angegeben <br>Umgebung: Windows 11, Google Chrome <br>Beschreibung: Beim Versuch, ein Buch mit der Funktion „Buch zurückgeben“ zurückzugeben, registriert das System die Rückgabe nicht. Das Buch bleibt weiterhin dem Benutzer zugewiesen. <br><br>Schritte zur Reproduktion: <br>Melden Sie sich als Benutzer mit einem ausgeliehen Buch im Buchausleihsystem an. <br>Klicken Sie auf die Schaltfläche „Buch zurückgeben“ für das ausgeliehene Buch. <br>Das System registriert die Rückgabe nicht und das Buch wird weiterhin als ausgeliehen angezeigt. <br>Erwartetes Ergebnis: Das Buch sollte als zurückgegeben registriert  und dem Benutzer nicht mehr zugewiesen sein. <br>Tatsächliches Ergebnis: Das Buch bleibt dem Benutzer zugewiesen. <br>Anhänge: [leere Liste] <br><br>Welche der folgenden Optionen hilft dem Entwickler AM EHESTEN, den Fehler schnell zu reproduzieren?<br><br>Wählen Sie EINE Option! (1 aus 4)",
+    "Text": "Betrachten Sie den folgenden Fehlerbericht für ein Buchausleihsystem.<br><br> Fehler-ID: 001 <br>Titel: Rückgabe eines Buches wird nicht registriert. <br>Schweregrad: Hoch <br>Priorität: nicht angegeben <br>Umgebung: Windows 11, Google Chrome <br>Beschreibung: Beim Versuch, ein Buch mit der Funktion „Buch zurückgeben“ zurückzugeben, registriert das System die Rückgabe nicht. Das Buch bleibt weiterhin dem Benutzer zugewiesen. <br><br>Schritte zur Reproduktion: <br>Melden Sie sich als Benutzer mit einem ausgeliehen Buch im Buchausleihsystem an. <br>Klicken Sie auf die Schaltfläche „Buch zurückgeben“ für das ausgeliehene Buch. <br>Das System registriert die Rückgabe nicht und das Buch wird weiterhin als ausgeliehen angezeigt. <br>Erwartetes Ergebnis: Das Buch sollte als zurückgegeben registriert und dem Benutzer nicht mehr zugewiesen sein. <br>Tatsächliches Ergebnis: Das Buch bleibt dem Benutzer zugewiesen. <br>Anhänge: [leere Liste] <br><br>Welche der folgenden Optionen hilft dem Entwickler AM EHESTEN, den Fehler schnell zu reproduzieren?<br><br>Wählen Sie EINE Option! (1 aus 4)",
     "Diagram": null,
     "Table": null,
     "Options": [
