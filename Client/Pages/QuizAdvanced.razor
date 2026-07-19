@@ -86,38 +86,40 @@ else if (State.Questions.Count == 0)
 }
 else if (currentIndex < State.Questions.Count)
 {
+    var q = State.Questions[currentIndex];
+
     <!-- Quiz-UI -->
     <p class="fw-bold mb-3">
         Frage @(@currentIndex + 1) / @State.Questions.Count
     </p>
 
     <div class="question-text mb-3">
-        @((MarkupString)ToMarkup(State.Questions[currentIndex].Text))
+        @((MarkupString)ToMarkup(q.Text))
     </div>
 
-    @if (!string.IsNullOrEmpty(State.Questions[currentIndex].Diagram))
+    @if (!string.IsNullOrEmpty(q.Diagram))
     {
         <div class="text-center mb-3">
-            <img src="@State.Questions[currentIndex].Diagram"
+            <img src="@q.Diagram"
                  alt="Diagramm"
                  class="img-fluid rounded shadow-sm" />
         </div>
     }
 
-    @if (State.Questions[currentIndex].Table != null && State.Questions[currentIndex].Table.Any())
+    @if (q.Table is { Count: > 0 } table)
     {
         <div class="table-responsive mb-3">
             <table class="table table-bordered table-sm">
                 <thead class="table-light">
                     <tr>
-                        @foreach (var col in State.Questions[currentIndex].Table!.First().Keys)
+                        @foreach (var col in table[0].Keys)
                         {
                             <th>@col</th>
                         }
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var row in State.Questions[currentIndex].Table!)
+                    @foreach (var row in table)
                     {
                         <tr>
                             @foreach (var val in row.Values)
@@ -131,22 +133,22 @@ else if (currentIndex < State.Questions.Count)
         </div>
     }
 
-    @if (!string.IsNullOrEmpty(State.Questions[currentIndex].PostText))
+    @if (!string.IsNullOrEmpty(q.PostText))
     {
         <div class="alert alert-secondary">
-            @((MarkupString)ToMarkup(State.Questions[currentIndex].PostText))
+            @((MarkupString)ToMarkup(q.PostText))
         </div>
     }
 
     <div class="d-grid gap-2 mt-3">
-        @for (int i = 0; i < State.Questions[currentIndex].Options.Count; i++)
+        @for (int i = 0; i < q.Options.Count; i++)
         {
             var localIdx = i;
             var isSelected = State.Answers[currentIndex].Contains(localIdx);
 
             <button class="btn @(isSelected ? "btn-primary" : "btn-outline-secondary") text-start"
                     @onclick="() => ToggleAnswer(localIdx)">
-                <strong>@(Convert.ToChar('A' + i)).</strong> @State.Questions[currentIndex].Options[i]
+                <strong>@(Convert.ToChar('A' + i)).</strong> @q.Options[i]
             </button>
         }
     </div>
@@ -224,7 +226,8 @@ else
 
             if (list == null || list.Count == 0)
             {
-                errorMessage = "Keine Fragen gefunden.";
+                // Kein errorMessage hier: State.Questions bleibt leer, wodurch der
+                // spezifischere "State.Questions.Count == 0"-Zweig (Warnhinweis) greift.
                 State.Questions = new List<QuestionDto>();
             }
             else

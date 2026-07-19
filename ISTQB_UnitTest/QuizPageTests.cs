@@ -121,5 +121,18 @@ namespace ISTQB_Tests
             Assert.Equal(1, state.Score);
             Assert.EndsWith("/result", this.Services.GetRequiredService<Microsoft.AspNetCore.Components.NavigationManager>().Uri, StringComparison.OrdinalIgnoreCase);
         }
+
+        [Fact]
+        public void EmptyQuestionList_ShowsCtflSpecificWarning_NotGenericError()
+        {
+            Services.AddSingleton(new QuizState());
+            RegisterQuestionService(new List<Question>());
+
+            var cut = Render<Quiz>();
+            cut.Find("button").Click(); // Start
+
+            Assert.Contains("questions.json", cut.Markup);
+            Assert.DoesNotContain("Ein Fehler ist aufgetreten", cut.Markup);
+        }
     }
 }
